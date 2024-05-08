@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { DigimonQueryContext } from '../Context/DigimonQueryContext';
 
 function DigimonList({
     moves,
@@ -8,7 +10,7 @@ function DigimonList({
     fullDigimonList
 }) {
 
-    const [digimonList, setDigimonList] = useState([]);
+    // const [digimonList, setDigimonList] = useState([]);
 
     // const handleBoosterSetChange = (event) => {
     //     setBoosterSetId(event.target.value)
@@ -22,18 +24,12 @@ function DigimonList({
     //     console.log(rarity)
     // };
 
-    // const {
-    //     query,
-    //     setQuery,
-    //     sortState,
-    //     setSortState,
-    //     boosterSet,
-    //     setBoosterSet,
-    //     boosterSetId,
-    //     setBoosterSetId,
-    //     rarity,
-    //     setRarity
-    // } = useContext(QueryContext);
+    const {
+        query,
+        setQuery,
+        sortState,
+        setSortState,
+    } = useContext(DigimonQueryContext);
 
     // const [listView, setListView] = useState(false);
     // const [showMore, setShowMore] = useState(20);
@@ -44,7 +40,7 @@ function DigimonList({
     //     if (newCards.length == 0 ) {
     //         setNoCards(true)
     //     }
-    //     const sortedCards = [...cards].sort(sortMethods[sortState].method);
+    //     const sortedCards = [...digimons].sort(sortMethods[sortState].method);
 
     //     const typedCards = []
     //     for (let card of sortedCards){
@@ -104,16 +100,12 @@ function DigimonList({
     // // eslint-disable-next-line
     // },[]);
 
-
-    // const sortMethods = {
-    //     none: { method: (a,b) => new Date(b.updated_on?.full_time.$date) - new Date(a.updated_on?.full_time.$date) },
-    //     newest: { method: (a,b) => b.id.localeCompare(a.id) },
-    //     oldest: { method: (a,b) => a.id.localeCompare(b.id) },
-    //     name: { method: (a,b) => a.name.localeCompare(b.name) },
-    //     card_number: { method: (a,b) => a.card_number - b.card_number },
-    //     enthusiasm_highest: { method: (a,b) => b.enthusiasm - a.enthusiasm },
-    //     enthusiasm_lowest: { method: (a,b) => a.enthusiasm - b.enthusiasm },
-    // };
+    const sortMethods = {
+        none: { method: (a,b) => a.id - b.id },
+        name: { method: (a,b) => b.name.localeCompare(a.name) },
+        id_num: { method: (a,b) => b.id - a.id },
+        level: { method: (a,b) => a.stage.level - b.stage.level },
+    };
 
     // const handleQuery = (event) => {
     //     setQuery({ ...query, [event.target.name]: event.target.value });
@@ -155,29 +147,38 @@ function DigimonList({
     //     setShowMore(20)
     // };
 
-    // const all_cards = newCards.filter(card => card.name.toLowerCase().includes(query.cardName.toLowerCase()))
-    //     .filter((card, index, arr) => (card.effect_text + card.second_effect_text).toLowerCase().includes(query.cardText.toLowerCase()))
-    //     .filter(card => card.card_number.toString().includes(query.cardNumber))
-    //     .filter(card => card.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
-    //     .filter((card, index, arr) => card.series_name.toLowerCase().includes(query.series.toLowerCase()))
-    //     .filter(card => card.card_number > query.startingNum - 1)
-    //     .filter(card => query.type? card.card_type.some(type => type.toString() == query.type):card.card_type)
-    //     .filter(card => card.card_class.includes(query.cardClass))
-    //     .filter(card => query.extraEffect? card.extra_effects.some(effect => effect.toString() == query.extraEffect):card.extra_effects)
-    //     .filter(card => query.reaction? card.reactions.some(reaction => reaction.toString() == query.reaction):card.reactions)
-    //     .filter(card => query.tag? card.card_tags.some(tag => tag.toString() == query.tag):card.card_tags)
-    //     .filter(card => boosterSet && !rarity ? boosterSet.all_cards.includes(card.card_number):card.card_number)
-    //     .filter(card => boosterSet && rarity ? boosterSet[rarity].includes(card.card_number):card.card_number)
-    //     .sort(sortMethods[sortState].method)
+    const allDigimon = fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(query.digimonName.toLowerCase()))
+    //     .filter((digimon, index, arr) => (digimon.effect_text + digimon.second_effect_text).toLowerCase().includes(query.digimonText.toLowerCase()))
+    //     .filter(digimon => digimon.digimon_number.toString().includes(query.digimonNumber))
+    //     .filter(digimon => digimon.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
+    //     .filter((digimon, index, arr) => digimon.series_name.toLowerCase().includes(query.series.toLowerCase()))
+    //     .filter(digimon => digimon.digimon_number > query.startingNum - 1)
+    //     .filter(digimon => query.type? digimon.digimon_type.some(type => type.toString() == query.type):digimon.digimon_type)
+    //     .filter(digimon => digimon.digimon_class.includes(query.digimonClass))
+    //     .filter(digimon => query.extraEffect? digimon.extra_effects.some(effect => effect.toString() == query.extraEffect):digimon.extra_effects)
+    //     .filter(digimon => query.reaction? digimon.reactions.some(reaction => reaction.toString() == query.reaction):digimon.reactions)
+    //     .filter(digimon => query.tag? digimon.digimon_tags.some(tag => tag.toString() == query.tag):digimon.digimon_tags)
+    //     .filter(digimon => boosterSet && !rarity ? boosterSet.all_digimons.includes(digimon.digimon_number):digimon.digimon_number)
+    //     .filter(digimon => boosterSet && rarity ? boosterSet[rarity].includes(digimon.digimon_number):digimon.digimon_number)
+    .sort(sortMethods[sortState].method)
 
+    console.log(allDigimon[10])
     //     const isQueryEmpty = Object.values(query).every((value) => value === "");
 
     return (
         <div>
-            {/* <img className='piece'
-                src={pieces[pieceIndex]}
-                alt={`Piece ${pieceIndex}`}
-            /> */}
+            <h1 className='white'>Digimon List</h1>
+            {allDigimon.map(digimon => {
+                return(
+                    <div className='digiBox'>
+                        <NavLink to={`/digimon/${digimon.id}`}>
+                            <img src={digimon.imageData} />
+                            <h2 className='white'>{digimon.id}. {digimon.name}</h2>
+                            <h2 className='white'>{digimon.stage?.name}</h2>
+                        </NavLink>
+                    </div>
+                )})
+            }
         </div>
     );
 }

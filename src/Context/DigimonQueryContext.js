@@ -5,7 +5,7 @@ const DigimonQueryContext = createContext();
 
 const DigimonQueryContextProvider = ({ children }) => {
     const [query, setQuery] = useState({
-        name: "",
+        digimonName: "",
         digimon_id: 0,
         neighbor: "",
         move: "",

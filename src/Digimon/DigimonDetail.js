@@ -1,0 +1,101 @@
+import React, { useState, useEffect, useContext } from 'react';
+import { NavLink, useParams } from 'react-router-dom';
+import { DigimonQueryContext } from '../Context/DigimonQueryContext';
+
+function DigimonDetail({
+    fullDigimonList
+}) {
+    console.log("dogmon")
+    const { digimon_id } = useParams()
+    const [digimon, setDigimon] = useState("")
+    const [prevEvos, setPrevEvos] = useState([])
+    const [nextEvos, setNextEvos] = useState([])
+
+    const getDigimon = async() => {
+        const digimonData = fullDigimonList.find(mon => mon.id == digimon_id)
+        console.log(digimonData)
+        const prev = []
+        const next = []
+
+        for (let mon_id of digimonData.neighbors.prev) {
+            console.log(digimonData.neighbors.prev)
+            const prevNeighbor = fullDigimonList.find(mon => mon.id == mon_id)
+            prev.push(prevNeighbor)
+        }
+        for (let mon_id of digimonData.neighbors.next) {
+            const nextNeighbor = fullDigimonList.find(mon => mon.id == mon_id)
+            next.push(nextNeighbor)
+        }
+
+        setDigimon(digimonData)
+        setPrevEvos(prev)
+        setNextEvos(next)
+    }
+
+    useEffect(() => {
+        window.scroll(0, 0);
+        getDigimon();
+        // console.log(cards)
+        // document.title = "Cards - PM CardBase"
+        // return () => {
+        //     document.title = "PlayMaker CardBase"
+        // };
+    // eslint-disable-next-line
+    },[digimon_id]);
+
+
+
+    return (
+        <div>
+            <img src={digimon.imageData} />
+            <h1 className='white'>{digimon.id}. {digimon.name}</h1>
+            {digimon.stage?
+                <h1 className='white'>{digimon.stage.name}</h1>:null
+            }
+            {digimon.moves?
+                <>
+                    <h2 className='white'>Moves:</h2>
+                    {digimon.moves?.map(move => {
+                        return(
+                            <>
+                                <h3 className='white'>{move}</h3>
+                            </>
+                        )})
+                    }
+                </>: null
+            }
+
+            <h2 className='white'>{prevEvos.length > 0 ? "Evolves from:":null}</h2>
+            {prevEvos?.map(prevEvo => {
+                return(
+                    <>
+                        <div className='digiBox'>
+                            <NavLink to={`/digimon/${prevEvo.id}`}>
+                                <img src={prevEvo.imageData} />
+                                <h3 className='white'>{prevEvo.id}. {prevEvo.name}</h3>
+                            </NavLink>
+                        </div>
+                    </>
+                )})
+            }
+            <h2 className='white'>{nextEvos.length > 0 ? "Evolves to:":null}</h2>
+            {nextEvos?.map(nextEvo => {
+                return(
+                    <div className='digiBox'>
+                        <>
+                            <NavLink to={`/digimon/${nextEvo.id}`}>
+                                <img src={nextEvo.imageData} />
+                                <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
+                            </NavLink>
+                        </>
+                    </div>
+                )})
+            }
+            <NavLink to={"/digilist"}>
+                <h1 className='white'>Back</h1>
+            </NavLink>
+        </div>
+    );
+}
+
+export default DigimonDetail;

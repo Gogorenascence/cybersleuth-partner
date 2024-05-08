@@ -6,13 +6,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh; /* Set body height to 100% of viewport height */
+  height: 100%; /* Set body height to 100% of viewport height */
+  width: 100%;
   background-image: url("../public/hexgrid3.png");
   background-size: cover; /* Ensure the background image covers the entire body */
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   overflow-x: hidden; /* Hide horizontal overflow to prevent horizontal scrollbar */
-  position: relative; /* Set position to relative */
+  position: absolute;
   z-index: -100;
 }
 
@@ -29,4 +31,12 @@ body {
 .piece {
   /* height: 10vh; */
   width: 15vw
+}
+
+.white {
+  color: white;
+}
+
+.digiBox {
+  width: min-content;
 }
