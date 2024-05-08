@@ -167,18 +167,30 @@ function DigimonList({
 
     return (
         <div>
-            <h1 className='white'>Digimon List</h1>
-            {allDigimon.map(digimon => {
-                return(
-                    <div className='digiBox'>
+            <div className="flex-items">
+                <h1 className='white'>Digimon List</h1>
+                <NavLink to="/partnercreate">
+                    <h2 className='white'
+                        style={{margin: "30px 0 0 25px"}}
+                    >Partner Create</h2>
+                </NavLink>
+            </div>
+            <div className="list-grid3">
+                {allDigimon.map((digimon, index) => {
+                    return(
                         <NavLink to={`/digimon/${digimon.id}`}>
-                            <img src={digimon.imageData} />
-                            <h2 className='white'>{digimon.id}. {digimon.name}</h2>
-                            <h2 className='white'>{digimon.stage?.name}</h2>
+                            <div className='digiBox'
+                            style={{marginTop: index < 0 ? "10px": "",
+                            marginBottom: index < allDigimon.length - 1 ? "10px": "" }}
+                            >
+                                    <img src={digimon.imageData} />
+                                    <h2 className='white'>{digimon.id}. {digimon.name}</h2>
+                                    <h2 className='white'>{digimon.stage?.name}</h2>
+                            </div>
                         </NavLink>
-                    </div>
-                )})
-            }
+                    )})
+                }
+            </div>
         </div>
     );
 }

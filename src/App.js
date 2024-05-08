@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import DigimonList from './Digimon/DigimonList';
 import DigimonDetail from './Digimon/DigimonDetail';
+import PartnerCreate from './Partners/PartnerCreate';
 
 
 function App() {
@@ -64,6 +65,12 @@ function App() {
           />
           <Route path="/digimon/:digimon_id" element={<DigimonDetail
             fullDigimonList={fullDigimonList}
+            />}
+          />
+          <Route path="/partnercreate" element={<PartnerCreate
+            fullDigimonList={fullDigimonList}
+            moveNames={moveNames}
+            digimonNames={digimonNames}
             />}
           />
         </Routes>

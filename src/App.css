@@ -38,5 +38,49 @@ body {
 }
 
 .digiBox {
-  width: min-content;
+  /* width: 50%; */
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 10px solid rgb(50, 170, 226);
+  border-style: double;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-content {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-items {
+  display: flex;
+  justify-items: center;
+}
+
+.flex-full {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.list-grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* Add any gap you want between the cards */
 }
