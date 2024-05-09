@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { DigimonQueryContext } from '../Context/DigimonQueryContext';
+import SiteLinks from '../Display/SiteLinks';
+
 
 function DigimonList({
-    moves,
-    moveNames,
-    digimonNames,
-    neighbors,
     fullDigimonList
 }) {
 
@@ -169,11 +167,7 @@ function DigimonList({
         <div>
             <div className="flex-items">
                 <h1 className='white'>Digimon List</h1>
-                <NavLink to="/partnercreate">
-                    <h2 className='white'
-                        style={{margin: "30px 0 0 25px"}}
-                    >Partner Create</h2>
-                </NavLink>
+                <SiteLinks/>
             </div>
             <div className="list-grid3">
                 {allDigimon.map((digimon, index) => {

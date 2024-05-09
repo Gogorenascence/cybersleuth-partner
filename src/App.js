@@ -6,6 +6,7 @@ import MainPage from './MainPage';
 import DigimonList from './Digimon/DigimonList';
 import DigimonDetail from './Digimon/DigimonDetail';
 import PartnerCreate from './Partners/PartnerCreate';
+import PartnersList from './Partners/PartnersList';
 
 
 function App() {
@@ -71,6 +72,10 @@ function App() {
             fullDigimonList={fullDigimonList}
             moveNames={moveNames}
             digimonNames={digimonNames}
+            />}
+          />
+          <Route path="/partners" element={<PartnersList
+            fullDigimonList={fullDigimonList}
             />}
           />
         </Routes>

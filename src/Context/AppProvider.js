@@ -1,12 +1,15 @@
 import React from "react";
 import { DigimonQueryContextProvider } from "./DigimonQueryContext";
+import { PartnerQueryContextProvider } from "./PartnerQueryContext";
 
 
 const AppProvider = ({ children }) => {
     return (
-        <DigimonQueryContextProvider>
-            {children}
-        </DigimonQueryContextProvider>
+        <PartnerQueryContextProvider>
+            <DigimonQueryContextProvider>
+                {children}
+            </DigimonQueryContextProvider>
+        </PartnerQueryContextProvider>
     );
 };
 

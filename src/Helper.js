@@ -1,12 +1,12 @@
 const helper = {
-    todaysFormattedDate: async function todaysFormattedDate() {
+    todaysFormattedDate: function todaysFormattedDate() {
         const timeZone = 'America/Chicago';
         const options = { timeZone: timeZone, year: 'numeric', month: '2-digit', day: '2-digit' };
         const adjustedDate = new Intl.DateTimeFormat('en-US', options).format(new Date());
         const formattedDate = new Date(adjustedDate).toISOString().split('T')[0];
         return formattedDate;
     },
-    createTimeObj: async function createTimeObj() {
+    createTimeObj: function createTimeObj() {
         let now = new Date();
         now.setHours(now.getHours() + 5)
 
@@ -28,7 +28,7 @@ const helper = {
         console.log(time_dict);
         return time_dict
     },
-    generateRandomString: async function generateRandomString(length) {
+    generateRandomString: function generateRandomString(length) {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         let randomString = '';
 
