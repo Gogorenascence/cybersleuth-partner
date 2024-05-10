@@ -169,7 +169,7 @@ function DigimonList({
                 <h1 className='white'>Digimon List</h1>
                 <SiteLinks/>
             </div>
-            <div className="list-grid3">
+            <div className="list-fill">
                 {allDigimon.map((digimon, index) => {
                     return(
                         <NavLink to={`/digimon/${digimon.id}`}>

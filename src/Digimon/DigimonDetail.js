@@ -52,7 +52,7 @@ function DigimonDetail({
             {digimon.stage?
                 <h1 className='white'>{digimon.stage.name}</h1>:null
             }
-            {digimon.moves?
+            {digimon.moves && digimon.moves.length > 0 ?
                 <>
                     <h2 className='white'>Moves:</h2>
                     {digimon.moves?.map(move => {
@@ -69,26 +69,26 @@ function DigimonDetail({
             {prevEvos?.map(prevEvo => {
                 return(
                     <>
-                        <div className='digiBox'>
-                            <NavLink to={`/digimon/${prevEvo.id}`}>
+                        <NavLink to={`/digimon/${prevEvo.id}`}>
+                            <div className='digiBox'>
                                 <img src={prevEvo.imageData} />
                                 <h3 className='white'>{prevEvo.id}. {prevEvo.name}</h3>
-                            </NavLink>
-                        </div>
+                            </div>
+                        </NavLink>
                     </>
                 )})
             }
             <h2 className='white'>{nextEvos.length > 0 ? "Evolves to:":null}</h2>
             {nextEvos?.map(nextEvo => {
                 return(
-                    <div className='digiBox'>
-                        <>
-                            <NavLink to={`/digimon/${nextEvo.id}`}>
+                    <>
+                        <NavLink to={`/digimon/${nextEvo.id}`}>
+                            <div className='digiBox'>
                                 <img src={nextEvo.imageData} />
                                 <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
-                            </NavLink>
-                        </>
-                    </div>
+                            </div>
+                        </NavLink>
+                    </>
                 )})
             }
             <NavLink to={"/digilist"}>

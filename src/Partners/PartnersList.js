@@ -53,8 +53,8 @@ function PartnersList({
             <div className="list-grid3">
                 {partners.map((partner, index) => {
                     return(
-                        // <NavLink to={`/digimon/${digimon.id}`}>
-                            <div className='digiBox'
+                        <NavLink to={`/partner/${partner.id}`}>
+                            <div className='digiBox pointer'
                             style={{marginTop: index < 0 ? "10px": "",
                             marginBottom: index < partners.length - 1 ? "10px": "" }}
                             >
@@ -66,7 +66,7 @@ function PartnersList({
                                 <h2 className='white'>Mega Order: {partner.megaOrder}</h2>
                                 <h2 className='white'>Ultra Order: {partner.ultraOrder}</h2>
                             </div>
-                        // </NavLink>
+                        </NavLink>
                     )})
                 }
             </div>
