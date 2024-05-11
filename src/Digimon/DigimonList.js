@@ -74,7 +74,7 @@ function DigimonList({
             <input
                 className="builder-input"
                 type="text"
-                placeholder=" Current Form"
+                placeholder=" Digimon Name"
                 onChange={handleQueryChange}
                 name="digimonName"
                 value={digiQuery.digimonName}>

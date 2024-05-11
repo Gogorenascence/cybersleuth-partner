@@ -13,7 +13,9 @@ function PartnersList({
     const {
         query,
         setQuery,
-        resetQuery
+        resetQuery,
+        sortState,
+        setSortState
     } = useContext(PartnerQueryContext)
 
     const {account} = useContext(AuthContext)
@@ -21,6 +23,7 @@ function PartnersList({
     const [partners, setPartners] = useState([])
 
     const [moveQuery, setMoveQuery] = useState("")
+    const [wantedEvoQuery, setWantedEvoQuery] = useState("")
 
     const getPartners = async () => {
         if (account) {
@@ -51,13 +54,39 @@ function PartnersList({
         setMoveQuery(event.target.value)
     }
 
+    const handleWantedEvoQueryChange = (event) => {
+        setWantedEvoQuery(event.target.value)
+    }
+
+    const handleWantedEvoChange = (evo) => {
+        setQuery({...query, ["wantedEvoName"]: evo.id})
+        setWantedEvoQuery("")
+    }
+
+    const sortMethods = {
+        none: { method: (a,b) => a.dateConverted.localeCompare(b.dateConverted) },
+        newest: { method: (a,b) => b.dateConverted.localeCompare(a.dateConverted) },
+        oldest: { method: (a,b) => a.dateConverted.localeCompare(b.dateConverted) },
+        name: { method: (a,b) => a.name.localeCompare(b.name) },
+        ABI: { method: (a,b) => a.abi - b.abi },
+        stage: { method: (a,b) => b.currentForm?.stage?.level - a.currentForm?.stage?.level },
+    };
+
+    const handleSort = (event) => {
+        setSortState(event.target.value);
+    };
+
     const allPartners = partners.filter(partner => partner.name.toLowerCase().includes(query.partnerName.toLowerCase()))
         .filter(partner => partner.currentForm.name.toLowerCase().includes(query.digimonName.toLowerCase()))
         .filter(partner => query.move? partner.moves.includes(query.move): true)
         .filter(partner => query.stage? partner.currentForm.stage.name === query.stage: true)
+        .filter(partner => query.wantedEvoName? partner.wantedEvos.includes(query.wantedEvoName): true)
+        .sort(sortMethods[sortState].method)
 
     const moveNamesList = Object.entries(moveNames).map(([id, name]) => ({ id, name }));
     const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery)): []
+
+    const wantedEvoQueriedList = wantedEvoQuery ? fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(wantedEvoQuery.toLowerCase())): []
 
     // //     .filter((digimon, index, arr) => (digimon.effect_text + digimon.second_effect_text).toLowerCase().includes(query.digimonText.toLowerCase()))
     // //     .filter(digimon => digimon.digimon_number.toString().includes(query.digimonNumber))
@@ -71,7 +100,7 @@ function PartnersList({
     // //     .filter(digimon => query.tag? digimon.digimon_tags.some(tag => tag.toString() == query.tag):digimon.digimon_tags)
     // //     .filter(digimon => boosterSet && !rarity ? boosterSet.all_digimons.includes(digimon.digimon_number):digimon.digimon_number)
     // //     .filter(digimon => boosterSet && rarity ? boosterSet[rarity].includes(digimon.digimon_number):digimon.digimon_number)
-    // .sort(sortMethods[sortState].method)
+
 
 
     return (
@@ -142,6 +171,41 @@ function PartnersList({
                     })}
                 </div>
             </span>
+            <span>
+                <div>
+                    <h5 className="label white">Wanted Evolution</h5>
+                    <input
+                        className="builder-input"
+                        type="text"
+                        placeholder=" Digimon Name"
+                        onChange={handleWantedEvoQueryChange}
+                        value={wantedEvoQuery}>
+                    </input>
+                </div>
+                <div className={wantedEvoQueriedList.length > 0? "partner-scrollable2" : "none"}>
+                    {wantedEvoQueriedList.map((evo, index) => {
+                        return(
+                            <h3 className="white pointer"
+                                onClick={() => handleWantedEvoChange(evo)}
+                            >{evo.name}</h3>
+                        )
+                    })}
+                </div>
+            </span>
+            <h5 className="label white">Sort By</h5>
+            <select
+                className="builder-select margin-bottom-20p"
+                type="text"
+                placeholder=" Sorted By"
+                value={sortState}
+                onChange={handleSort}>
+                <option value="none">Sorted By</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="name">A-Z</option>
+                <option value="ABI">ABI</option>
+                <option value="stage">Stage Desc.</option>
+            </select>
             <br/>
             <button
                 className="margin-bottom-20p"

@@ -7,6 +7,7 @@ const PartnerQueryContextProvider = ({ children }) => {
     const [query, setQuery] = useState({
         partnerName: "",
         digimonName: "",
+        wantedEvoName: "",
         move: "",
         stage: ""
     });
@@ -19,6 +20,7 @@ const PartnerQueryContextProvider = ({ children }) => {
         setQuery({
             partnerName: "",
             digimonName: "",
+            wantedEvoName: "",
             move: "",
             stage: "",
         })

@@ -165,7 +165,7 @@ function PartnerDetail({
                 }
                 { partner.wantedEvos && partner.wantedEvos.length > 0?
                     <>
-                        <h3 className="white">Evolutions: </h3>
+                        <h3 className="white">Wanted Evolutions: </h3>
                         {partner.wantedEvos.map((evo, index) => {
                             return(
                                 <h3 className="white pointer"

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import helper from '../Helper';
 import partnerQueries from './PartnerQueries';
-import SiteLinks from '../Display/SiteLinks';
-import { set } from 'firebase/database';
+import { AuthContext } from '../Context/AuthContext';
 
 
 function PartnerEdit({
@@ -12,6 +11,7 @@ function PartnerEdit({
 }) {
 
     const { partner_id } = useParams()
+    const {account} = useContext(AuthContext)
     const navigate = useNavigate()
 
     const [partner, setPartner] = useState({
@@ -147,27 +147,31 @@ function PartnerEdit({
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        const data = {...partner}
+        if (account && partner.name && evoList.length > 0) {
+            const data = {...partner}
 
-        const simpleEvos = []
-        const simpleWantedEvos = []
-        for (let evo of evoList) {
-            simpleEvos.push(evo.id)
-        }
-        for (let evo of wantedEvoList) {
-            simpleWantedEvos.push(evo.id)
-        }
-        const randomId = helper.generateRandomString(16);
+            const simpleEvos = []
+            const simpleWantedEvos = []
+            for (let evo of evoList) {
+                simpleEvos.push(evo.id)
+            }
+            for (let evo of wantedEvoList) {
+                simpleWantedEvos.push(evo.id)
+            }
+            const randomId = helper.generateRandomString(16);
 
-        data["moves"] = moveList
-        data["evos"] = simpleEvos
-        data["wantedEvos"] = simpleWantedEvos
-        data["id"] = randomId
+            data["moves"] = moveList
+            data["evos"] = simpleEvos
+            data["wantedEvos"] = simpleWantedEvos
+            data["id"] = randomId
 
-        const partnerResponse = await partnerQueries.editPartner(partner_id, data)
-        if (partnerResponse) {
-            console.log(partnerResponse)
-            navigate(`/partner/${randomId}`)
+            const partnerResponse = await partnerQueries.editPartner(partner_id, data)
+            if (partnerResponse) {
+                console.log(partnerResponse)
+                navigate(`/partner/${randomId}`)
+            }
+        } else {
+            alert("Your partner needs a name and at least 1 form!")
         }
     }
 

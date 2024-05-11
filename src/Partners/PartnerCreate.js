@@ -127,7 +127,7 @@ function PartnerCreate({
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        if (account) {
+        if (account && partner.name && evoList.length > 0) {
             const data = {...partner}
 
             const simpleEvos = []
@@ -150,8 +150,10 @@ function PartnerCreate({
             if (partnerResponse) {
                 console.log(partnerResponse)
                 resetPartner()
-                // navigate(`/partner/${randomId}`)
+                navigate(`/partner/${randomId}`)
             }
+        } else {
+            alert("Your partner needs a name and at least 1 form!")
         }
     }
 
