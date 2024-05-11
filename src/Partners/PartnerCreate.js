@@ -150,7 +150,7 @@ function PartnerCreate({
             if (partnerResponse) {
                 console.log(partnerResponse)
                 resetPartner()
-                navigate(`/partner/${randomId}`)
+                // navigate(`/partner/${randomId}`)
             }
         }
     }

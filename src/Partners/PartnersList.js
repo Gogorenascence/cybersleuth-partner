@@ -149,6 +149,11 @@ function PartnersList({
             >
                 Reset Filters
             </button>
+            {partners && partners.length > 0?
+                <h2 className='white'>
+                    Showing {allPartners.length} of {partners.length} Partners
+                </h2>: null
+            }
             <div className="list-grid3">
                 {allPartners.map((partner, index) => {
                     return(
