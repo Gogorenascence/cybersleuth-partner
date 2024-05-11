@@ -43,7 +43,7 @@ function PartnerCreate({
     const resetPartner = () => {
         setPartner({
             name: "",
-            tamer_id: "AceMaker001",
+            tamer_id: account? account.id: "",
             dateConverted: helper.todaysFormattedDate(),
             abi: 1,
             moves: [],
@@ -94,6 +94,7 @@ function PartnerCreate({
         } else {
             setEvoList([...evoList, evo])
         }
+        console.log(account.id)
         setEvoPlacement(0)
         setEvoQuery("")
     }
@@ -139,6 +140,7 @@ function PartnerCreate({
             }
             const randomId = helper.generateRandomString(16);
 
+            data["tamer_id"] = account.id
             data["moves"] = moveList
             data["evos"] = simpleEvos
             data["wantedEvos"] = simpleWantedEvos
