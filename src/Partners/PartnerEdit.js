@@ -173,164 +173,185 @@ function PartnerEdit({
 
 
     return (
-        <div>
+        <div className="cyberspace">
             <div className="flex-items">
-                <h1 className='white'>Partner Create</h1>
-                <SiteLinks/>
+                <h1 className='white'>Partner Edit</h1>
             </div>
-            <div className="flex-between">
+            <div className="media-flex-between">
+
                 <div>
-                    <h2 className="white">Name: {partner.name}</h2>
-                    <h3 className="white">{evoList.length > 0? `Current Form: ${evoList[evoList.length-1].name}`: null}</h3>
-                    <h3 className="white">Tamer: {partner.tamer_id}</h3>
-                    <h3 className="white">ABI: {partner.abi}</h3>
-                    <h3 className="white">{partner.megaOrder? `Mega Order: ${partner.megaOrder}`: null}</h3>
-                    <h3 className="white">{partner.ultraOrder? `Ultra Order: ${partner.ultraOrder}`: null}</h3>
-                    <h3 className="white">{moveList.length > 0? "Moves: ": null}</h3>
-                    {moveList.map((move, index) => {
-                        return(
-                            <h3 className="white pointer"
-                                onClick={() => {handleRemoveMove(move)}}
-                            >{move}</h3>
-                        )
-                    })}
-                    <h3 className="white">{evoList.length > 0? "Evolutions: ": null}</h3>
-                    {evoList.map((evo, index) => {
-                        return(
-                            <h3 className="white pointer"
-                                onClick={() => {handleRemoveEvo(evo)}}
-                            >{index == evoList.length - 1? "Latest: ": `${index + 1}: `} {evo? evo.name : ""}</h3>
-                        )
-                    })}
-                    <h3 className="white">{wantedEvoList.length > 0? "Wanted Evolutions: ": null}</h3>
-                    {wantedEvoList.map((evo, index) => {
-                        return(
-                            <h3 className="white pointer"
-                                onClick={() => {handleRemoveWantedEvo(evo)}}
-                            >{evo? evo.name : ""}</h3>
-                        )
-                    })}
-                </div>
-                <span>
+                    <span>
+                        <h5 className="label white">Name </h5>
+                        <input
+                            className="builder-input"
+                            type="text"
+                            placeholder=" Partner Name"
+                            onChange={handlePartnerChange}
+                            name="name"
+                            value={partner.name}>
+                        </input>
 
-                    <h5 className="label white">Name </h5>
-                    <input
-                        // className="builder-input"
-                        type="text"
-                        placeholder=" Partner Name"
-                        onChange={handlePartnerChange}
-                        name="name"
-                        value={partner.name}>
-                    </input>
+                        <h5 className="label white">ABI </h5>
+                        <input
+                            className="builder-input"
+                            type="number"
+                            placeholder=" ABI"
+                            onChange={handlePartnerChange}
+                            name="abi"
+                            value={partner.abi}>
+                        </input>
 
-                    <h5 className="label white">ABI </h5>
-                    <input
-                        // className="builder-input"
-                        type="number"
-                        placeholder=" ABI"
-                        onChange={handlePartnerChange}
-                        name="abi"
-                        value={partner.abi}>
-                    </input>
+                        <h5 className="label white">Date Converted</h5>
+                        <input
+                            className="builder-input"
+                            type="date"
+                            placeholder=" Date"
+                            max={helper.todaysFormattedDate()}
+                            onChange={handlePartnerChange}
+                            name="dateConverted"
+                            value={partner.dateConverted}>
+                        </input>
 
-                    <h5 className="label white">Date Converted</h5>
-                    <input
-                        // className="builder-input"
-                        type="date"
-                        placeholder=" Date"
-                        max={helper.todaysFormattedDate()}
-                        onChange={handlePartnerChange}
-                        name="dateConverted"
-                        value={partner.dateConverted}>
-                    </input>
+                        <h5 className="label white">Mega Order </h5>
+                        <input
+                            className="builder-input"
+                            type="number"
+                            placeholder=" Mega Order"
+                            onChange={handlePartnerChange}
+                            name="megaOrder"
+                            value={partner.megaOrder}>
+                        </input>
 
-                    <h5 className="label white">Mega Order </h5>
-                    <input
-                        // className="builder-input"
-                        type="number"
-                        placeholder=" Mega Order"
-                        onChange={handlePartnerChange}
-                        name="megaOrder"
-                        value={partner.megaOrder}>
-                    </input>
-
-                    <h5 className="label white">Ultra Order </h5>
-                    <input
-                        // className="builder-input"
-                        type="number"
-                        placeholder=" Ultra Order"
-                        onChange={handlePartnerChange}
-                        name="ultraOrder"
-                        value={partner.ultraOrder}>
-                    </input>
-
-                </span>
-                <span>
+                        <h5 className="label white">Ultra Order </h5>
+                        <input
+                            className="builder-input"
+                            type="number"
+                            placeholder=" Ultra Order"
+                            onChange={handlePartnerChange}
+                            name="ultraOrder"
+                            value={partner.ultraOrder}>
+                        </input>
+                    </span>
                     <span>
                         <div>
                             <h5 className="label white">Partner Move Select</h5>
                             <input
-                                // className="builder-input"
+                                className="builder-input"
                                 type="text"
                                 placeholder=" Move Name"
                                 onChange={handleMoveQueryChange}
                                 value={moveQuery}>
                             </input>
                         </div>
-                        {moveQueriedList.map((move, index) => {
-                            return(
-                                <h3 className="white pointer"
-                                    onClick={() => handleAddMove(move.name)}
-                                >{move.name}</h3>
-                            )
-                        })}
-                    </span>
-                    <span>
-                        <div>
-                            <h5 className="label white">Partner Evolution Select</h5>
-                            <input
-                                // className="builder-input"
-                                type="text"
-                                placeholder=" Digimon Name"
-                                onChange={handleEvoQueryChange}
-                                value={evoQuery}>
-                            </input>
+
+                        <div className={moveQueriedList.length > 0? "partner-scrollable2": "none"}>
+                            {moveQueriedList.map((move, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => handleAddMove(move.name)}
+                                    >{move.name}</h3>
+                                )
+                            })}
                         </div>
-                        <input
-                            // className="builder-input"
-                            type="number"
-                            placeholder=" Place in list"
-                            onChange={handleEvoPlacement}
-                            value={evoPlacement}>
-                        </input>
-                        {evoQueriedList.map((evo, index) => {
-                            return(
-                                <h3 className="white pointer"
-                                    onClick={() => handleAddEvo(evo)}
-                                >{evo.name}</h3>
-                            )
-                        })}
                     </span>
+                    <h3 className="white">{moveList.length > 0? "Moves: ": null}</h3>
+                    {moveList.length >0?
+                        <div className="partner-scrollable">
+                            {moveList.map((move, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => {handleRemoveMove(move)}}
+                                    >{move}</h3>
+                                )
+                            })}
+                        </div>: null
+                    }
+                </div>
+
+                <span>
+                    <h3 className="white">{evoList.length > 0? `Current Form: ${evoList[evoList.length-1].name}`: null}</h3>
+                    <span>
+                        <div className="flex">
+                            <span>
+                                <h5 className="label white">Partner Evolution Select</h5>
+                                <input
+                                    className="builder-input"
+                                    type="text"
+                                    placeholder=" Digimon Name"
+                                    onChange={handleEvoQueryChange}
+                                    value={evoQuery}>
+                                </input>
+                            </span>
+                            <span>
+                                <h5 className="label white">Order</h5>
+                                <input
+                                    className="builder-input-small"
+                                    type="number"
+                                    placeholder=" Place in list"
+                                    onChange={handleEvoPlacement}
+                                    value={evoPlacement}>
+                                </input>
+                            </span>
+                        </div>
+                        <div className={evoQueriedList.length > 0? "partner-scrollable2": "none"}>
+                            {evoQueriedList.map((evo, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => handleAddEvo(evo)}
+                                    >{evo.name}</h3>
+                                )
+                            })}
+                        </div>
+                    </span>
+                    <h3 className="white">{evoList.length > 0? "Evolutions: ": null}</h3>
+                    {evoList.length > 0?
+                        <div className="partner-scrollable">
+                            {evoList.map((evo, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => {handleRemoveEvo(evo)}}
+                                    >{index == evoList.length - 1? "Latest: ": `${index + 1}: `} {evo? evo.name : ""}</h3>
+                                )
+                            })}
+                        </div>:null
+                    }
+
                     <span>
                         <div>
                             <h5 className="label white">Partner Wanted Evolution Select</h5>
                             <input
-                                // className="builder-input"
+                                className="builder-input"
                                 type="text"
                                 placeholder=" Digimon Name"
                                 onChange={handleWantedEvoQueryChange}
                                 value={wantedEvoQuery}>
                             </input>
                         </div>
-                        {wantedEvoQueriedList.map((evo, index) => {
-                            return(
-                                <h3 className="white pointer"
-                                    onClick={() => handleAddWantedEvo(evo)}
-                                >{evo.name}</h3>
-                            )
-                        })}
+                        <div className={wantedEvoQueriedList.length > 0? "partner-scrollable2" : "none"}>
+                            {wantedEvoQueriedList.map((evo, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => handleAddWantedEvo(evo)}
+                                    >{evo.name}</h3>
+                                )
+                            })}
+                        </div>
                     </span>
+
+                    <h3 className="white">{wantedEvoList.length > 0? "Wanted Evolutions: ": null}</h3>
+                    {wantedEvoList.length > 0?
+                        <div className="partner-scrollable">
+                            {wantedEvoList.map((evo, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => {handleRemoveWantedEvo(evo)}}
+                                    >{evo? evo.name : ""}</h3>
+                                )
+                            })}
+                        </div>: null
+                    }
                 </span>
+
             </div>
             <button
                 onClick={handleSubmit}

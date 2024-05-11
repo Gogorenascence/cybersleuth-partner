@@ -56,7 +56,7 @@ function App() {
     <AppProvider>
       <BrowserRouter>
       <NavBar/>
-      <div className="App">
+      <div className="App margin-bottom-20p">
         {/* <PixelBack/> */}
         <Routes>
           <Route index element={<MainPage />} />
@@ -80,6 +80,7 @@ function App() {
           />
           <Route path="/partners" element={<PartnersList
             fullDigimonList={fullDigimonList}
+            moveNames={moveNames}
             />}
           />
           <Route path="/partner/:partner_id" element={<PartnerDetail
@@ -94,6 +95,8 @@ function App() {
             />}
           />
         </Routes>
+        <br/>
+        <br/>
       </div>
       </BrowserRouter>
     </AppProvider>

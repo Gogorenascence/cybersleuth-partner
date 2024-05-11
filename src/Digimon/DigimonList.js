@@ -5,98 +5,22 @@ import { DigimonQueryContext } from '../Context/DigimonQueryContext';
 
 
 function DigimonList({
-    fullDigimonList
+    fullDigimonList,
+    moveNames
 }) {
 
-    // const [digimonList, setDigimonList] = useState([]);
-
-    // const handleBoosterSetChange = (event) => {
-    //     setBoosterSetId(event.target.value)
-    //     const selectedBoosterSet = booster_sets.find(set => set.id === event.target.value);
-    //     setBoosterSet(selectedBoosterSet)
-    //     console.log(boosterSet[rarity])
-    // };
-
-    // const handleRarityChange = (event) => {
-    //     setRarity(event.target.value);
-    //     console.log(rarity)
-    // };
-
     const {
-        query,
-        setQuery,
+        digiQuery,
+        setDigiQuery,
         sortState,
         setSortState,
+        resetDigiQuery
     } = useContext(DigimonQueryContext);
 
     // const [listView, setListView] = useState(false);
     // const [showMore, setShowMore] = useState(20);
 
-    // const [noCards, setNoCards] = useState(false);
-
-    // const getCards = async() =>{
-    //     if (newCards.length == 0 ) {
-    //         setNoCards(true)
-    //     }
-    //     const sortedCards = [...digimons].sort(sortMethods[sortState].method);
-
-    //     const typedCards = []
-    //     for (let card of sortedCards){
-    //         if (card.card_type[0] === 1001) {
-    //             card["cardType"] = "Fighter"
-    //         }
-    //         else if (card.card_type[0] === 1002) {
-    //             card["cardType"] = "Aura"
-    //         }
-    //         else if (card.card_type[0] === 1003) {
-    //             card["cardType"] = "Move"
-    //         }
-    //         else if (card.card_type[0] === 1004) {
-    //             card["cardType"] = "Ending"
-    //         }
-    //         else if (card.card_type[0] === 1005) {
-    //             card["cardType"] = "Any Type"
-    //         }
-    //         else if (card.card_type[0] === 1006) {
-    //             card["cardType"] = "Item"
-    //         }
-    //         else if (card.card_type[0] === 1007) {
-    //             card["cardType"] = "Event"
-    //         }
-    //         else if (card.card_type[0] === 1008) {
-    //             card["cardType"] = "Comeback"
-    //         }
-
-    //         card["effectText"] = card.effect_text.split("//")
-
-    //         if (card.second_effect_text){
-    //             card["secondEffectText"] = card.second_effect_text.split("//")
-    //         }
-
-    //         typedCards.push(card)
-    //     }
-    //     setNewCards(typedCards);
-    // };
-
-    // const navigate = useNavigate()
-
-    // const getRandomCard = async() =>{
-    //     const randomIndex = Math.floor(Math.random() * cards.length);
-    //     const randomCard = cards[randomIndex].card_number;
-    //     console.log(randomCard.card_number)
-    //     navigate(`/cards/${randomCard}`)
-    // }
-
-    // useEffect(() => {
-    //     window.scroll(0, 0);
-    //     getCards();
-    //     console.log(cards)
-    //     document.title = "Cards - PM CardBase"
-    //     return () => {
-    //         document.title = "PlayMaker CardBase"
-    //     };
-    // // eslint-disable-next-line
-    // },[]);
+    const [moveQuery, setMoveQuery] = useState("")
 
     const sortMethods = {
         none: { method: (a,b) => a.id - b.id },
@@ -109,43 +33,20 @@ function DigimonList({
     //     setQuery({ ...query, [event.target.name]: event.target.value });
     //     setShowMore(20)
     //     console.log(query)
-    // };
+    const handleQueryChange = (event) => {
+        setDigiQuery({...digiQuery, [event.target.name]: event.target.value})
+    }
 
-    // const handleQueryReset = (event) => {
-    //     setQuery({
-    //         cardName: "",
-    //         cardText: "",
-    //         cardNumber: "",
-    //         heroID: "",
-    //         series: "",
-    //         startingNum: "",
-    //         type: "",
-    //         cardClass: "",
-    //         extraEffect: "",
-    //         reaction: "",
-    //         tag: "",
-    //     });
-    //     setShowMore(20)
-    //     setSortState("none")
-    //     setBoosterSetId("")
-    //     setBoosterSet("");
-    //     setRarity("")
-    // };
+    const handleMoveQueryChange = (event) => {
+        setMoveQuery(event.target.value)
+    }
 
-    // const handleSort = (event) => {
-    //     setSortState(event.target.value);
-    // };
+    const allDigimon = fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(digiQuery.digimonName.toLowerCase()))
+    .filter(digimon => digiQuery.move? digimon.moves.includes(digiQuery.move): true)
+    .filter(digimon => digiQuery.stage? digimon.stage.name === digiQuery.stage: true)
 
-    // const handleShowMore = (event) => {
-    //     setShowMore(showMore + 20);
-    // };
-
-    // const handleListView = (event) => {
-    //     setListView(!listView);
-    //     setShowMore(20)
-    // };
-
-    const allDigimon = fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(query.digimonName.toLowerCase()))
+    const moveNamesList = Object.entries(moveNames).map(([id, name]) => ({ id, name }));
+    const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery)): []
     //     .filter((digimon, index, arr) => (digimon.effect_text + digimon.second_effect_text).toLowerCase().includes(query.digimonText.toLowerCase()))
     //     .filter(digimon => digimon.digimon_number.toString().includes(query.digimonNumber))
     //     .filter(digimon => digimon.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
@@ -164,10 +65,70 @@ function DigimonList({
     //     const isQueryEmpty = Object.values(query).every((value) => value === "");
 
     return (
-        <div>
+        <div className="cyberspace">
             <div className="flex-items">
                 <h1 className='white'>Digimon List</h1>
             </div>
+
+            <h5 className="label white">Digimon Name </h5>
+            <input
+                className="builder-input"
+                type="text"
+                placeholder=" Current Form"
+                onChange={handleQueryChange}
+                name="digimonName"
+                value={digiQuery.digimonName}>
+            </input>
+            <br/>
+            <h5 className="label white">Stage</h5>
+            <select
+                className="builder-select"
+                type="text"
+                placeholder=" Stage"
+                onChange={handleQueryChange}
+                name="stage"
+                value={digiQuery.stage}>
+                <option value="">No Stage Selected</option>
+                <option value="Ultra">Ultra</option>
+                <option value="Mega">Mega</option>
+                <option value="Ultimate">Ultimate</option>
+                <option value="Champion">Champion</option>
+                <option value="Armor">Armor</option>
+                <option value="Rookie">Rookie</option>
+                <option value="Training 2">Training 2</option>
+                <option value="Training 1">Training 1</option>
+                <option value="-">-</option>
+            </select>
+
+            <span>
+                <div>
+                    <h5 className="label white">Move</h5>
+                    <input
+                        className="builder-input"
+                        type="text"
+                        placeholder=" Move Name"
+                        onChange={handleMoveQueryChange}
+                        value={moveQuery}>
+                    </input>
+                </div>
+
+                <div className={moveQueriedList.length > 0? "partner-scrollable2": "none"}>
+                    {moveQueriedList.map((move, index) => {
+                        return(
+                            <h3 className="white pointer"
+                                onClick={() => setDigiQuery({...digiQuery, ["move"]: move.name})}
+                            >{move.name}</h3>
+                        )
+                    })}
+                </div>
+            </span>
+            <br/>
+            <button
+                className="margin-bottom-20p"
+                onClick={resetDigiQuery}
+            >
+                Reset Filters
+            </button>
             <div className="media-list-fill">
                 {allDigimon.map((digimon, index) => {
                     return(

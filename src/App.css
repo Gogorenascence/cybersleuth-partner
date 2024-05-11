@@ -30,6 +30,10 @@ button {
   white-space: nowrap;
 }
 
+.cyberspace {
+  margin: 0 30px 0 30px;
+}
+
 .pixelGrid {
   height: 100vh;
   width: 100vw;
@@ -103,6 +107,52 @@ button {
   margin-bottom: 0px;
   padding: 0;
   text-align: center;
+}
+
+.partner-scrollable {
+  margin: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgba(255, 153, 0, 0.185);
+  outline: 2px white solid;
+}
+
+.partner-scrollable2 {
+  margin: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgba(153, 0, 255, 0.185);
+  outline: 2px white solid;
+}
+
+.builder-input {
+  width: 60vw;
+  height: 30px;
+  margin: 5px 5px 0px 5px;
+}
+
+.builder-select {
+  width: 61.5vw;
+  height: 37px;
+  margin: 5px 5px 0px 5px;
+}
+
+.builder-input-small {
+  width: 15vw;
+  height: 30px;
+  margin: 5px 5px 0px 5px;
+}
+
+.label{
+  font-size: large;
+  margin: 15px 5px 0px 5px;
+  color: white;
+}
+
+.margin-bottom-20p {
+  margin-bottom: 20px;
 }
 
 /* NavBar CSS */
@@ -232,7 +282,6 @@ button {
   display: none;
 }
 
-
 .navbar-brand2 {
   font-size: 23px;
   font-weight: 600;
@@ -270,6 +319,7 @@ button {
   height: 0px;
   width: 0;
   opacity: 0;
+  overflow: hidden;
   transition: all .5s;
 }
 
@@ -381,6 +431,29 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
     gap: 10px;
     grid-auto-flow: dense;
+  }
+
+  .media-flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .builder-input {
+    width: 370px;
+    height: 30px;
+    margin: 5px 5px 0px 5px;
+  }
+
+  .builder-select {
+    width: 377px;
+    height: 37px;
+    margin: 5px 5px 0px 5px;
+  }
+
+  .builder-input-small {
+    width: 50px;
+    height: 30px;
+    margin: 5px 5px 0px 5px;
   }
 
   /* navbar css */

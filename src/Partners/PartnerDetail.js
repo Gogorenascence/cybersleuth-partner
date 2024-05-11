@@ -138,25 +138,29 @@ function PartnerDetail({
                 { partner.moves && partner.moves.length > 0?
                     <>
                         <h3 className="white">Moves: </h3>
-                        {partner.moves.map((move, index) => {
-                            return(
-                                <h3 className="white">{move}</h3>
-                            )
-                        })}
+                        <div className="partner-scrollable">
+                            {partner.moves.map((move, index) => {
+                                return(
+                                    <h3 className="white pointer">{move}</h3>
+                                )
+                            })}
+                        </div>
                     </>: null
                 }
                 { partner.evos && partner.evos.length > 0?
                     <>
                         <h3 className="white">Evolutions: </h3>
-                        {partner.evos.slice(0, partner.evos.length - 1).map((evo, index) => {
-                            return(
-                                <h3 className="white pointer"
-                                    onClick={() => {setDigimonID(evo)}}
-                                >
-                                    {`${index + 1}: `} {evo? matchEvo(evo) : ""}
-                                </h3>
-                            )
-                        })}
+                        <div className="partner-scrollable">
+                            {partner.evos.slice(0, partner.evos.length - 1).map((evo, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => {setDigimonID(evo)}}
+                                    >
+                                        {`${index + 1}: `} {evo? matchEvo(evo) : ""}
+                                    </h3>
+                                )
+                            })}
+                        </div>
                     </>: null
                 }
                 { partner.wantedEvos && partner.wantedEvos.length > 0?
