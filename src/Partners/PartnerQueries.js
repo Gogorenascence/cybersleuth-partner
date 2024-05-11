@@ -45,7 +45,7 @@ const partnerQueries = {
         }
         partnersCollectionRef = query(
             partnersCollectionRef,
-            orderBy("updated_on.full_time", "desc"),
+            orderBy("dateConverted", "desc"),
             limit(end)
         )
         const snapshot = await getDocs(partnersCollectionRef)

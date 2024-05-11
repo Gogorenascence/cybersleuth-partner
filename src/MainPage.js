@@ -1,12 +1,19 @@
+import PartnersRow from "./Display/PartnerRow";
 
 
-function MainPage() {
+function MainPage({
+  fullDigimonList
+}) {
 
     return (
-      <div>
-        <div className="flex-items">
-          <h1 className='white'>Cyber Sleuth Partners</h1>
+      <div className="cyberspace">
+        <div className="aligned">
+          <h1 className='white'>Cyber Sleuth Partner</h1>
+          <h2 className='white'>Partner Digimon Manager</h2>
         </div>
+        <PartnersRow
+          fullDigimonList={fullDigimonList}
+        />
         {/* <h1 className="media-title">Welcome to PlayMaker CardBase</h1>
         <h2 className="media-title">The PlayMaker Card Database and Deck Sharing Site</h2>
         <br/>

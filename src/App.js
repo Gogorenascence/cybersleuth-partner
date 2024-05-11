@@ -10,6 +10,7 @@ import PartnersList from './Partners/PartnersList';
 import PartnerDetail from './Partners/PartnerDetail';
 import PartnerEdit from './Partners/PartnerEdit';
 import NavBar from './FBANavBar';
+import PartnersRow from './Display/PartnerRow';
 
 
 function App() {
@@ -59,7 +60,10 @@ function App() {
       <div className="App margin-bottom-20p">
         {/* <PixelBack/> */}
         <Routes>
-          <Route index element={<MainPage />} />
+          <Route index element={<MainPage
+            fullDigimonList={fullDigimonList}
+            />}
+          />
           <Route path="/digilist" element={<DigimonList
             moves={moves}
             moveNames={moveNames}

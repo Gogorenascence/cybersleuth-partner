@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext} from 'react';
-import partnersQueries from './PartnerQueries';
+import partnerQueries from './PartnerQueries';
 import { NavLink } from 'react-router-dom';
 import { PartnerQueryContext } from '../Context/PartnerQueryContext';
 import { AuthContext } from '../Context/AuthContext';
@@ -27,7 +27,7 @@ function PartnersList({
 
     const getPartners = async () => {
         if (account) {
-            const partnersData = await partnersQueries.getQueriedPartnersData({tamer_id: account.id})
+            const partnersData = await partnerQueries.getQueriedPartnersData({tamer_id: account.id})
             if (partnersData) {
                 console.log(partnersData)
                 for (let partner of partnersData) {
