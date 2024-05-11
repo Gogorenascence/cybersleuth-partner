@@ -223,8 +223,13 @@ function PartnerDetail({
                         </>
                     )})
                 }
+                {digimon?
+                    <a href={digimon.infoURL}>
+                        <h2 className='white'>Link to DigiDB.io</h2>
+                    </a>: null
+                }
                 <NavLink to={"/partners"}>
-                    <h1 className='white'>Back</h1>
+                    <h1 className='white'>Back to Partners</h1>
                 </NavLink>
             </div>
         </div>

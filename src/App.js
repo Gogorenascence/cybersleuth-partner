@@ -20,9 +20,11 @@ function App() {
   let digimonNames = require("./Database/digiNames.json")
   let neighbors = require("./Database/digiNeighbours.json")
   let imageData = require("./Database/imageData.json")
+  let digiData = require("./Database/digiData.json")
   let fullDigimonList = []
 
   for (let [num, name] of Object.entries(digimonNames)) {
+    console.log(digiData[num])
     const digimon = {
       name: name,
       id: num,
@@ -30,6 +32,7 @@ function App() {
       moves: moves[num]? moves[num].map((moveNum) => moveNames[moveNum]): [],
       stage: "",
       imageData: imageData[num],
+      infoURL: digiData[num]["url"]
     }
     if (num < 6) {
       digimon["stage"] = {name: "Training 1", level: 1}

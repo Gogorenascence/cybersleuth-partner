@@ -91,8 +91,11 @@ function DigimonDetail({
                     </>
                 )})
             }
+            <a href={digimon.infoURL}>
+                <h2 className='white'>Link to DigiDB.io</h2>
+            </a>
             <NavLink to={"/digilist"}>
-                <h1 className='white'>Back</h1>
+                <h1 className='white'>Back to Digimon List</h1>
             </NavLink>
         </div>
     );
