@@ -15,7 +15,7 @@ body {
   background-image: url("../public/hexgrid3.png");
   background-size: 100%; /* Ensure the background image covers the entire body */
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
   /* overflow-x: hidden; */
   z-index: -100;
