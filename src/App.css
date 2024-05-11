@@ -34,7 +34,7 @@ button {
 }
 
 :root {
-  --window-width80: calc(100vw - 80px);
+  --window-width80: calc(100vw - 95px);
 }
 
 .cyberspace {
@@ -75,8 +75,8 @@ button {
 }
 
 .digiBox2 {
-  width: var(--window-width80);
-  min-height: 300px;
+  /* width: var(--window-width80); */
+  min-height: 400px;
   background-color: rgba(255, 255, 255, 0.5);
   border: 10px solid rgb(50, 170, 226);
   border-style: double;
@@ -172,8 +172,23 @@ button {
 
 .horizontalScrollable {
   display: flex;
-  justify-content: center;
   overflow-x: scroll;
+}
+
+.verticalScrollable {
+  height: 50vh;
+  overflow-y: scroll;
+  outline: 2px white solid;
+}
+
+/* Hide the scrollbar */
+.verticalScrollable::-webkit-scrollbar {
+  width: 0; /* Set the width of the scrollbar to 0 */
+}
+
+/* Hide the scrollbar thumb */
+.verticalScrollable::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the background color of the thumb to transparent */
 }
 
 .xx-large-button {

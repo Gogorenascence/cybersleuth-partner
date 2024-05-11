@@ -54,7 +54,7 @@ function PartnersRow({
             { partners && partners.length > 0?
                 <>
                     <h1 className="white aligned">Recent Partners</h1>
-                    <div className="horizontalScrollable margin-bottom-20p">
+                    <div className="verticalScrollable margin-bottom-20p">
                         {partners.map((partner, index) => {
                             return(
                                 <NavLink to={`/partner/${partner.id}`}>

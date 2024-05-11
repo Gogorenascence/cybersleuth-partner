@@ -271,13 +271,13 @@ function NavBar() {
             </div>
               :
             <div className="accountbuttons">
-              <NavLink className="username2" to="/account">
-                <div className="navbar-select pointer">
+              {/* <NavLink className="username2" to="/account"> */}
+                <div className="navbar-select">
                   <h5 className="navbar-menu-item">
                     {account.username}
                   </h5>
                 </div>
-              </NavLink>
+              {/* </NavLink> */}
               <div className="navbar-select pointer" onClick={() => logout()}>
                 <h5 className="navbar-menu-item">
                   Logout
@@ -352,13 +352,13 @@ function NavBar() {
           </li>
           :
           <li className="flex">
-            <NavLink to="/account" onClick={() => handleShowMobileMenu()}>
-              <div className="navbar-select2 pointer">
+            {/* <NavLink to="/account" onClick={() => handleShowMobileMenu()}> */}
+              <div className="navbar-select2">
                 <h5 className="navbar-menu-item ellipsis2">
                   {account.username}
                 </h5>
               </div>
-            </NavLink>
+            {/* </NavLink> */}
             <div className="navbar-select2 pointer"
               onClick={() => logout()}
               >
