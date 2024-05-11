@@ -67,10 +67,6 @@ const partnerQueries = {
         for (const [key, value] of Object.entries(queryList)) {
             partnersCollectionRef = query(partnersCollectionRef, where(key, "==", value));
         }
-        partnersCollectionRef = query(
-            partnersCollectionRef,
-            orderBy("updated_on.full_time", "desc")
-        )
         const snapshot = await getDocs(partnersCollectionRef)
         console.log(snapshot)
         if (snapshot.empty) {

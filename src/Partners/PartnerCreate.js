@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import helper from '../Helper';
 import partnerQueries from './PartnerQueries';
+import { AuthContext } from '../Context/AuthContext';
 
 
 function PartnerCreate({
@@ -9,11 +10,12 @@ function PartnerCreate({
     digimonNames
 }) {
 
+    const {account} = useContext(AuthContext)
     const navigate = useNavigate()
 
     const [partner, setPartner] = useState({
         name: "",
-        tamer_id: "AceMaker001",
+        tamer_id: account? account.id: "",
         dateConverted: helper.todaysFormattedDate(),
         abi: 1,
         moves: [],
@@ -124,29 +126,30 @@ function PartnerCreate({
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        if (account) {
+            const data = {...partner}
 
-        const data = {...partner}
+            const simpleEvos = []
+            const simpleWantedEvos = []
+            for (let evo of evoList) {
+                simpleEvos.push(evo.id)
+            }
+            for (let evo of wantedEvoList) {
+                simpleWantedEvos.push(evo.id)
+            }
+            const randomId = helper.generateRandomString(16);
 
-        const simpleEvos = []
-        const simpleWantedEvos = []
-        for (let evo of evoList) {
-            simpleEvos.push(evo.id)
-        }
-        for (let evo of wantedEvoList) {
-            simpleWantedEvos.push(evo.id)
-        }
-        const randomId = helper.generateRandomString(16);
+            data["moves"] = moveList
+            data["evos"] = simpleEvos
+            data["wantedEvos"] = simpleWantedEvos
+            data["id"] = randomId
 
-        data["moves"] = moveList
-        data["evos"] = simpleEvos
-        data["wantedEvos"] = simpleWantedEvos
-        data["id"] = randomId
-
-        const partnerResponse = await partnerQueries.createPartner(data)
-        if (partnerResponse) {
-            console.log(partnerResponse)
-            resetPartner()
-            navigate(`/partner/${randomId}`)
+            const partnerResponse = await partnerQueries.createPartner(data)
+            if (partnerResponse) {
+                console.log(partnerResponse)
+                resetPartner()
+                navigate(`/partner/${randomId}`)
+            }
         }
     }
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext} from 'react';
 import partnersQueries from './PartnerQueries';
 import { NavLink } from 'react-router-dom';
 import { PartnerQueryContext } from '../Context/PartnerQueryContext';
+import { AuthContext } from '../Context/AuthContext';
 
 
 function PartnersList({
@@ -15,28 +16,32 @@ function PartnersList({
         resetQuery
     } = useContext(PartnerQueryContext)
 
+    const {account} = useContext(AuthContext)
+
     const [partners, setPartners] = useState([])
 
     const [moveQuery, setMoveQuery] = useState("")
 
     const getPartners = async () => {
-        const partnersData = await partnersQueries.getPartnersData()
-        if (partnersData) {
-            console.log(partnersData)
-            for (let partner of partnersData) {
-                const currentFormId = partner.evos[partner.evos.length - 1]
-                const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
-                partner["currentForm"] = currentForm
-                partner["imageData"] = currentForm.imageData
+        if (account) {
+            const partnersData = await partnersQueries.getQueriedPartnersData({tamer_id: account.id})
+            if (partnersData) {
+                console.log(partnersData)
+                for (let partner of partnersData) {
+                    const currentFormId = partner.evos[partner.evos.length - 1]
+                    const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
+                    partner["currentForm"] = currentForm
+                    partner["imageData"] = currentForm.imageData
+                }
+                console.log(partnersData)
+                setPartners(partnersData)
             }
-            console.log(partnersData)
-            setPartners(partnersData)
         }
     }
 
     useEffect(() => {
         getPartners()
-    }, []); // Empty dependency array to run only once on mount
+    }, [account]); // Empty dependency array to run only once on mount
 
     const handleQueryChange = (event) => {
         setQuery({...query, [event.target.name]: event.target.value})
