@@ -240,7 +240,7 @@ function NavBar() {
                 </div>
                 { showMenu.show && showMenu.section === "digimon"?
                   <div className="nav-dropdown-content">
-                    <NavLink className="dropdown-select username2" to="/digimon" onClick={() => followLink()}>
+                    <NavLink className="dropdown-select username2" to="/digilist" onClick={() => followLink()}>
                       <div className="nav-dropdown-item">
                         Digimon Search
                       </div>
@@ -327,7 +327,7 @@ function NavBar() {
           </div>
           { showMenu.show && showMenu.section === "digimon"?
             <div className="nav-dropdown-content">
-              <NavLink className="nav-dropdown-item" to="/cards" onClick={() => handleShowMobileMenu()}>
+              <NavLink className="nav-dropdown-item" to="/digilist" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
                   Digimon Search
                 </div>

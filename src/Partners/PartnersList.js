@@ -48,7 +48,6 @@ function PartnersList({
         <div>
             <div className="flex-items">
                 <h1 className='white'>Partner List</h1>
-                <SiteLinks/>
             </div>
             <div className="list-grid3">
                 {partners.map((partner, index) => {
