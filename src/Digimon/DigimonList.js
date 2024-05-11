@@ -168,7 +168,7 @@ function DigimonList({
             <div className="flex-items">
                 <h1 className='white'>Digimon List</h1>
             </div>
-            <div className="list-fill">
+            <div className="media-list-fill">
                 {allDigimon.map((digimon, index) => {
                     return(
                         <NavLink to={`/digimon/${digimon.id}`}>

@@ -291,7 +291,7 @@ function NavBar() {
             src="https://i.imgur.com/Q1Y2vV9.png"
             alt="menu"/>
       </div>
-      <ul className={showMobileMenu? "navbar-menu media-none maximize": "navbar-menu hidden2 minimize"}>
+      <ul className={showMobileMenu? "navbar-menu media-none maximize": "navbar-menu media-none minimize"}>
         <li className="nav-item">
           <div className={ showMenu.show && showMenu.section === "partners"?
             "navbar-selected pointer": "navbar-select pointer"}

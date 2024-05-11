@@ -97,19 +97,6 @@ button {
   cursor: pointer;
 }
 
-.list-grid3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; /* Add any gap you want between the cards */
-}
-
-.list-fill {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
-  gap: 10px;
-  grid-auto-flow: dense;
-}
-
 .error {
   color: red;
   margin-top: 10px;
@@ -156,7 +143,6 @@ button {
   float: none;
   overflow: hidden;
   background-color: rgb(44, 41, 56);
-  width: 100vw;
   outline: .5px solid white;
 }
 
@@ -246,21 +232,6 @@ button {
   display: none;
 }
 
-.maximize {
-  top: 66px;
-  max-height: 1333px;
-  max-width: 1333px;
-  opacity: 1;
-  transition: all .5s;
-}
-
-.minimize {
-  top: 66px;
-  max-height: 0;
-  max-width: 0;
-  opacity: 0;
-  transition: all .5s;
-}
 
 .navbar-brand2 {
   font-size: 23px;
@@ -284,6 +255,22 @@ button {
   display: flex;
   align-items: center;
   animation: pulse 1.5s infinite;
+}
+
+.maximize {
+  top: 66px;
+  max-height: 1333px;
+  max-width: 1333px;
+  opacity: 1;
+  transition: all .5s;
+}
+
+.minimize {
+  top: 66px;
+  height: 0px;
+  width: 0;
+  opacity: 0;
+  transition: all .5s;
 }
 
 @keyframes pulse {
@@ -383,8 +370,20 @@ button {
 /* end medium login modal css */
 
 @media screen and (min-width: 1330px) {
-  /* navbar css */
+  .list-grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+  }
 
+  .list-fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
+    gap: 10px;
+    grid-auto-flow: dense;
+  }
+
+  /* navbar css */
   .navbar-brand {
     font-size: 23px;
     font-weight: 500;
