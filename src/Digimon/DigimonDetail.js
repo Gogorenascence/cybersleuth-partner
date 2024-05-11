@@ -46,7 +46,7 @@ function DigimonDetail({
 
 
     return (
-        <div>
+        <div className="cyberspace">
             <img src={digimon.imageData} />
             <h1 className='white'>{digimon.id}. {digimon.name}</h1>
             {digimon.stage?

@@ -96,7 +96,7 @@ function PartnerDetail({
 
 
     return (
-        <div>
+        <div className="cyberspace">
             <div>
                 <span className="flex">
                     <h1 className="white">{partner.name}</h1>
