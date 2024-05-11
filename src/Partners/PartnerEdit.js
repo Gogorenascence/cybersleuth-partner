@@ -140,9 +140,9 @@ function PartnerEdit({
     const moveNamesList = Object.entries(moveNames).map(([id, name]) => ({ id, name }));
     const digimonNamesList = Object.entries(digimonNames).map(([id, name]) => ({ id, name }));
 
-    const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery)): []
-    const evoQueriedList = evoQuery ? digimonNamesList.filter(digimon => digimon.name.toLowerCase().includes(evoQuery)): []
-    const wantedEvoQueriedList = wantedEvoQuery ? digimonNamesList.filter(digimon => digimon.name.toLowerCase().includes(wantedEvoQuery)): []
+    const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery.toLowerCase())): []
+    const evoQueriedList = evoQuery ? digimonNamesList.filter(digimon => digimon.name.toLowerCase().includes(evoQuery.toLowerCase())): []
+    const wantedEvoQueriedList = wantedEvoQuery ? digimonNamesList.filter(digimon => digimon.name.toLowerCase().includes(wantedEvoQuery.toLowerCase())): []
 
     const handleSubmit = async (event) => {
         event.preventDefault()
