@@ -1,4 +1,3 @@
-import SiteLinks from "./Display/SiteLinks";
 
 
 function MainPage() {
@@ -7,7 +6,6 @@ function MainPage() {
       <div>
         <div className="flex-items">
           <h1 className='white'>Cyber Sleuth Partners</h1>
-          <SiteLinks/>
         </div>
         {/* <h1 className="media-title">Welcome to PlayMaker CardBase</h1>
         <h2 className="media-title">The PlayMaker Card Database and Deck Sharing Site</h2>

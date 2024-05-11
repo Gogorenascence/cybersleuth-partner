@@ -9,6 +9,7 @@ import PartnerCreate from './Partners/PartnerCreate';
 import PartnersList from './Partners/PartnersList';
 import PartnerDetail from './Partners/PartnerDetail';
 import PartnerEdit from './Partners/PartnerEdit';
+import NavBar from './FBANavBar';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
   return (
     <AppProvider>
       <BrowserRouter>
+      <NavBar/>
       <div className="App">
         {/* <PixelBack/> */}
         <Routes>

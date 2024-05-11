@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import helper from '../Helper';
 import partnerQueries from './PartnerQueries';
-import SiteLinks from '../Display/SiteLinks';
 
 
 function PartnerCreate({
@@ -158,7 +157,6 @@ function PartnerCreate({
         <div>
             <div className="flex-items">
                 <h1 className='white'>Partner Create</h1>
-                <SiteLinks/>
             </div>
             <div className="flex-between">
                 <div>

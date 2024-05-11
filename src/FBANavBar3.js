@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React, { useEffect, useState, useContext, useRef } from "react";
-import { AuthContext } from "./context/AuthContext";
-import { AppContext } from "./context/AppContext";
+import { AuthContext } from "./Context/AuthContext";
 import {GoogleButton} from "react-google-button"
 
 
@@ -44,7 +43,7 @@ function NavBar() {
     forgotPassword
   } = useContext(AuthContext)
 
-  const {isDark} = useContext(AppContext)
+  const isDark = true
 
   const navbar = useRef(null)
   useOutsideAlerter(navbar);
