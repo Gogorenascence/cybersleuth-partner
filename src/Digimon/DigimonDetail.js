@@ -35,14 +35,19 @@ function DigimonDetail({
     useEffect(() => {
         window.scroll(0, 0);
         getDigimon();
-        // console.log(cards)
-        // document.title = "Cards - PM CardBase"
-        // return () => {
-        //     document.title = "PlayMaker CardBase"
-        // };
     // eslint-disable-next-line
     },[digimon_id]);
 
+    useEffect(() => {
+        window.scroll(0, 0);
+        getDigimon();
+        // console.log(cards)
+        document.title = `${digimon.name} - Cyber Sleuth Partner`
+        return () => {
+            document.title = "Cyber Sleuth Partner"
+        };
+    // eslint-disable-next-line
+    },[digimon]);
 
 
     return (

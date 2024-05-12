@@ -68,8 +68,10 @@ function PartnersList({
         newest: { method: (a,b) => b.dateConverted.localeCompare(a.dateConverted) },
         oldest: { method: (a,b) => a.dateConverted.localeCompare(b.dateConverted) },
         name: { method: (a,b) => a.name.localeCompare(b.name) },
-        ABI: { method: (a,b) => a.abi - b.abi },
-        stage: { method: (a,b) => b.currentForm?.stage?.level - a.currentForm?.stage?.level },
+        ABI_a: { method: (a,b) => a.abi - b.abi },
+        ABI_d: { method: (a,b) => b.abi - a.abi },
+        stage_a: { method: (a,b) => a.currentForm?.stage?.level - b.currentForm?.stage?.level },
+        stage_d: { method: (a,b) => b.currentForm?.stage?.level - a.currentForm?.stage?.level },
     };
 
     const handleSort = (event) => {
@@ -203,8 +205,10 @@ function PartnersList({
                 <option value="newest">Newest</option>
                 <option value="oldest">Oldest</option>
                 <option value="name">A-Z</option>
-                <option value="ABI">ABI</option>
-                <option value="stage">Stage Desc.</option>
+                <option value="stage_a">Stage Asc.</option>
+                <option value="stage_d">Stage Desc.</option>
+                <option value="ABI_a">ABI Asc.</option>
+                <option value="ABI_d">ABI Desc.</option>
             </select>
             <br/>
             <button

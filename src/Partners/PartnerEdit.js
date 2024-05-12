@@ -62,14 +62,16 @@ function PartnerEdit({
     useEffect(() => {
         window.scroll(0, 0);
         getPartner();
-        // console.log(cards)
-        // document.title = "Cards - PM CardBase"
-        // return () => {
-        //     document.title = "PlayMaker CardBase"
-        // };
     // eslint-disable-next-line
     },[partner_id]);
 
+    useEffect(() => {
+        document.title = `Editing ${partner.name} - Cyber Sleuth Partner`
+        return () => {
+            document.title = "Cyber Sleuth Partner"
+        };
+    // eslint-disable-next-line
+    },[partner]);
 
     const handlePartnerChange = (event) => {
         setPartner({...partner, [event.target.name]: event.target.value})

@@ -64,35 +64,41 @@ function PartnerDetail({
     useEffect(() => {
         window.scroll(0, 0);
         getPartner();
-        // console.log(cards)
-        // document.title = "Cards - PM CardBase"
-        // return () => {
-            //     document.title = "PlayMaker CardBase"
-            // };
             // eslint-disable-next-line
         },[partner_id]);
 
-        useEffect(() => {
-            getDigimon();
+    useEffect(() => {
+        window.scroll(0, 0);
+        getPartner();
+        // console.log(cards)
+        document.title = `${partner.name} - Cyber Sleuth Partner`
+        return () => {
+                document.title = "Cyber Sleuth Partner"
+            };
             // eslint-disable-next-line
-        },[digimon_id]);
+        },[partner]);
 
-        const matchEvo = (evoItem) => {
-            return digimonNames[evoItem]
-        }
+    useEffect(() => {
+        getDigimon();
+        // eslint-disable-next-line
+    },[digimon_id]);
 
-        const deletePartner = async () => {
-            if (prompt === partner.name) {
-                const deleteResponse = await partnerQueries.deletePartner(partner_id)
-                if (deleteResponse) {
-                    navigate("/partners")
-                }
+    const matchEvo = (evoItem) => {
+        return digimonNames[evoItem]
+    }
+
+    const deletePartner = async () => {
+        if (prompt === partner.name) {
+            const deleteResponse = await partnerQueries.deletePartner(partner_id)
+            if (deleteResponse) {
+                navigate("/partners")
             }
         }
+    }
 
-        const handlePromptChange = (event) => {
-            setPrompt(event.target.value)
-        }
+    const handlePromptChange = (event) => {
+        setPrompt(event.target.value)
+    }
 
 
     return (
