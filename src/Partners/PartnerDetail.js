@@ -68,8 +68,6 @@ function PartnerDetail({
         },[partner_id]);
 
     useEffect(() => {
-        getPartner();
-        // console.log(cards)
         document.title = `${partner.name} - Cyber Sleuth Partner`
         return () => {
                 document.title = "Cyber Sleuth Partner"

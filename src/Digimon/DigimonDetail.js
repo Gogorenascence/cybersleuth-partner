@@ -39,8 +39,6 @@ function DigimonDetail({
     },[digimon_id]);
 
     useEffect(() => {
-        getDigimon();
-        // console.log(cards)
         document.title = `${digimon.name} - Cyber Sleuth Partner`
         return () => {
             document.title = "Cyber Sleuth Partner"
