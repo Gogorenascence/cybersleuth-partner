@@ -225,12 +225,15 @@ function PartnersList({
             <div className="list-grid3">
                 {allPartners.map((partner, index) => {
                     return(
-                        <NavLink to={`/partner/${partner.id}`}>
+                        <NavLink
+                            to={`/partner/${partner.id}`}
+                            className="navlink"
+                        >
                             <div className='digiBox pointer'
                             style={{marginTop: index < 0 ? "10px": "",
                             marginBottom: index < partners.length - 1 ? "10px": "" }}
                             >
-                                <img src={partner.imageData} />
+                                <img className='dotImage' src={partner.imageData} />
                                 <h1 className='white'>{partner.name}</h1>
                                 <h2 className='white'>Current Form: {partner.currentForm.name}</h2>
                                 <h2 className='white'>ABI: {partner.abi}</h2>

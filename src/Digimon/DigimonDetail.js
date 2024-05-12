@@ -49,7 +49,7 @@ function DigimonDetail({
 
     return (
         <div className="cyberspace">
-            <img src={digimon.imageData} />
+            <img className='dotImage' src={digimon.imageData}/>
             <h1 className='white'>{digimon.id}. {digimon.name}</h1>
             {digimon.stage?
                 <h1 className='white'>{digimon.stage.name}</h1>:null
@@ -73,7 +73,7 @@ function DigimonDetail({
                     <>
                         <NavLink to={`/digimon/${prevEvo.id}`}>
                             <div className='digiBox'>
-                                <img src={prevEvo.imageData} />
+                                <img className='dotImage' src={prevEvo.imageData}/>
                                 <h3 className='white'>{prevEvo.id}. {prevEvo.name}</h3>
                             </div>
                         </NavLink>
@@ -86,7 +86,7 @@ function DigimonDetail({
                     <>
                         <NavLink to={`/digimon/${nextEvo.id}`}>
                             <div className='digiBox'>
-                                <img src={nextEvo.imageData} />
+                                <img className='dotImage' src={nextEvo.imageData} />
                                 <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
                             </div>
                         </NavLink>

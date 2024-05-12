@@ -33,6 +33,11 @@ button {
   white-space: nowrap;
 }
 
+.dotImage {
+  margin: 10px 0 0 10px;
+  height: 50px;
+}
+
 :root {
   --window-width80: calc(100vw - 95px);
 }
@@ -66,6 +71,10 @@ button {
   color: white;
 }
 
+.navlink {
+  text-decoration: none;
+}
+
 .digiBox {
   /* width: 50%; */
   min-height: 200px;
@@ -74,12 +83,36 @@ button {
   border-style: double;
 }
 
+.digiBox h1 {
+  margin-left: 8px;
+}
+
+.digiBox h2 {
+  margin-left: 8px;
+}
+
+.digiBox h3 {
+  margin-left: 8px;
+}
+
 .digiBox2 {
   /* width: var(--window-width80); */
   min-height: 400px;
   background-color: rgba(255, 255, 255, 0.5);
   border: 10px solid rgb(50, 170, 226);
   border-style: double;
+}
+
+.digiBox2 h1 {
+  margin-left: 8px;
+}
+
+.digiBox2 h2 {
+  margin-left: 8px;
+}
+
+.digiBox2 h3 {
+  margin-left: 8px;
 }
 
 .flex {
@@ -133,6 +166,18 @@ button {
   outline: 2px white solid;
 }
 
+.partner-scrollable h1 {
+  margin-left: 8px;
+}
+
+.partner-scrollable h2 {
+  margin-left: 8px;
+}
+
+.partner-scrollable h3 {
+  margin-left: 8px;
+}
+
 .partner-scrollable2 {
   margin: 10px;
   height: 200px;
@@ -140,6 +185,18 @@ button {
   overflow-x: hidden;
   background-color: rgba(153, 0, 255, 0.185);
   outline: 2px white solid;
+}
+
+.partner-scrollable2 h1 {
+  margin-left: 8px;
+}
+
+.partner-scrollable2 h2 {
+  margin-left: 8px;
+}
+
+.partner-scrollable2 h3 {
+  margin-left: 8px;
 }
 
 .builder-input {

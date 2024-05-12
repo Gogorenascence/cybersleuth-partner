@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
-import { DigimonQueryContext } from '../Context/DigimonQueryContext';
 import partnerQueries from './PartnerQueries';
-import { set } from 'firebase/database';
+import { AuthContext } from '../Context/AuthContext';
 
 
 function PartnerDetail({
     fullDigimonList,
     digimonNames
 }) {
-    console.log("dogmon")
     const { partner_id } = useParams()
+    const { account } = useContext(AuthContext)
     const navigate = useNavigate()
 
     const [partner, setPartner] = useState("")
@@ -103,12 +102,16 @@ function PartnerDetail({
             <div>
                 <span className="flex">
                     <h1 className="white">{partner.name}</h1>
-                    <NavLink to={`/partner/${partner_id}/edit`}>
-                        <h3 className="white">&nbsp; [Edit]</h3>
-                    </NavLink>
-                    <h3 className="white pointer"
-                        onClick={() => setShowPrompt(!showPrompt)}
-                    >&nbsp; [Delete]</h3>
+                    {account && partner && account.id === partner.tamer_id?
+                        <>
+                            <NavLink to={`/partner/${partner_id}/edit`}>
+                                <h3 className="white">&nbsp; [Edit]</h3>
+                            </NavLink>
+                            <h3 className="white pointer"
+                                onClick={() => setShowPrompt(!showPrompt)}
+                            >&nbsp; [Delete]</h3>
+                        </>: null
+                    }
                 </span>
                 {showPrompt === true?
                     <>
@@ -130,7 +133,7 @@ function PartnerDetail({
                     <div className="pointer"
                         onClick={() => {setDigimonID(partner.currentForm.id)}}>
                         <h2 className="white">Current Form: {partner.currentForm.name}</h2>
-                        <img src={partner.currentForm.imageData} />
+                        <img className='dotImage' src={partner.currentForm.imageData} />
                     </div>: null
                 }
                 <h3 className="white">Tamer: {partner.tamer_id}</h3>
@@ -182,7 +185,7 @@ function PartnerDetail({
                 }
             </div>
             <div>
-                <img src={digimon.imageData} />
+                <img className='dotImage' src={digimon.imageData} />
                 <h1 className='white'>{digimon.id}. {digimon.name}</h1>
                 {digimon.stage?
                     <h1 className='white'>{digimon.stage.name}</h1>:null
@@ -207,7 +210,7 @@ function PartnerDetail({
                             <div className='digiBox pointer'
                                 onClick={() => {setDigimonID(prevEvo.id)}}
                             >
-                                <img src={prevEvo.imageData} />
+                                <img className='dotImage' src={prevEvo.imageData} />
                                 <h3 className='white'>{prevEvo.id}. {prevEvo.name}</h3>
                             </div>
                         </>
@@ -220,14 +223,14 @@ function PartnerDetail({
                             <div className='digiBox pointer'
                                 onClick={() => {setDigimonID(nextEvo.id)}}
                             >
-                                <img src={nextEvo.imageData} />
+                                <img className='dotImage' src={nextEvo.imageData} />
                                 <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
                             </div>
                         </>
                     )})
                 }
                 {digimon?
-                    <a href={digimon.infoURL}>
+                    <a href={digimon.infoURL} className='navlink'>
                         <h2 className='white'>Link to DigiDB.io</h2>
                     </a>: null
                 }

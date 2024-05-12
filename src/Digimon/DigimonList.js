@@ -137,7 +137,7 @@ function DigimonList({
                             style={{marginTop: index < 0 ? "10px": "",
                             marginBottom: index < allDigimon.length - 1 ? "10px": "" }}
                             >
-                                    <img src={digimon.imageData} />
+                                    <img className='dotImage' src={digimon.imageData} />
                                     <h2 className='white'>{digimon.id}. {digimon.name}</h2>
                                     <h2 className='white'>{digimon.stage?.name}</h2>
                             </div>

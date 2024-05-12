@@ -149,7 +149,7 @@ function PartnerEdit({
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        if (account && partner.name && evoList.length > 0) {
+        if (account && partner.name && account.id === partner.tamer_id && evoList.length > 0) {
             const data = {...partner}
 
             const simpleEvos = []
