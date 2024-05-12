@@ -68,7 +68,6 @@ function PartnerDetail({
         },[partner_id]);
 
     useEffect(() => {
-        window.scroll(0, 0);
         getPartner();
         // console.log(cards)
         document.title = `${partner.name} - Cyber Sleuth Partner`

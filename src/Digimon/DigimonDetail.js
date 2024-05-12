@@ -39,7 +39,6 @@ function DigimonDetail({
     },[digimon_id]);
 
     useEffect(() => {
-        window.scroll(0, 0);
         getDigimon();
         // console.log(cards)
         document.title = `${digimon.name} - Cyber Sleuth Partner`
