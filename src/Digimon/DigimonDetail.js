@@ -71,7 +71,7 @@ function DigimonDetail({
             {prevEvos?.map(prevEvo => {
                 return(
                     <>
-                        <NavLink to={`/digimon/${prevEvo.id}`}>
+                        <NavLink className="navlink" to={`/digimon/${prevEvo.id}`}>
                             <div className='digiBox'>
                                 <img className='dotImage' src={prevEvo.imageData}/>
                                 <h3 className='white'>{prevEvo.id}. {prevEvo.name}</h3>
@@ -84,7 +84,7 @@ function DigimonDetail({
             {nextEvos?.map(nextEvo => {
                 return(
                     <>
-                        <NavLink to={`/digimon/${nextEvo.id}`}>
+                        <NavLink className="navlink" to={`/digimon/${nextEvo.id}`}>
                             <div className='digiBox'>
                                 <img className='dotImage' src={nextEvo.imageData} />
                                 <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
@@ -93,10 +93,10 @@ function DigimonDetail({
                     </>
                 )})
             }
-            <a href={digimon.infoURL}>
+            <a href={digimon.infoURL} className="navlink">
                 <h2 className='white'>Link to DigiDB.io</h2>
             </a>
-            <NavLink to={"/digilist"}>
+            <NavLink className="navlink" to={"/digilist"}>
                 <h1 className='white'>Back to Digimon List</h1>
             </NavLink>
         </div>

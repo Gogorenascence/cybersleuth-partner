@@ -132,7 +132,7 @@ function DigimonList({
             <div className="media-list-fill">
                 {allDigimon.map((digimon, index) => {
                     return(
-                        <NavLink to={`/digimon/${digimon.id}`}>
+                        <NavLink className="navlink" to={`/digimon/${digimon.id}`}>
                             <div className='digiBox'
                             style={{marginTop: index < 0 ? "10px": "",
                             marginBottom: index < allDigimon.length - 1 ? "10px": "" }}
