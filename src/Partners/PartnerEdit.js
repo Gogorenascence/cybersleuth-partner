@@ -158,17 +158,15 @@ function PartnerEdit({
             for (let evo of wantedEvoList) {
                 simpleWantedEvos.push(evo.id)
             }
-            const randomId = helper.generateRandomString(16);
 
             data["moves"] = moveList
             data["evos"] = simpleEvos
             data["wantedEvos"] = simpleWantedEvos
-            data["id"] = randomId
 
             const partnerResponse = await partnerQueries.editPartner(partner_id, data)
             if (partnerResponse) {
                 console.log(partnerResponse)
-                navigate(`/partner/${randomId}`)
+                navigate(`/partner/${partner.id}`)
             }
         } else {
             alert("Your partner needs a name and at least 1 form!")

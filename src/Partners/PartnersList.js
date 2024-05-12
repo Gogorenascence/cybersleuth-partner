@@ -208,7 +208,7 @@ function PartnersList({
             </select>
             <br/>
             <button
-                className="margin-bottom-20p"
+                className="margin-bottom-20p margin-top-20p"
                 onClick={resetQuery}
             >
                 Reset Filters
