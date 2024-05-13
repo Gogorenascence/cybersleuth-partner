@@ -7,7 +7,8 @@ import { AuthContext } from '../Context/AuthContext';
 
 function PartnerEdit({
     moveNames,
-    digimonNames
+    digimonNames,
+    fullDigimonList
 }) {
 
     const { partner_id } = useParams()
@@ -60,7 +61,7 @@ function PartnerEdit({
     }
 
     useEffect(() => {
-        window.scroll(0, 0);
+        // window.scroll(0, 0);
         getPartner();
     // eslint-disable-next-line
     },[partner_id]);
@@ -160,10 +161,17 @@ function PartnerEdit({
             for (let evo of wantedEvoList) {
                 simpleWantedEvos.push(evo.id)
             }
+            const currentFormId = simpleEvos[simpleEvos.length - 1]
+            const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
+
+            data["currentForm"] = currentForm
+            data["imageData"] = currentForm.imageData
 
             data["moves"] = moveList
             data["evos"] = simpleEvos
             data["wantedEvos"] = simpleWantedEvos
+
+            console.log(data)
 
             const partnerResponse = await partnerQueries.editPartner(partner_id, data)
             if (partnerResponse) {

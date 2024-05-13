@@ -16,15 +16,15 @@ const PartnerQueryContextProvider = ({ children }) => {
     // const [listView, setListView] = useState(false);
     const [showMore, setShowMore] = useState(20);
 
-    const resetQuery = () => {
-        setQuery({
-            partnerName: "",
-            digimonName: "",
-            wantedEvoName: "",
-            move: "",
-            stage: "",
-        })
-    }
+    // const resetQuery = () => {
+    //     setQuery({
+    //         partnerName: "",
+    //         digimonName: "",
+    //         wantedEvoName: "",
+    //         move: "",
+    //         stage: "",
+    //     })
+    // }
 
     return (
         <PartnerQueryContext.Provider value={{
@@ -34,7 +34,7 @@ const PartnerQueryContextProvider = ({ children }) => {
             setSortState,
             showMore,
             setShowMore,
-            resetQuery
+            // resetQuery
             }}>
             {children}
         </PartnerQueryContext.Provider>

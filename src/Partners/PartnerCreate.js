@@ -7,7 +7,8 @@ import { AuthContext } from '../Context/AuthContext';
 
 function PartnerCreate({
     moveNames,
-    digimonNames
+    digimonNames,
+    fullDigimonList
 }) {
 
     const {account} = useContext(AuthContext)
@@ -140,6 +141,11 @@ function PartnerCreate({
             }
             const randomId = helper.generateRandomString(16);
 
+            const currentFormId = simpleEvos[simpleEvos.length - 1]
+            const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
+
+            data["currentForm"] = currentForm
+            data["imageData"] = currentForm.imageData
             data["tamer_id"] = account.id
             data["moves"] = moveList
             data["evos"] = simpleEvos
@@ -150,7 +156,7 @@ function PartnerCreate({
             if (partnerResponse) {
                 console.log(partnerResponse)
                 resetPartner()
-                navigate(`/partner/${randomId}`)
+                // navigate(`/partner/${randomId}`)
             }
         } else {
             alert("Your partner needs a name and at least 1 form!")

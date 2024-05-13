@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore"
 
 
+
 const partnerQueries = {
     getPartnersData: async function getPartnersData() {
         const partnersCollectionRef = collection(db, "partners")
@@ -79,6 +80,38 @@ const partnerQueries = {
             return data;
         }
     },
+    getPartnersListData: async function getPartnersListData(tamer_id, queryList) {
+        let partnersCollectionRef = collection(db, "partners");
+        let queryRef = query(partnersCollectionRef, where("tamer_id", "==", tamer_id));
+        if (queryList) {
+            if (queryList.partnerName !== "") {
+                queryRef = query(queryRef, where("name", "==", queryList.partnerName));
+            }
+            if (queryList.digimonName !== "") {
+                queryRef = query(queryRef, where("currentForm.name", "==", queryList.digimonName));
+            }
+            if (queryList.wantedEvoName !== "") {
+                queryRef = query(queryRef, where("wantedEvos", "array-contains", queryList.wantedEvoName));
+            }
+            if (queryList.move !== "") {
+                queryRef = query(queryRef, where("moves", "array-contains", queryList.move));
+            }
+            if (queryList.stage !== "") {
+                queryRef = query(queryRef, where("currentForm.stage.name", "==", queryList.stage));
+            }
+        }
+        const snapshot = await getDocs(queryRef)
+        console.log(snapshot)
+        if (snapshot.empty) {
+            console.log("No matching documents.");
+            return null;
+        } else {
+            const data = snapshot.docs.map((doc) => ({
+                ...doc.data(),
+            }))
+            return data;
+        }
+    },
     createPartner: async function createPartner(partnerData) {
         const partnersCollectionRef = collection(db, "partners")
         addDoc(partnersCollectionRef, partnerData)
@@ -119,7 +152,14 @@ const partnerQueries = {
             console.log("Partner not found");
             return false; // Partner not found
         }
-    }
+    },
+    // transferAllPartners: function transferAllPartners() {
+    //     let allPartners = require("../../src/Database/partners.json")
+    //     const partnersCollectionRef = collection(db, "partners")
+    //     for (let partner of allPartners) {
+    //         addDoc(partnersCollectionRef, partner)
+    //     }
+    // },
 }
 
 export default partnerQueries

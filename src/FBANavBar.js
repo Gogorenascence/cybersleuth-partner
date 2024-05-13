@@ -242,7 +242,7 @@ function NavBar() {
                   <div className="nav-dropdown-content">
                     <NavLink className="dropdown-select username2" to="/digilist" onClick={() => followLink()}>
                       <div className="nav-dropdown-item">
-                        Digimon Search
+                        Digimon List
                       </div>
                     </NavLink>
                   </div>:null
@@ -329,7 +329,7 @@ function NavBar() {
             <div className="nav-dropdown-content">
               <NavLink className="nav-dropdown-item" to="/digilist" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
-                  Digimon Search
+                  Digimon List
                 </div>
               </NavLink>
             </div>:null

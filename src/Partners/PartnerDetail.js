@@ -25,11 +25,7 @@ function PartnerDetail({
     const getPartner = async () => {
         const partnerData = await partnerQueries.getPartnerDataById(partner_id)
         if (partnerData) {
-            console.log(partnerData)
             const currentFormId = partnerData.evos[partnerData.evos.length - 1]
-            const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
-            partnerData["currentForm"] = currentForm
-            partnerData["imageData"] = currentForm.imageData
             console.log(partnerData)
             setPartner(partnerData)
             setDigimonID(currentFormId)

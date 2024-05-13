@@ -1,4 +1,5 @@
 import PartnersRow from "./Display/PartnerRow";
+// import partnerQueries from "./Partners/PartnerQueries";
 
 
 function MainPage({
@@ -14,6 +15,9 @@ function MainPage({
         <PartnersRow
           fullDigimonList={fullDigimonList}
         />
+        {/* <button
+          onClick={() => partnerQueries.transferAllPartners()}
+        >Transfer All</button> */}
         {/* <h1 className="media-title">Welcome to PlayMaker CardBase</h1>
         <h2 className="media-title">The PlayMaker Card Database and Deck Sharing Site</h2>
         <br/>

@@ -1,5 +1,4 @@
 import './App.css';
-import PixelBack from './Display/PixelBack';
 import AppProvider from "./Context/AppProvider";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
@@ -10,7 +9,7 @@ import PartnersList from './Partners/PartnersList';
 import PartnerDetail from './Partners/PartnerDetail';
 import PartnerEdit from './Partners/PartnerEdit';
 import NavBar from './FBANavBar';
-import PartnersRow from './Display/PartnerRow';
+import BackToTop from './Display/BackToTop';
 
 
 function App() {
@@ -60,6 +59,7 @@ function App() {
     <AppProvider>
       <BrowserRouter>
       <NavBar/>
+      <BackToTop/>
       <div className="App margin-bottom-20p">
         {/* <PixelBack/> */}
         <Routes>

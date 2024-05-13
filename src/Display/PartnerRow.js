@@ -18,13 +18,6 @@ function PartnersRow({
             const partnersData = await partnerQueries.getRangedQueriedPartnersData(5, {tamer_id: account.id})
             if (partnersData) {
                 console.log(partnersData)
-                for (let partner of partnersData) {
-                    const currentFormId = partner.evos[partner.evos.length - 1]
-                    const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
-                    partner["currentForm"] = currentForm
-                    partner["imageData"] = currentForm.imageData
-                }
-                console.log(partnersData)
                 setPartners(partnersData)
             }
         }
@@ -61,7 +54,10 @@ function PartnersRow({
                                     to={`/partner/${partner.id}`}
                                     className="navlink"
                                 >
-                                    <div className='digiBox2 pointer'>
+                                    <div className='digiBox2 pointer'
+                                        style={{marginTop: index < 0 ? "10px": "",
+                                        marginBottom: index < partners.length - 1 ? "10px": "" }}
+                                    >
                                         <img className='dotImage' src={partner.imageData} />
                                         <h1 className='white'>{partner.name}</h1>
                                         <h2 className='white'>Current Form: {partner.currentForm.name}</h2>

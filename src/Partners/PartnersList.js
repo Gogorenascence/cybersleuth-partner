@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext} from 'react';
+import React, { useState, useEffect, useContext, useRef} from 'react';
 import partnerQueries from './PartnerQueries';
 import { NavLink } from 'react-router-dom';
 import { PartnerQueryContext } from '../Context/PartnerQueryContext';
@@ -13,38 +13,46 @@ function PartnersList({
     const {
         query,
         setQuery,
-        resetQuery,
         sortState,
         setSortState
     } = useContext(PartnerQueryContext)
-
     const {account} = useContext(AuthContext)
+    const results = useRef(null)
 
     const [partners, setPartners] = useState([])
 
     const [moveQuery, setMoveQuery] = useState("")
+    const [evoQuery, setEvoQuery] = useState("")
     const [wantedEvoQuery, setWantedEvoQuery] = useState("")
 
     const getPartners = async () => {
         if (account) {
-            const partnersData = await partnerQueries.getQueriedPartnersData({tamer_id: account.id})
+            // const partnersData = await partnerQueries.getQueriedPartnersData({tamer_id: account.id})
+            const partnersData = await partnerQueries.getPartnersListData(
+                account.id,
+                query
+            )
             if (partnersData) {
-                console.log(partnersData)
-                for (let partner of partnersData) {
-                    const currentFormId = partner.evos[partner.evos.length - 1]
-                    const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
-                    partner["currentForm"] = currentForm
-                    partner["imageData"] = currentForm.imageData
-                }
+                // console.log(partnersData)
+                // for (let partner of partnersData) {
+                //     const currentFormId = partner.evos[partner.evos.length - 1]
+                //     const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
+                //     partner["currentForm"] = currentForm
+                //     partner["imageData"] = currentForm.imageData
+                // }
                 console.log(partnersData)
                 setPartners(partnersData)
+
+            }
+            if (results.current) {
+                results.current.scrollIntoView({ behavior: 'smooth' });
             }
         }
     }
 
-    useEffect(() => {
-        getPartners()
-    }, [account]); // Empty dependency array to run only once on mount
+    // useEffect(() => {
+    //     getPartners()
+    // }, [account]); // Empty dependency array to run only once on mount
 
     const handleQueryChange = (event) => {
         setQuery({...query, [event.target.name]: event.target.value})
@@ -54,13 +62,18 @@ function PartnersList({
         setMoveQuery(event.target.value)
     }
 
+    const handleEvoQueryChange = (event) => {
+        setEvoQuery(event.target.value)
+    }
+    const handleEvoChange = (evo) => {
+        setQuery({...query, ["digimonName"]: evo.name})
+    }
+
     const handleWantedEvoQueryChange = (event) => {
         setWantedEvoQuery(event.target.value)
     }
-
     const handleWantedEvoChange = (evo) => {
         setQuery({...query, ["wantedEvoName"]: evo.id})
-        setWantedEvoQuery("")
     }
 
     const sortMethods = {
@@ -78,16 +91,18 @@ function PartnersList({
         setSortState(event.target.value);
     };
 
-    const allPartners = partners.filter(partner => partner.name.toLowerCase().includes(query.partnerName.toLowerCase()))
-        .filter(partner => partner.currentForm.name.toLowerCase().includes(query.digimonName.toLowerCase()))
-        .filter(partner => query.move? partner.moves.includes(query.move): true)
-        .filter(partner => query.stage? partner.currentForm.stage.name === query.stage: true)
-        .filter(partner => query.wantedEvoName? partner.wantedEvos.includes(query.wantedEvoName): true)
-        .sort(sortMethods[sortState].method)
+    const allPartners = partners.sort(sortMethods[sortState].method)
+    // partners.filter(partner => partner.name.toLowerCase().includes(query.partnerName.toLowerCase()))
+    //     .filter(partner => partner.currentForm.name.toLowerCase().includes(query.digimonName.toLowerCase()))
+    //     .filter(partner => query.move? partner.moves.includes(query.move): true)
+    //     .filter(partner => query.stage? partner.currentForm.stage.name === query.stage: true)
+    //     .filter(partner => query.wantedEvoName? partner.wantedEvos.includes(query.wantedEvoName): true)
+    //     .sort(sortMethods[sortState].method)
 
     const moveNamesList = Object.entries(moveNames).map(([id, name]) => ({ id, name }));
     const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery)): []
 
+    const evoQueriedList = evoQuery ? fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(evoQuery.toLowerCase())): []
     const wantedEvoQueriedList = wantedEvoQuery ? fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(wantedEvoQuery.toLowerCase())): []
 
     // //     .filter((digimon, index, arr) => (digimon.effect_text + digimon.second_effect_text).toLowerCase().includes(query.digimonText.toLowerCase()))
@@ -102,13 +117,24 @@ function PartnersList({
     // //     .filter(digimon => query.tag? digimon.digimon_tags.some(tag => tag.toString() == query.tag):digimon.digimon_tags)
     // //     .filter(digimon => boosterSet && !rarity ? boosterSet.all_digimons.includes(digimon.digimon_number):digimon.digimon_number)
     // //     .filter(digimon => boosterSet && rarity ? boosterSet[rarity].includes(digimon.digimon_number):digimon.digimon_number)
-
+    const resetQuery = () => {
+        setQuery({
+            partnerName: "",
+            digimonName: "",
+            wantedEvoName: "",
+            move: "",
+            stage: "",
+        })
+        setMoveQuery("")
+        setEvoQuery("")
+        setWantedEvoQuery("")
+    }
 
 
     return (
         <div className="cyberspace">
             <div className="flex-items">
-                <h1 className='white'>Partner List</h1>
+                <h1 className='white'>Partner Search</h1>
             </div>
 
             <h5 className="label white">Name </h5>
@@ -121,16 +147,27 @@ function PartnersList({
                 value={query.partnerName}>
             </input>
 
-            <h5 className="label white">Current Form </h5>
-            <input
-                className="builder-input"
-                type="text"
-                placeholder=" Current Form"
-                onChange={handleQueryChange}
-                name="digimonName"
-                value={query.digimonName}>
-            </input>
-            <br/>
+            <span>
+                <div>
+                    <h5 className="label white">Current Form </h5>
+                    <input
+                        className="builder-input"
+                        type="text"
+                        placeholder=" Current Form"
+                        onChange={handleEvoQueryChange}
+                        value={evoQuery}>
+                    </input>
+                </div>
+                <div className={evoQueriedList.length > 0? "partner-scrollable2" : "none"}>
+                    {evoQueriedList.map((evo, index) => {
+                        return(
+                            <h3 className={evo.name == query.digimonName? "white pointer selected": "white pointer"}
+                                onClick={() => handleEvoChange(evo)}
+                            >{evo.name}</h3>
+                        )
+                    })}
+                </div>
+            </span>
             <h5 className="label white">Stage</h5>
             <select
                 className="builder-select"
@@ -166,7 +203,7 @@ function PartnersList({
                 <div className={moveQueriedList.length > 0? "partner-scrollable2": "none"}>
                     {moveQueriedList.map((move, index) => {
                         return(
-                            <h3 className="white pointer"
+                            <h3 className={move.name == query.move? "white pointer selected": "white pointer"}
                                 onClick={() => setQuery({...query, ["move"]: move.name})}
                             >{move.name}</h3>
                         )
@@ -187,7 +224,7 @@ function PartnersList({
                 <div className={wantedEvoQueriedList.length > 0? "partner-scrollable2" : "none"}>
                     {wantedEvoQueriedList.map((evo, index) => {
                         return(
-                            <h3 className="white pointer"
+                            <h3 className={evo.id == query.wantedEvoName? "white pointer selected": "white pointer"}
                                 onClick={() => handleWantedEvoChange(evo)}
                             >{evo.name}</h3>
                         )
@@ -217,34 +254,42 @@ function PartnersList({
             >
                 Reset Filters
             </button>
-            {partners && partners.length > 0?
+            <button
+                className="margin-bottom-20p margin-top-20p"
+                onClick={() => getPartners()}
+            >
+                Search
+            </button>
+            {allPartners && allPartners.length > 0?
                 <h2 className='white'>
-                    Showing {allPartners.length} of {partners.length} Partners
+                    Showing {allPartners.length > 1 ? `${allPartners.length} Partners` : "1 Partner"}
                 </h2>: null
             }
-            <div className="list-grid3">
-                {allPartners.map((partner, index) => {
-                    return(
-                        <NavLink
-                            to={`/partner/${partner.id}`}
-                            className="navlink"
-                        >
-                            <div className='digiBox pointer'
-                            style={{marginTop: index < 0 ? "10px": "",
-                            marginBottom: index < partners.length - 1 ? "10px": "" }}
+            {allPartners.length > 0?
+                <div className="list-grid3" ref={results}>
+                    {allPartners.map((partner, index) => {
+                        return(
+                            <NavLink
+                                to={`/partner/${partner.id}`}
+                                className="navlink"
                             >
-                                <img className='dotImage' src={partner.imageData} />
-                                <h1 className='white'>{partner.name}</h1>
-                                <h2 className='white'>Current Form: {partner.currentForm.name}</h2>
-                                <h2 className='white'>ABI: {partner.abi}</h2>
-                                <h2 className='white'>Date Converted: {partner.dateConverted}</h2>
-                                <h2 className='white'>Mega Order: {partner.megaOrder}</h2>
-                                <h2 className='white'>Ultra Order: {partner.ultraOrder}</h2>
-                            </div>
-                        </NavLink>
-                    )})
-                }
-            </div>
+                                <div className='digiBox pointer'
+                                style={{marginTop: index < 0 ? "10px": "",
+                                marginBottom: index < allPartners.length - 1 ? "10px": "" }}
+                                >
+                                    <img className='dotImage' src={partner.imageData} />
+                                    <h1 className='white'>{partner.name}</h1>
+                                    <h2 className='white'>Current Form: {partner.currentForm.name}</h2>
+                                    <h2 className='white'>ABI: {partner.abi}</h2>
+                                    <h2 className='white'>Date Converted: {partner.dateConverted}</h2>
+                                    <h2 className='white'>Mega Order: {partner.megaOrder}</h2>
+                                    <h2 className='white'>Ultra Order: {partner.ultraOrder}</h2>
+                                </div>
+                            </NavLink>
+                        )})
+                    }
+                </div>: null
+            }
         </div>
     );
 }
