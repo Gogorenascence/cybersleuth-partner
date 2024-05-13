@@ -181,6 +181,7 @@ function PartnerDetail({
                 }
             </div>
             <div>
+                <h1 className='white'> Click on Current Form or Evolutions to change tree below</h1>
                 <img className='dotImage' src={digimon.imageData} />
                 <h1 className='white'>{digimon.id}. {digimon.name}</h1>
                 {digimon.stage?
@@ -230,7 +231,7 @@ function PartnerDetail({
                         <h2 className='white'>Link to DigiDB.io</h2>
                     </a>: null
                 }
-                <NavLink to={"/partners"}>
+                <NavLink to={"/partners"} className="navlink">
                     <h1 className='white'>Back to Partners</h1>
                 </NavLink>
             </div>
