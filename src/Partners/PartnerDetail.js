@@ -189,7 +189,7 @@ function PartnerDetail({
                 <h1 className='white'>Partner Evolution Tree</h1>
                 <h3 className='white'> Click on Current Form, Evolutions or Wanted Evolution to change tree below</h3>
                 <img className='dotImage' src={digimon.imageData} />
-                <h1 className='white'>{digimon.id}. {digimon.name}</h1>
+                <h1 className='white'>{digimon.name}</h1>
                 {digimon.stage?
                     <h1 className='white'>{digimon.stage.name}</h1>:null
                 }
