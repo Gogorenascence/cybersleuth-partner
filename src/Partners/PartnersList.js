@@ -11,6 +11,8 @@ function PartnersList({
 }) {
 
     const {
+        partners,
+        setPartners,
         query,
         setQuery,
         sortState,
@@ -19,27 +21,17 @@ function PartnersList({
     const {account} = useContext(AuthContext)
     const results = useRef(null)
 
-    const [partners, setPartners] = useState([])
-
     const [moveQuery, setMoveQuery] = useState("")
     const [evoQuery, setEvoQuery] = useState("")
     const [wantedEvoQuery, setWantedEvoQuery] = useState("")
 
     const getPartners = async () => {
         if (account) {
-            // const partnersData = await partnerQueries.getQueriedPartnersData({tamer_id: account.id})
             const partnersData = await partnerQueries.getPartnersListData(
                 account.id,
                 query
             )
             if (partnersData) {
-                // console.log(partnersData)
-                // for (let partner of partnersData) {
-                //     const currentFormId = partner.evos[partner.evos.length - 1]
-                //     const currentForm = fullDigimonList.find(digimon => digimon.id === currentFormId)
-                //     partner["currentForm"] = currentForm
-                //     partner["imageData"] = currentForm.imageData
-                // }
                 console.log(partnersData)
                 setPartners(partnersData)
 
@@ -47,8 +39,23 @@ function PartnersList({
             if (results.current) {
                 results.current.scrollIntoView({ behavior: 'smooth' });
             }
+            resetQuery()
         }
     }
+
+    // const getPartners = async () => {
+    //     if (account) {
+    //         const partnersData = await partnerQueries.getPartnersData()
+    //         if (partnersData) {
+    //             console.log(partnersData)
+    //             setPartners(partnersData)
+
+    //         }
+    //         if (results.current) {
+    //             results.current.scrollIntoView({ behavior: 'smooth' });
+    //         }
+    //     }
+    // }
 
     // useEffect(() => {
     //     getPartners()

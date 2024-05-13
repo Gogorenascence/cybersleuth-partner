@@ -74,7 +74,7 @@ function PartnersRow({
                         className="xx-large-button"
                         onClick={() => navigate("/partners")}
                     >
-                        See All Partners
+                        Search Partners
                     </button>
                 </>:
                 <div className='aligned margin-top-xp'>

@@ -4,6 +4,8 @@ import { createContext, useState } from "react";
 const PartnerQueryContext = createContext();
 
 const PartnerQueryContextProvider = ({ children }) => {
+    const [partners, setPartners] = useState([])
+
     const [query, setQuery] = useState({
         partnerName: "",
         digimonName: "",
@@ -28,6 +30,8 @@ const PartnerQueryContextProvider = ({ children }) => {
 
     return (
         <PartnerQueryContext.Provider value={{
+            partners,
+            setPartners,
             query,
             setQuery,
             sortState,
