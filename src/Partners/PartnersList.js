@@ -110,7 +110,7 @@ function PartnersList({
     //     .sort(sortMethods[sortState].method)
 
     const moveNamesList = Object.entries(moveNames).map(([id, name]) => ({ id, name }));
-    const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery)): []
+    const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery.toLowerCase())): []
 
     const evoQueriedList = evoQuery ? fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(evoQuery.toLowerCase())): []
     const wantedEvoQueriedList = wantedEvoQuery ? fullDigimonList.filter(digimon => digimon.name.toLowerCase().includes(wantedEvoQuery.toLowerCase())): []
