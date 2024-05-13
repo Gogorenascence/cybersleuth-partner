@@ -40,6 +40,7 @@ button {
 
 :root {
   --window-width80: calc(100vw - 95px);
+  --window-height: calc(100vh - 200px)
 }
 
 .cyberspace {
@@ -225,6 +226,11 @@ button {
 
 .margin-top-20p {
   margin-top: 20px;
+}
+
+
+.margin-top-xp {
+  margin-top: 20vh;
 }
 
 .margin-bottom-20p {

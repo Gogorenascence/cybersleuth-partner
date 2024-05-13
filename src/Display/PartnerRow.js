@@ -76,7 +76,13 @@ function PartnersRow({
                     >
                         See All Partners
                     </button>
-                </>: null
+                </>:
+                <div className='aligned margin-top-xp'>
+                    <h1 className="white">You have no created partners</h1>
+                    <NavLink to={"partnercreate"} className="navlink">
+                        <h2 className="white">Head to Partner Create!</h2>
+                    </NavLink>
+                </div>
             }
         </div>
     );

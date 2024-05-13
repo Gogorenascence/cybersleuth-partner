@@ -207,29 +207,31 @@ function NavBar() {
 
           <div className="nav-main">
             <ul className="media-navbar-menu none">
-              <li className="nav-item">
-                <div className={ showMenu.show && showMenu.section === "partners"?
-                  "navbar-selected pointer": "navbar-select pointer"}
-                  onClick={() => handleShowMenu(true, "partners")}>
-                  <h5 className="navbar-menu-item">
-                    Partners
-                  </h5>
-                </div>
-                { showMenu.show && showMenu.section === "partners"?
-                <div className="nav-dropdown-content">
-                  <NavLink className="dropdown-select" to="/partners" onClick={() => followLink()}>
-                    <div className="nav-dropdown-item">
-                      Partner Search
-                    </div>
-                  </NavLink>
-                  <NavLink className="dropdown-select" to="/partnercreate" onClick={() => followLink()}>
-                    <div className="nav-dropdown-item">
-                      Partner Create
-                    </div>
-                  </NavLink>
-                </div>: null
-                }
-              </li>
+              {account?
+                <li className="nav-item">
+                  <div className={ showMenu.show && showMenu.section === "partners"?
+                    "navbar-selected pointer": "navbar-select pointer"}
+                    onClick={() => handleShowMenu(true, "partners")}>
+                    <h5 className="navbar-menu-item">
+                      Partners
+                    </h5>
+                  </div>
+                  { showMenu.show && showMenu.section === "partners"?
+                  <div className="nav-dropdown-content">
+                    <NavLink className="dropdown-select" to="/partners" onClick={() => followLink()}>
+                      <div className="nav-dropdown-item">
+                        Partner Search
+                      </div>
+                    </NavLink>
+                    <NavLink className="dropdown-select" to="/partnercreate" onClick={() => followLink()}>
+                      <div className="nav-dropdown-item">
+                        Partner Create
+                      </div>
+                    </NavLink>
+                  </div>: null
+                  }
+                </li>: null
+              }
               <li className="nav-item">
                 <div className={ showMenu.show && showMenu.section === "digimon"?
                   "navbar-selected pointer": "navbar-select pointer"}
@@ -292,30 +294,32 @@ function NavBar() {
             alt="menu"/>
       </div>
       <ul className={showMobileMenu? "navbar-menu media-none maximize": "navbar-menu media-none minimize"}>
-        <li className="nav-item">
-          <div className={ showMenu.show && showMenu.section === "partners"?
-            "navbar-selected pointer": "navbar-select pointer"}
-            onClick={() => handleShowMenu(true, "partners")}
-            >
-            <h5 className="navbar-menu-item">
-              Partners
-            </h5>
-          </div>
-          { showMenu.show && showMenu.section === "partners"?
-          <div className="nav-dropdown-content">
-            <NavLink className="nav-dropdown-item" to="/partners" onClick={() => handleShowMobileMenu()}>
-              <div className="dropdown-select">
-                  Partner Search
-              </div>
-            </NavLink>
-            <NavLink className="nav-dropdown-item" to="/partnercreate" onClick={() => handleShowMobileMenu()}>
-              <div className="dropdown-select">
-                Partner Create
-              </div>
-            </NavLink>
-          </div>: null
-          }
-        </li>
+        {account?
+          <li className="nav-item">
+            <div className={ showMenu.show && showMenu.section === "partners"?
+              "navbar-selected pointer": "navbar-select pointer"}
+              onClick={() => handleShowMenu(true, "partners")}
+              >
+              <h5 className="navbar-menu-item">
+                Partners
+              </h5>
+            </div>
+            { showMenu.show && showMenu.section === "partners"?
+            <div className="nav-dropdown-content">
+              <NavLink className="nav-dropdown-item" to="/partners" onClick={() => handleShowMobileMenu()}>
+                <div className="dropdown-select">
+                    Partner Search
+                </div>
+              </NavLink>
+              <NavLink className="nav-dropdown-item" to="/partnercreate" onClick={() => handleShowMobileMenu()}>
+                <div className="dropdown-select">
+                  Partner Create
+                </div>
+              </NavLink>
+            </div>: null
+            }
+          </li>: null
+        }
         <li className="nav-item">
           <div className={ showMenu.show && showMenu.section === "digimon"?
             "navbar-selected pointer": "navbar-select pointer"}
