@@ -270,7 +270,9 @@ function PartnersList({
             >
                 Search
             </button>
-            <h3 className='white'>{refresh? "Search again to refresh your results": null}</h3>
+            <h3 className='white pointer'
+                onClick={() => getPartners()}
+            >{refresh? "Search again to refresh your results": null}</h3>
             {allPartners && allPartners.length > 0?
                 <h2 className='white'>
                     Showing {allPartners.length > 1 ? `${allPartners.length} Partners` : "1 Partner"}

@@ -147,6 +147,10 @@ function PartnerCreate({
     const evoQueriedList = evoQuery ? digimonNamesList.filter(digimon => digimon.name.toLowerCase().includes(evoQuery.toLowerCase())): []
     const wantedEvoQueriedList = wantedEvoQuery ? digimonNamesList.filter(digimon => digimon.name.toLowerCase().includes(wantedEvoQuery.toLowerCase())): []
 
+    const openInNewTab = (url) => {
+        window.open(url, "_blank", "noreferrer");
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault()
         if (account && partner.name && evoList.length > 0) {
@@ -269,7 +273,7 @@ function PartnerCreate({
                             })}
                         </div>
                     </span>
-                    <h3 className="white">{moveList.length > 0? "Moves: ": null}</h3>
+                    <h3 className="label white">{moveList.length > 0? "Moves: ": null}</h3>
                     {moveList.length >0?
                         <div className="partner-scrollable">
                             {moveList.map((move, index) => {
@@ -284,7 +288,7 @@ function PartnerCreate({
                 </div>
 
                 <span>
-                    <h3 className="white">{evoList.length > 0? `Current Form: ${evoList[evoList.length-1].name}`: null}</h3>
+                    <h3 className="label white">{evoList.length > 0? `Current Form: ${evoList[evoList.length-1].name}`: null}</h3>
                     <span>
                         <div className="flex">
                             <span>
@@ -318,7 +322,7 @@ function PartnerCreate({
                             })}
                         </div>
                     </span>
-                    <h3 className="white">{evoList.length > 0? "Evolutions: ": null}</h3>
+                    <h3 className="label white">{evoList.length > 0? "Evolutions: ": null}</h3>
                     {evoList.length > 0?
                         <div className="partner-scrollable">
                             {evoList.map((evo, index) => {
@@ -363,7 +367,10 @@ function PartnerCreate({
                             value={pathFinderString}>
                         </input>
                     </span>
-                    <h3 className="white">{wantedEvoList.length > 0? "Wanted Evolutions: ": null}</h3>
+                    <h3 className='label white pointer'
+                        onClick={() => openInNewTab("http://37.97.147.73/DigiPathFinder.htm")}
+                    >Click Here to Generate a Path</h3>
+                    <h3 className="label white">{wantedEvoList.length > 0? "Wanted Evolutions: ": null}</h3>
                     {wantedEvoList.length > 0?
                         <div className="partner-scrollable">
                             {wantedEvoList.map((evo, index) => {
