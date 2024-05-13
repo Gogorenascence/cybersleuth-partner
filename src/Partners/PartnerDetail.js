@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import partnerQueries from './PartnerQueries';
 import { AuthContext } from '../Context/AuthContext';
+import { PartnerQueryContext } from '../Context/PartnerQueryContext';
 
 
 function PartnerDetail({
@@ -10,6 +11,7 @@ function PartnerDetail({
 }) {
     const { partner_id } = useParams()
     const { account } = useContext(AuthContext)
+    const {setRefresh} = useContext(PartnerQueryContext)
     const navigate = useNavigate()
 
     const [partner, setPartner] = useState("")
@@ -83,6 +85,7 @@ function PartnerDetail({
         if (prompt === partner.name) {
             const deleteResponse = await partnerQueries.deletePartner(partner_id)
             if (deleteResponse) {
+                setRefresh(true)
                 navigate("/partners")
             }
         }
