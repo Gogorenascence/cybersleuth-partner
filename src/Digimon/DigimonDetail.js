@@ -68,11 +68,14 @@ function DigimonDetail({
             }
 
             <h2 className='white'>{prevEvos.length > 0 ? "Evolves from:":null}</h2>
-            {prevEvos?.map(prevEvo => {
+            {prevEvos?.map((prevEvo, index) => {
                 return(
                     <>
                         <NavLink className="navlink" to={`/digimon/${prevEvo.id}`}>
-                            <div className='digiBox'>
+                            <div className='digiBox'
+                                style={{marginTop: index < 0 ? "10px": "",
+                                marginBottom: index < prevEvos.length - 1 ? "10px": "" }}
+                            >
                                 <img className='dotImage' src={prevEvo.imageData}/>
                                 <h3 className='white'>{prevEvo.id}. {prevEvo.name}</h3>
                             </div>
@@ -81,11 +84,14 @@ function DigimonDetail({
                 )})
             }
             <h2 className='white'>{nextEvos.length > 0 ? "Evolves to:":null}</h2>
-            {nextEvos?.map(nextEvo => {
+            {nextEvos?.map((nextEvo, index) => {
                 return(
                     <>
                         <NavLink className="navlink" to={`/digimon/${nextEvo.id}`}>
-                            <div className='digiBox'>
+                            <div className='digiBox'
+                                style={{marginTop: index < 0 ? "10px": "",
+                                marginBottom: index < nextEvos.length - 1 ? "10px": "" }}
+                            >
                                 <img className='dotImage' src={nextEvo.imageData} />
                                 <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
                             </div>

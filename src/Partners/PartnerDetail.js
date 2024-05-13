@@ -149,7 +149,7 @@ function PartnerDetail({
                         </div>
                     </>: null
                 }
-                { partner.evos && partner.evos.length > 0?
+                { partner.evos && partner.evos.length > 1?
                     <>
                         <h3 className="white">Evolutions: </h3>
                         <div className="partner-scrollable">
@@ -168,20 +168,23 @@ function PartnerDetail({
                 { partner.wantedEvos && partner.wantedEvos.length > 0?
                     <>
                         <h3 className="white">Wanted Evolutions: </h3>
-                        {partner.wantedEvos.map((evo, index) => {
-                            return(
-                                <h3 className="white pointer"
-                                    onClick={() => {setDigimonID(evo)}}
-                                >
-                                    {evo? matchEvo(evo) : ""}
-                                </h3>
-                            )
-                        })}
+                        <div className="partner-scrollable">
+                            {partner.wantedEvos.map((evo, index) => {
+                                return(
+                                    <h3 className="white pointer"
+                                        onClick={() => {setDigimonID(evo)}}
+                                    >
+                                        {evo? matchEvo(evo) : ""}
+                                    </h3>
+                                )
+                            })}
+                        </div>
                     </>: null
                 }
             </div>
             <div>
-                <h1 className='white'> Click on Current Form or Evolutions to change tree below</h1>
+                <h1 className='white'>Partner Evolution Tree</h1>
+                <h3 className='white'> Click on Current Form, Evolutions or Wanted Evolution to change tree below</h3>
                 <img className='dotImage' src={digimon.imageData} />
                 <h1 className='white'>{digimon.id}. {digimon.name}</h1>
                 {digimon.stage?
@@ -201,10 +204,12 @@ function PartnerDetail({
                 }
 
                 <h2 className='white'>{prevEvos.length > 0 ? "Evolves from:":null}</h2>
-                {prevEvos?.map(prevEvo => {
+                {prevEvos?.map((prevEvo, index) => {
                     return(
                         <>
                             <div className='digiBox pointer'
+                                style={{marginTop: index < 0 ? "10px": "",
+                                marginBottom: index < prevEvos.length - 1 ? "10px": "" }}
                                 onClick={() => {setDigimonID(prevEvo.id)}}
                             >
                                 <img className='dotImage' src={prevEvo.imageData} />
@@ -214,11 +219,13 @@ function PartnerDetail({
                     )})
                 }
                 <h2 className='white'>{nextEvos.length > 0 ? "Evolves to:":null}</h2>
-                {nextEvos?.map(nextEvo => {
+                {nextEvos?.map((nextEvo, index) => {
                     return(
                         <>
                             <div className='digiBox pointer'
                                 onClick={() => {setDigimonID(nextEvo.id)}}
+                                style={{marginTop: index < 0 ? "10px": "",
+                                marginBottom: index < nextEvos.length - 1 ? "10px": "" }}
                             >
                                 <img className='dotImage' src={nextEvo.imageData} />
                                 <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
