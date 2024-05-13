@@ -216,7 +216,7 @@ function PartnerDetail({
                                 onClick={() => {setDigimonID(prevEvo.id)}}
                             >
                                 <img className='dotImage' src={prevEvo.imageData} />
-                                <h3 className='white'>{prevEvo.id}. {prevEvo.name}</h3>
+                                <h3 className='white'>{prevEvo.name}</h3>
                             </div>
                         </>
                     )})
@@ -231,7 +231,7 @@ function PartnerDetail({
                                 marginBottom: index < nextEvos.length - 1 ? "10px": "" }}
                             >
                                 <img className='dotImage' src={nextEvo.imageData} />
-                                <h3 className='white'>{nextEvo.id}. {nextEvo.name}</h3>
+                                <h3 className='white'>{nextEvo.name}</h3>
                             </div>
                         </>
                     )})
