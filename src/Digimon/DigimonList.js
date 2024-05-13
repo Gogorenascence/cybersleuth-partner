@@ -44,7 +44,7 @@ function DigimonList({
     .filter(digimon => digiQuery.stage? digimon.stage.name === digiQuery.stage: true)
 
     const moveNamesList = Object.entries(moveNames).map(([id, name]) => ({ id, name }));
-    const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery)): []
+    const moveQueriedList = moveQuery ? moveNamesList.filter(move => move.name.toLowerCase().includes(moveQuery.toLowerCase())): []
     //     .filter((digimon, index, arr) => (digimon.effect_text + digimon.second_effect_text).toLowerCase().includes(query.digimonText.toLowerCase()))
     //     .filter(digimon => digimon.digimon_number.toString().includes(query.digimonNumber))
     //     .filter(digimon => digimon.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
