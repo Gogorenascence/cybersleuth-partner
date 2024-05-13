@@ -36,6 +36,7 @@ function PartnerCreate({
     const [evoPlacement, setEvoPlacement] = useState(0)
 
     const [wantedEvoQuery, setWantedEvoQuery] = useState("")
+    const [pathFinderString, setPathFinderString] = useState("")
 
     const handlePartnerChange = (event) => {
         setPartner({...partner, [event.target.name]: event.target.value})
@@ -117,6 +118,24 @@ function PartnerCreate({
         const newWantedEvoList = [...wantedEvoList]
         newWantedEvoList.splice(evoIndex, 1)
         setWantedEvoList(newWantedEvoList)
+    }
+
+    const handlePathFinderString = (event) => {
+        const pathFinderString = event.target.value
+        const pathFinderList = pathFinderString.replaceAll(" Evolve to: ", ',')
+            .replaceAll(" Devolve to: ", ",")
+            .replaceAll("*", "")
+            .split(",")
+        const newWantedEvoList = [...wantedEvoList]
+        for (let item of pathFinderList) {
+            const digiItem = digimonNamesList.find(digimonItem => digimonItem.name === item)
+            if (digiItem) {
+                newWantedEvoList.push(digiItem)
+            }
+        }
+        console.log(newWantedEvoList)
+        setWantedEvoList(newWantedEvoList)
+        setPathFinderString(event.target.value)
     }
 
     const moveNamesList = Object.entries(moveNames).map(([id, name]) => ({ id, name }));
@@ -308,10 +327,11 @@ function PartnerCreate({
                             })}
                         </div>:null
                     }
-
+                </span>
+                <span>
                     <span>
                         <div>
-                            <h5 className="label white">Partner Wanted Evolution Select</h5>
+                            <h5 className="label white">Wanted Evolution Select</h5>
                             <input
                                 className="builder-input"
                                 type="text"
@@ -330,7 +350,16 @@ function PartnerCreate({
                             })}
                         </div>
                     </span>
-
+                    <span>
+                        <h5 className="label white">Wanted Evolution Path</h5>
+                        <input
+                            className="builder-input"
+                            type="text"
+                            placeholder=" Path Finder String"
+                            onChange={handlePathFinderString}
+                            value={pathFinderString}>
+                        </input>
+                    </span>
                     <h3 className="white">{wantedEvoList.length > 0? "Wanted Evolutions: ": null}</h3>
                     {wantedEvoList.length > 0?
                         <div className="partner-scrollable">
