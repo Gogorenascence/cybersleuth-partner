@@ -175,7 +175,7 @@ function PartnerCreate({
             if (partnerResponse) {
                 console.log(partnerResponse)
                 resetPartner()
-                // navigate(`/partner/${randomId}`)
+                navigate(`/partner/${randomId}`)
             }
         } else {
             alert("Your partner needs a name and at least 1 form!")
