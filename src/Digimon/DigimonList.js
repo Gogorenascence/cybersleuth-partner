@@ -115,7 +115,7 @@ function DigimonList({
                 <div className={moveQueriedList.length > 0? "partner-scrollable2": "none"}>
                     {moveQueriedList.map((move, index) => {
                         return(
-                            <h3 className="white pointer"
+                            <h3 className={move.name == digiQuery.move? "white pointer selected": "white pointer"}
                                 onClick={() => setDigiQuery({...digiQuery, ["move"]: move.name})}
                             >{move.name}</h3>
                         )
@@ -129,6 +129,11 @@ function DigimonList({
             >
                 Reset Filters
             </button>
+            {allDigimon && allDigimon.length > 0?
+                <h2 className='white'>
+                    Showing {allDigimon.length} Partners
+                </h2>: null
+            }
             <div className="media-list-fill">
                 {allDigimon.map((digimon, index) => {
                     return(
