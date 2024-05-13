@@ -13,8 +13,6 @@ function DigimonList({
         digiQuery,
         setDigiQuery,
         sortState,
-        setSortState,
-        resetDigiQuery
     } = useContext(DigimonQueryContext);
 
     // const [listView, setListView] = useState(false);
@@ -60,6 +58,17 @@ function DigimonList({
     //     .filter(digimon => boosterSet && !rarity ? boosterSet.all_digimons.includes(digimon.digimon_number):digimon.digimon_number)
     //     .filter(digimon => boosterSet && rarity ? boosterSet[rarity].includes(digimon.digimon_number):digimon.digimon_number)
     .sort(sortMethods[sortState].method)
+
+    const resetDigiQuery = () => {
+        setDigiQuery({
+            digimonName: "",
+            digimon_id: 0,
+            neighbor: "",
+            move: "",
+            stage: "",
+        })
+        setMoveQuery("")
+    }
 
     console.log(allDigimon[10])
     //     const isQueryEmpty = Object.values(query).every((value) => value === "");
@@ -131,7 +140,7 @@ function DigimonList({
             </button>
             {allDigimon && allDigimon.length > 0?
                 <h2 className='white'>
-                    Showing {allDigimon.length} Partners
+                    Showing {allDigimon.length} Digimon
                 </h2>: null
             }
             <div className="media-list-fill">

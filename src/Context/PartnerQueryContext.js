@@ -17,7 +17,7 @@ const PartnerQueryContextProvider = ({ children }) => {
     const [sortState, setSortState] = useState("none");
     // const [listView, setListView] = useState(false);
     const [showMore, setShowMore] = useState(20);
-
+    const [refresh, setRefresh] = useState(false)
     // const resetQuery = () => {
     //     setQuery({
     //         partnerName: "",
@@ -38,6 +38,8 @@ const PartnerQueryContextProvider = ({ children }) => {
             setSortState,
             showMore,
             setShowMore,
+            refresh,
+            setRefresh
             // resetQuery
             }}>
             {children}

@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import helper from '../Helper';
 import partnerQueries from './PartnerQueries';
 import { AuthContext } from '../Context/AuthContext';
+import { PartnerQueryContext } from '../Context/PartnerQueryContext';
 
 
 function PartnerCreate({
@@ -12,6 +13,7 @@ function PartnerCreate({
 }) {
 
     const {account} = useContext(AuthContext)
+    const {setRefresh} = useContext(PartnerQueryContext)
     const navigate = useNavigate()
 
     const [partner, setPartner] = useState({
@@ -174,6 +176,7 @@ function PartnerCreate({
             const partnerResponse = await partnerQueries.createPartner(data)
             if (partnerResponse) {
                 console.log(partnerResponse)
+                setRefresh(true)
                 resetPartner()
                 navigate(`/partner/${randomId}`)
             }

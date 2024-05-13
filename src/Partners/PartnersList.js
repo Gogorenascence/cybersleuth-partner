@@ -16,7 +16,9 @@ function PartnersList({
         query,
         setQuery,
         sortState,
-        setSortState
+        setSortState,
+        refresh,
+        setRefresh
     } = useContext(PartnerQueryContext)
     const {account} = useContext(AuthContext)
     const results = useRef(null)
@@ -39,6 +41,7 @@ function PartnersList({
             if (results.current) {
                 results.current.scrollIntoView({ behavior: 'smooth' });
             }
+            setRefresh(false)
             resetQuery()
         }
     }
@@ -57,9 +60,9 @@ function PartnersList({
     //     }
     // }
 
-    // useEffect(() => {
-    //     getPartners()
-    // }, [account]); // Empty dependency array to run only once on mount
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, [account]); // Empty dependency array to run only once on mount
 
     const handleQueryChange = (event) => {
         setQuery({...query, [event.target.name]: event.target.value})
@@ -267,6 +270,7 @@ function PartnersList({
             >
                 Search
             </button>
+            <h3 className='white'>{refresh? "Search again to refresh your results": null}</h3>
             {allPartners && allPartners.length > 0?
                 <h2 className='white'>
                     Showing {allPartners.length > 1 ? `${allPartners.length} Partners` : "1 Partner"}

@@ -15,16 +15,6 @@ const DigimonQueryContextProvider = ({ children }) => {
     // const [listView, setListView] = useState(false);
     const [showMore, setShowMore] = useState(20);
 
-    const resetDigiQuery = () => {
-        setDigiQuery({
-            digimonName: "",
-            digimon_id: 0,
-            neighbor: "",
-            move: "",
-            stage: "",
-        })
-    }
-
     return (
         <DigimonQueryContext.Provider value={{
             digiQuery,
@@ -33,7 +23,6 @@ const DigimonQueryContextProvider = ({ children }) => {
             setSortState,
             showMore,
             setShowMore,
-            resetDigiQuery
             }}>
             {children}
         </DigimonQueryContext.Provider>

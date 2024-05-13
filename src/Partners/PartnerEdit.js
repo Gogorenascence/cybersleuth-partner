@@ -3,6 +3,7 @@ import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import helper from '../Helper';
 import partnerQueries from './PartnerQueries';
 import { AuthContext } from '../Context/AuthContext';
+import { PartnerQueryContext } from '../Context/PartnerQueryContext';
 
 
 function PartnerEdit({
@@ -13,6 +14,7 @@ function PartnerEdit({
 
     const { partner_id } = useParams()
     const {account} = useContext(AuthContext)
+    const {setRefresh} = useContext(PartnerQueryContext)
     const navigate = useNavigate()
 
     const [partner, setPartner] = useState({
@@ -196,6 +198,7 @@ function PartnerEdit({
             const partnerResponse = await partnerQueries.editPartner(partner_id, data)
             if (partnerResponse) {
                 console.log(partnerResponse)
+                setRefresh(true)
                 navigate(`/partner/${partner.id}`)
             }
         } else {
