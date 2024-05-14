@@ -27,6 +27,7 @@ button {
   background-color: rgb(44, 41, 56);
   border-radius: 4px;
   height: 38px;
+  line-height: 38px; /* Important */
   text-align: center;
   font-size: large;
   padding: 0px 10px;
