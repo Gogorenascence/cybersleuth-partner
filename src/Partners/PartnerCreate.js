@@ -172,6 +172,7 @@ function PartnerCreate({
             data["currentForm"] = currentForm
             data["imageData"] = currentForm.imageData
             data["tamer_id"] = account.id
+            data["tamerName"] = account.username
             data["moves"] = moveList
             data["evos"] = simpleEvos
             data["wantedEvos"] = simpleWantedEvos

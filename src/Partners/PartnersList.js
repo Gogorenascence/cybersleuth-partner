@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, useRef} from 'react';
 import partnerQueries from './PartnerQueries';
+import userQueries from '../Accounts/userQueries';
 import { NavLink } from 'react-router-dom';
 import { PartnerQueryContext } from '../Context/PartnerQueryContext';
 import { AuthContext } from '../Context/AuthContext';
@@ -49,10 +50,16 @@ function PartnersList({
     const adminGetPartners = async () => {
         if (account) {
             const partnersData = await partnerQueries.getPartnersData()
+            const userData = await userQueries.getTamerNames()
+            console.log(userData)
             if (partnersData) {
+                // for (let partner of partnersData) {
+                //     const tamer = userData.find(user => user.id === partner.tamer_id)
+                //     partner["tamerName"] = tamer.username
+                //     console.log(partner)
+                // }
                 console.log(partnersData)
                 setPartners(partnersData)
-
             }
             if (results.current) {
                 results.current.scrollIntoView({ behavior: 'smooth' });
@@ -300,6 +307,7 @@ function PartnersList({
                                 >
                                     <img className='dotImage' src={partner.imageData} />
                                     <h1 className='white'>{partner.name}</h1>
+                                    <h2 className='white'>Tamer Name: {partner.tamerName}</h2>
                                     <h2 className='white'>Current Form: {partner.currentForm.name}</h2>
                                     <h2 className='white'>ABI: {partner.abi}</h2>
                                     <h2 className='white'>Date Converted: {partner.dateConverted}</h2>

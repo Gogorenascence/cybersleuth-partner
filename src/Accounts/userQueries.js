@@ -13,43 +13,43 @@ import {
 
 
 
-const partnerQueries = {
+const userQueries = {
     getPartnersData: async function getPartnersData() {
-        const partnersCollectionRef = collection(db, "partners")
-        const response = await getDocs(partnersCollectionRef);
+        const usersCollectionRef = collection(db, "users")
+        const response = await getDocs(usersCollectionRef);
         const data = response.docs.map((doc) => ({
             ...doc.data(),
         }))
         return data
     },
     getPartnerDataById: async function getPartnerDataById(id) {
-        const partnersCollectionRef = collection(db, "partners");
-        const partnerQuery = query(
-            partnersCollectionRef,
+        const usersCollectionRef = collection(db, "users");
+        const userQuery = query(
+            usersCollectionRef,
             where("id", "==", id)
         )
-        const snapshot = await getDocs(partnerQuery);
+        const snapshot = await getDocs(userQuery);
         if (snapshot.empty) {
             console.log("No matching documents.");
             return null;
         } else {
-            const partnerData = snapshot.docs[0].data();
-            return partnerData;
+            const userData = snapshot.docs[0].data();
+            return userData;
         }
     },
     getRangedQueriedPartnersData: async function getRangedQueriedPartnersData(end, queryList) {
-        let partnersCollectionRef = collection(db, "partners");
-        console.log(query(partnersCollectionRef))
+        let usersCollectionRef = collection(db, "users");
+        console.log(query(usersCollectionRef))
 
         for (const [key, value] of Object.entries(queryList)) {
-            partnersCollectionRef = query(partnersCollectionRef, where(key, "==", value));
+            usersCollectionRef = query(usersCollectionRef, where(key, "==", value));
         }
-        partnersCollectionRef = query(
-            partnersCollectionRef,
+        usersCollectionRef = query(
+            usersCollectionRef,
             orderBy("dateConverted", "desc"),
             limit(end)
         )
-        const snapshot = await getDocs(partnersCollectionRef)
+        const snapshot = await getDocs(usersCollectionRef)
         console.log(snapshot)
         if (snapshot.empty) {
             console.log("No matching documents.");
@@ -62,13 +62,13 @@ const partnerQueries = {
         }
     },
     getQueriedPartnersData: async function getQueriedPartnersData(queryList) {
-        let partnersCollectionRef = collection(db, "partners");
-        console.log(query(partnersCollectionRef))
+        let usersCollectionRef = collection(db, "users");
+        console.log(query(usersCollectionRef))
 
         for (const [key, value] of Object.entries(queryList)) {
-            partnersCollectionRef = query(partnersCollectionRef, where(key, "==", value));
+            usersCollectionRef = query(usersCollectionRef, where(key, "==", value));
         }
-        const snapshot = await getDocs(partnersCollectionRef)
+        const snapshot = await getDocs(usersCollectionRef)
         console.log(snapshot)
         if (snapshot.empty) {
             console.log("No matching documents.");
@@ -81,11 +81,11 @@ const partnerQueries = {
         }
     },
     getPartnersListData: async function getPartnersListData(tamer_id, queryList) {
-        let partnersCollectionRef = collection(db, "partners");
-        let queryRef = query(partnersCollectionRef, where("tamer_id", "==", tamer_id));
+        let usersCollectionRef = collection(db, "users");
+        let queryRef = query(usersCollectionRef, where("tamer_id", "==", tamer_id));
         if (queryList) {
-            if (queryList.partnerName !== "") {
-                queryRef = query(queryRef, where("name", "==", queryList.partnerName));
+            if (queryList.userName !== "") {
+                queryRef = query(queryRef, where("name", "==", queryList.userName));
             }
             if (queryList.digimonName !== "") {
                 queryRef = query(queryRef, where("currentForm.name", "==", queryList.digimonName));
@@ -112,23 +112,23 @@ const partnerQueries = {
             return data;
         }
     },
-    createPartner: async function createPartner(partnerData) {
-        const partnersCollectionRef = collection(db, "partners")
-        addDoc(partnersCollectionRef, partnerData)
-        return partnerData
+    createPartner: async function createPartner(userData) {
+        const usersCollectionRef = collection(db, "users")
+        addDoc(usersCollectionRef, userData)
+        return userData
     },
-    editPartner: async function editPartner(id, partnerData) {
-        const partnersCollectionRef = collection(db, "partners")
-        const partnerQuery = query(
-            partnersCollectionRef,
+    editPartner: async function editPartner(id, userData) {
+        const usersCollectionRef = collection(db, "users")
+        const userQuery = query(
+            usersCollectionRef,
             where("id", "==", id)
         );
 
-        const snapshot = await getDocs(partnerQuery);
+        const snapshot = await getDocs(userQuery);
         if (!snapshot.empty) {
 
-            const partnerDoc = snapshot.docs[0];
-            await setDoc(partnerDoc.ref, partnerData);
+            const userDoc = snapshot.docs[0];
+            await setDoc(userDoc.ref, userData);
             return true;
         } else {
             console.log("Partner not found");
@@ -136,30 +136,38 @@ const partnerQueries = {
         }
     },
     deletePartner: async function deletePartner(id) {
-        const partnersCollectionRef = collection(db, "partners");
-        const partnerQuery = query(
-            partnersCollectionRef,
+        const usersCollectionRef = collection(db, "users");
+        const userQuery = query(
+            usersCollectionRef,
             where("id", "==", id)
         );
 
-        const snapshot = await getDocs(partnerQuery);
+        const snapshot = await getDocs(userQuery);
         if (!snapshot.empty) {
             // Document exists, delete it
-            const partnerDoc = snapshot.docs[0];
-            await deleteDoc(partnerDoc.ref);
+            const userDoc = snapshot.docs[0];
+            await deleteDoc(userDoc.ref);
             return true; // Deletion successful
         } else {
             console.log("Partner not found");
             return false; // Partner not found
         }
     },
-    transferAllPartners: function transferAllPartners() {
-        let allPartners = require("../../src/Database/partners.json")
-        const partnersCollectionRef = collection(db, "partners")
-        for (let partner of allPartners) {
-            addDoc(partnersCollectionRef, partner)
-        }
-    },
+    getTamerNames: async function getTamerNames() {
+        const usersCollectionRef = collection(db, "users")
+        const response = await getDocs(usersCollectionRef);
+        const data = response.docs.map((doc) => ({
+            ...doc.data(),
+        }))
+        return data
+    }
+    // transferAllPartners: function transferAllPartners() {
+    //     let allPartners = require("../../src/Database/users.json")
+    //     const usersCollectionRef = collection(db, "users")
+    //     for (let user of allPartners) {
+    //         addDoc(usersCollectionRef, user)
+    //     }
+    // },
 }
 
-export default partnerQueries
+export default userQueries

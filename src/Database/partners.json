@@ -1,74 +1,14 @@
 [
     {
-        "id": "x82yrX4YiwNBozca",
+        "megaOrder": "5",
         "tamer_id": "AceMaker001",
-        "evos": [
-            "140"
-        ],
-        "dateConverted": "2024-05-04",
-        "megaOrder": 0,
-        "abi": "5",
-        "ultraOrder": 0,
-        "wantedEvos": [
-            "203"
-        ],
-        "name": "Jack",
-        "moves": [],
-        "currentForm": {
-            "name": "Pumpkinmon",
-            "id": "140",
-            "neighbors": {
-                "prev": [
-                    "60",
-                    "93",
-                    "98",
-                    "268",
-                    "273"
-                ],
-                "next": [
-                    "206",
-                    "216",
-                    "231"
-                ]
-            },
-            "moves": [
-                "Awesome Quake I",
-                "Meteor Fall I",
-                "Comet Hammer III",
-                "Texture Blow"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot596.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=140"
-        },
-        "imageData": "http://digidb.io/images/dot/dot596.png"
-    },
-    {
-        "wantedEvos": [],
-        "name": "Palmy",
-        "abi": "43",
-        "dateConverted": "2024-04-08",
         "moves": [
-            "Thunder Fall I",
             "Final Aura",
             "Gaia Element III",
-            "Destruction Cannon II",
             "Mental Charge Field",
-            "Crescent Leaf II",
-            "Gale Storm I",
-            "Meteor Fall I",
-            "Anti-Paralysis",
-            "Ripping Net",
-            "Rune Forest II",
             "Rune Forest III",
-            "Crescent Leaf I",
-            "Anti-Poison"
+            "Mental Break Field"
         ],
-        "tamer_id": "AceMaker001",
-        "megaOrder": "5",
         "id": "LsRQeI8SPrzHiLmv",
         "evos": [
             "42",
@@ -80,15 +20,19 @@
             "231",
             "249"
         ],
+        "name": "Palmy",
         "ultraOrder": "1",
+        "imageData": "http://digidb.io/images/dot/dot779.png",
+        "wantedEvos": [
+            "159",
+            "232"
+        ],
         "currentForm": {
+            "imageData": "http://digidb.io/images/dot/dot779.png",
             "name": "Rosemon BM",
-            "id": "249",
-            "neighbors": {
-                "prev": [
-                    "231"
-                ],
-                "next": []
+            "stage": {
+                "level": 7,
+                "name": "Ultra"
             },
             "moves": [
                 "Final Heal",
@@ -97,128 +41,81 @@
                 "Safety Guard",
                 "Perfect Revival"
             ],
-            "stage": {
-                "name": "Ultra",
-                "level": 7
-            },
-            "imageData": "http://digidb.io/images/dot/dot779.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=249"
-        },
-        "imageData": "http://digidb.io/images/dot/dot779.png"
-    },
-    {
-        "wantedEvos": [],
-        "tamer_id": "AceMaker001",
-        "evos": [
-            "7",
-            "52",
-            "281",
-            "289",
-            "8",
-            "26",
-            "107",
-            "141",
-            "218"
-        ],
-        "id": "M0AcHN27EvmVKBEU",
-        "moves": [],
-        "name": "Tide",
-        "dateConverted": "2024-04-12",
-        "megaOrder": "16",
-        "ultraOrder": 0,
-        "abi": "44",
-        "currentForm": {
-            "name": "MarineAngemon",
-            "id": "218",
             "neighbors": {
                 "prev": [
-                    "129",
-                    "141",
-                    "145"
+                    "231"
                 ],
                 "next": []
             },
-            "moves": [
-                "Hydro Water III",
-                "Ocean Wave II",
-                "Dispel",
-                "Final Aura",
-                "Safety Guard"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot024.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=218"
+            "infoURL": "http://digidb.io/digimon-search/?request=249",
+            "id": "249"
         },
-        "imageData": "http://digidb.io/images/dot/dot024.png"
+        "dateConverted": "2024-04-08",
+        "abi": "43",
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "abi": "13",
-        "dateConverted": "2024-05-01",
-        "moves": [],
-        "tamer_id": "AceMaker001",
-        "evos": [
-            "21",
-            "79",
-            "116"
-        ],
-        "megaOrder": 0,
-        "id": "O7JYtk9NSjpmOBhb",
-        "ultraOrder": 0,
-        "name": "Bright",
         "wantedEvos": [
-            "200"
+            "189",
+            "94"
         ],
+        "abi": "73",
+        "evos": [
+            "8",
+            "258",
+            "279",
+            "288",
+            "106",
+            "122",
+            "185",
+            "122",
+            "106",
+            "152",
+            "226"
+        ],
+        "moves": [
+            "Nanomachine Break III",
+            "Acceleration Boost",
+            "Saint Knuckle III",
+            "Guard Charge Field",
+            "Wind Claw III",
+            "Gale Storm III"
+        ],
+        "ultraOrder": 0,
+        "imageData": "http://digidb.io/images/dot/dot383.png",
+        "name": "Mono",
+        "id": "Y4muE6FitHBiBjwR",
+        "dateConverted": "2024-04-09",
+        "tamer_id": "AceMaker001",
+        "megaOrder": "10",
         "currentForm": {
-            "name": "Etemon",
-            "id": "116",
+            "moves": [
+                "Mach Rush II",
+                "Nanomachine Break III",
+                "Guard Charge Field",
+                "Speed Break Field",
+                "Thunder Fall III"
+            ],
+            "id": "226",
+            "name": "RustTyranomon",
+            "imageData": "http://digidb.io/images/dot/dot383.png",
+            "infoURL": "http://digidb.io/digimon-search/?request=226",
+            "stage": {
+                "level": 6,
+                "name": "Mega"
+            },
             "neighbors": {
                 "prev": [
-                    "79",
-                    "85",
-                    "96",
-                    "100"
+                    "151",
+                    "152",
+                    "154"
                 ],
-                "next": [
-                    "205",
-                    "207",
-                    "222",
-                    "305",
-                    "314"
-                ]
-            },
-            "moves": [
-                "Hell Crusher I",
-                "Escape Dash",
-                "Mirror Reflection",
-                "Nightmare III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot311.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=116"
+                "next": []
+            }
         },
-        "imageData": "http://digidb.io/images/dot/dot311.png"
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "name": "Buzzer",
-        "tamer_id": "AceMaker001",
-        "abi": "63",
-        "megaOrder": "3",
-        "moves": [
-            "Gaia Element III",
-            "Heaven's Thunder III",
-            "Nanomachine Break III",
-            "Mental Charge Field",
-            "Chain Max"
-        ],
-        "ultraOrder": 0,
-        "id": "Up2fS6Sq5nD1gvKp",
-        "wantedEvos": [],
         "evos": [
             "2",
             "13",
@@ -232,10 +129,25 @@
             "160",
             "107"
         ],
+        "imageData": "http://digidb.io/images/dot/dot077.png",
+        "wantedEvos": [],
+        "megaOrder": "3",
+        "tamer_id": "AceMaker001",
         "dateConverted": "2024-04-11",
         "currentForm": {
-            "name": "Reppamon",
+            "stage": {
+                "name": "Champion",
+                "level": 4
+            },
             "id": "107",
+            "moves": [
+                "Saint Knuckle II",
+                "Shining Laser I",
+                "Aura"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot077.png",
+            "infoURL": "http://digidb.io/digimon-search/?request=107",
+            "name": "Reppamon",
             "neighbors": {
                 "prev": [
                     "26",
@@ -249,639 +161,22 @@
                     "141",
                     "160"
                 ]
-            },
-            "moves": [
-                "Saint Knuckle II",
-                "Shining Laser I",
-                "Aura"
-            ],
-            "stage": {
-                "name": "Champion",
-                "level": 4
-            },
-            "imageData": "http://digidb.io/images/dot/dot077.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=107"
+            }
         },
-        "imageData": "http://digidb.io/images/dot/dot077.png"
-    },
-    {
-        "id": "WZ27G00m9Y6hFNHY",
-        "ultraOrder": 0,
-        "moves": [],
-        "megaOrder": "4",
-        "wantedEvos": [],
-        "name": "Gilly",
-        "tamer_id": "AceMaker001",
-        "evos": [
-            "6",
-            "27",
-            "84",
-            "158",
-            "84",
-            "287",
-            "315"
-        ],
-        "abi": "34",
-        "dateConverted": "2024-04-12",
-        "currentForm": {
-            "name": "Breakdramon",
-            "id": "315",
-            "neighbors": {
-                "prev": [
-                    "287",
-                    "295",
-                    "154"
-                ],
-                "next": [
-                    "175"
-                ]
-            },
-            "moves": [
-                "Thunder Fall II",
-                "Guard Break Field",
-                "Nanomachine Break III",
-                "Thunder Fall III",
-                "Awesome Quake III"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot214.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=315"
-        },
-        "imageData": "http://digidb.io/images/dot/dot214.png"
-    },
-    {
-        "evos": [
-            "17",
-            "6",
-            "255",
-            "266",
-            "267",
-            "41",
-            "275",
-            "291",
-            "309"
-        ],
-        "abi": "37",
-        "megaOrder": "1",
-        "id": "vTquu9N3K8AHNr3S",
-        "tamer_id": "AceMaker001",
-        "ultraOrder": 0,
-        "name": "Slash",
-        "wantedEvos": [
-            "187"
-        ],
-        "dateConverted": "2024-04-23",
+        "ultraOrder": "0",
         "moves": [
-            "Wolkenapalm III",
-            "Saint Knuckle III",
-            "Speed Charge Field",
-            "Attack Charge Field",
-            "Heavy Strike III"
+            "Gaia Element III",
+            "Heaven's Thunder III",
+            "Nanomachine Break III",
+            "Mental Charge Field",
+            "Chain Max"
         ],
-        "currentForm": {
-            "name": "Slayerdramon",
-            "id": "309",
-            "neighbors": {
-                "prev": [
-                    "283",
-                    "291",
-                    "158"
-                ],
-                "next": [
-                    "175"
-                ]
-            },
-            "moves": [
-                "Heavy Strike III",
-                "Attack Charge Field",
-                "Speed Charge Field",
-                "X-Aura",
-                "Gale Storm III"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot213.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=309"
-        },
-        "imageData": "http://digidb.io/images/dot/dot213.png"
+        "name": "Buzzer",
+        "abi": "63",
+        "id": "Up2fS6Sq5nD1gvKp",
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "id": "BzPyhjqtM6g1C1YE",
-        "abi": "18",
-        "tamer_id": "AceMaker001",
-        "evos": [
-            "43",
-            "1",
-            "18",
-            "75",
-            "295"
-        ],
-        "ultraOrder": 0,
-        "name": "Crash",
-        "dateConverted": "2024-05-01",
-        "wantedEvos": [
-            "194",
-            "227"
-        ],
-        "moves": [],
-        "megaOrder": 0,
-        "currentForm": {
-            "name": "Triceramon",
-            "id": "295",
-            "neighbors": {
-                "prev": [
-                    "58",
-                    "75",
-                    "267",
-                    "277"
-                ],
-                "next": [
-                    "315",
-                    "181",
-                    "185"
-                ]
-            },
-            "moves": [
-                "Awesome Quake I",
-                "Hit Charge",
-                "Wolkenapalm II",
-                "Comet Hammer III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot033.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=295"
-        },
-        "imageData": "http://digidb.io/images/dot/dot033.png"
-    },
-    {
-        "dateConverted": "2024-04-16",
-        "megaOrder": "13",
-        "id": "wCCPCJjvGfc5KNTm",
-        "moves": [],
-        "name": "Zipper",
-        "wantedEvos": [
-            "193"
-        ],
-        "ultraOrder": 0,
-        "evos": [
-            "108",
-            "36",
-            "7",
-            "256",
-            "108",
-            "118",
-            "181"
-        ],
-        "tamer_id": "AceMaker001",
-        "abi": "33",
-        "currentForm": {
-            "name": "GranKuwagamon",
-            "id": "181",
-            "neighbors": {
-                "prev": [
-                    "109",
-                    "118",
-                    "125",
-                    "293",
-                    "295"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Physical Drain",
-                "Crescent Leaf III",
-                "Gale Storm II",
-                "Attack Break Field",
-                "Speed Charge Field"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot423.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=181"
-        },
-        "imageData": "http://digidb.io/images/dot/dot423.png"
-    },
-    {
-        "id": "2JjSLRQnjfx6z3Tc",
-        "moves": [],
-        "abi": "5",
-        "evos": [
-            "101"
-        ],
-        "ultraOrder": 0,
-        "tamer_id": "AceMaker001",
-        "name": "Lilly",
-        "megaOrder": 0,
-        "dateConverted": "2024-05-04",
-        "wantedEvos": [
-            "217"
-        ],
-        "currentForm": {
-            "name": "BlackGatomon",
-            "id": "101",
-            "neighbors": {
-                "prev": [
-                    "20",
-                    "52",
-                    "53",
-                    "253"
-                ],
-                "next": [
-                    "123",
-                    "136",
-                    "163",
-                    "165"
-                ]
-            },
-            "moves": [
-                "Nightmare II",
-                "Grand Rock II",
-                "Power Energy II"
-            ],
-            "stage": {
-                "name": "Champion",
-                "level": 4
-            },
-            "imageData": "http://digidb.io/images/dot/dot043.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=101"
-        },
-        "imageData": "http://digidb.io/images/dot/dot043.png"
-    },
-    {
-        "wantedEvos": [
-            "221",
-            "243"
-        ],
-        "dateConverted": "2024-04-30",
-        "megaOrder": 0,
-        "id": "7ATQf5DhKzVSonDl",
-        "moves": [],
-        "evos": [
-            "89"
-        ],
-        "name": "Blaster",
-        "tamer_id": "AceMaker001",
-        "abi": "4",
-        "ultraOrder": 0,
-        "currentForm": {
-            "name": "Tankmon",
-            "id": "89",
-            "neighbors": {
-                "prev": [
-                    "18",
-                    "19",
-                    "30"
-                ],
-                "next": [
-                    "111",
-                    "120",
-                    "121",
-                    "136",
-                    "299"
-                ]
-            },
-            "moves": [
-                "Nanomachine Break II",
-                "Hit Charge",
-                "Shock"
-            ],
-            "stage": {
-                "name": "Champion",
-                "level": 4
-            },
-            "imageData": "http://digidb.io/images/dot/dot621.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=89"
-        },
-        "imageData": "http://digidb.io/images/dot/dot621.png"
-    },
-    {
-        "name": "Buggy",
-        "dateConverted": "2024-04-15",
-        "id": "TPV6e2d5WRRpzATJ",
-        "tamer_id": "AceMaker001",
-        "evos": [
-            "54",
-            "87",
-            "113",
-            "196",
-            "110",
-            "195",
-            "73"
-        ],
-        "ultraOrder": 0,
-        "megaOrder": "2",
-        "abi": "81",
-        "moves": [
-            "Nightmare III",
-            "Destruction Cannon III",
-            "Guard Break Field",
-            "Dispel",
-            "Power Energy III",
-            "Restore",
-            "Meteor Fall III"
-        ],
-        "wantedEvos": [
-            "123"
-        ],
-        "currentForm": {
-            "name": "Kurisarimon",
-            "id": "73",
-            "neighbors": {
-                "prev": [
-                    "24",
-                    "29",
-                    "43",
-                    "251",
-                    "258"
-                ],
-                "next": [
-                    "113",
-                    "123",
-                    "130",
-                    "282"
-                ]
-            },
-            "moves": [
-                "Destruction Cannon II",
-                "Nanomachine Break II",
-                "Guard Break"
-            ],
-            "stage": {
-                "name": "Champion",
-                "level": 4
-            },
-            "imageData": "http://digidb.io/images/dot/dot630.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=73"
-        },
-        "imageData": "http://digidb.io/images/dot/dot630.png"
-    },
-    {
-        "moves": [],
-        "abi": "13",
-        "tamer_id": "AceMaker001",
-        "id": "HD6PcwfGFKokrsqR",
-        "megaOrder": 0,
-        "dateConverted": "2024-04-28",
-        "ultraOrder": 0,
-        "wantedEvos": [
-            "183"
-        ],
-        "name": "Sandy",
-        "evos": [
-            "19",
-            "57",
-            "112"
-        ],
-        "currentForm": {
-            "name": "Meteormon",
-            "id": "112",
-            "neighbors": {
-                "prev": [
-                    "57",
-                    "95",
-                    "106",
-                    "260",
-                    "268",
-                    "273"
-                ],
-                "next": [
-                    "169",
-                    "195",
-                    "222"
-                ]
-            },
-            "moves": [
-                "Awesome Quake I",
-                "Meteor Fall I",
-                "Grand Rock III",
-                "Power Energy III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot756.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=112"
-        },
-        "imageData": "http://digidb.io/images/dot/dot756.png"
-    },
-    {
-        "moves": [],
-        "megaOrder": "19",
-        "wantedEvos": [
-            "248",
-            "302",
-            "323"
-        ],
-        "dateConverted": "2024-04-18",
-        "ultraOrder": 0,
-        "abi": "62",
-        "id": "y9UMh8TB7cMFRXbj",
-        "name": "Falcon",
-        "evos": [
-            "45",
-            "61",
-            "283",
-            "238",
-            "61",
-            "146",
-            "191"
-        ],
-        "tamer_id": "AceMaker001",
-        "currentForm": {
-            "name": "Seraphimon",
-            "id": "191",
-            "neighbors": {
-                "prev": [
-                    "131",
-                    "146",
-                    "297"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Holy Light III",
-                "Shining Laser II",
-                "Final Heal",
-                "Shining Laser III",
-                "Perfect Revival"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot315.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=191"
-        },
-        "imageData": "http://digidb.io/images/dot/dot315.png"
-    },
-    {
-        "evos": [
-            "16",
-            "28",
-            "103",
-            "157",
-            "103",
-            "110",
-            "88",
-            "166",
-            "59",
-            "298",
-            "26",
-            "107",
-            "131",
-            "190"
-        ],
-        "moves": [],
-        "name": "Wanny",
-        "tamer_id": "AceMaker001",
-        "dateConverted": "2024-04-12",
-        "id": "SPF8hBaaHf6PAoT6",
-        "ultraOrder": 0,
-        "abi": "96",
-        "wantedEvos": [],
-        "megaOrder": "17",
-        "currentForm": {
-            "name": "Kentaurosmon",
-            "id": "190",
-            "neighbors": {
-                "prev": [
-                    "131",
-                    "135",
-                    "289"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Shining Laser II",
-                "Saint Knuckle III",
-                "Shining Laser III",
-                "Restore",
-                "Final Heal"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot086.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=190"
-        },
-        "imageData": "http://digidb.io/images/dot/dot086.png"
-    },
-    {
-        "tamer_id": "AceMaker001",
-        "dateConverted": "2024-05-03",
-        "moves": [],
-        "evos": [
-            "24",
-            "70",
-            "165"
-        ],
-        "name": "Dark",
-        "abi": "12",
-        "ultraOrder": 0,
-        "id": "q3zworw57qacTijV",
-        "wantedEvos": [
-            "235"
-        ],
-        "megaOrder": "0",
-        "currentForm": {
-            "name": "WereGarurumon (Blk)",
-            "id": "165",
-            "neighbors": {
-                "prev": [
-                    "70",
-                    "101",
-                    "269"
-                ],
-                "next": [
-                    "204",
-                    "219",
-                    "224",
-                    "319"
-                ]
-            },
-            "moves": [
-                "Mach Rush I",
-                "Wolkenapalm II",
-                "Comet Hammer III",
-                "Mach Rush II"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot715.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=165"
-        },
-        "imageData": "http://digidb.io/images/dot/dot715.png"
-    },
-    {
-        "ultraOrder": "3",
-        "name": "Gobbi",
-        "tamer_id": "AceMaker001",
-        "wantedEvos": [
-            "194"
-        ],
-        "moves": [
-            "Wind Claw III",
-            "Speed Charge Field",
-            "Gale Storm III",
-            "Mirror Reflection"
-        ],
-        "abi": "42",
-        "id": "M8CbfosrrGdWCmEn",
-        "evos": [
-            "31",
-            "95",
-            "132",
-            "63",
-            "23",
-            "147",
-            "220",
-            "247"
-        ],
-        "dateConverted": "2024-04-13",
-        "megaOrder": "8",
-        "currentForm": {
-            "name": "MirageGaogamon BM",
-            "id": "247",
-            "neighbors": {
-                "prev": [
-                    "220"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Saint Knuckle III",
-                "Attack Break Field",
-                "Holy Light III",
-                "Final Aura",
-                "Shining Laser III"
-            ],
-            "stage": {
-                "name": "Ultra",
-                "level": 7
-            },
-            "imageData": "http://digidb.io/images/dot/dot777.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=247"
-        },
-        "imageData": "http://digidb.io/images/dot/dot777.png"
-    },
-    {
-        "name": "Toko",
-        "dateConverted": "2024-04-11",
-        "tamer_id": "AceMaker001",
         "evos": [
             "5",
             "10",
@@ -903,30 +198,27 @@
             "Wolkenapalm III",
             "Holy Light III"
         ],
-        "abi": "86",
-        "megaOrder": "12",
-        "wantedEvos": [
-            "325"
-        ],
-        "ultraOrder": 0,
-        "id": "qtf1P7MaCvOo5FPE",
+        "name": "Toko",
+        "tamer_id": "AceMaker001",
         "currentForm": {
-            "name": "WarGrowlmon",
-            "id": "151",
             "neighbors": {
-                "prev": [
-                    "68",
-                    "72",
-                    "99",
-                    "267"
-                ],
                 "next": [
                     "178",
                     "198",
                     "226",
                     "243",
                     "318"
+                ],
+                "prev": [
+                    "68",
+                    "72",
+                    "99",
+                    "267"
                 ]
+            },
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
             },
             "moves": [
                 "Chain Plus",
@@ -934,72 +226,1045 @@
                 "Wolkenapalm III",
                 "Saint Knuckle III"
             ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
             "imageData": "http://digidb.io/images/dot/dot134.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=151"
+            "name": "WarGrowlmon",
+            "infoURL": "http://digidb.io/digimon-search/?request=151",
+            "id": "151"
         },
-        "imageData": "http://digidb.io/images/dot/dot134.png"
+        "imageData": "http://digidb.io/images/dot/dot134.png",
+        "wantedEvos": [
+            "325"
+        ],
+        "abi": "86",
+        "ultraOrder": 0,
+        "dateConverted": "2024-04-11",
+        "id": "qtf1P7MaCvOo5FPE",
+        "megaOrder": "12",
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "id": "14if8LbSkEm4qyXB",
-        "megaOrder": "15",
+        "imageData": "http://digidb.io/images/dot/dot086.png",
         "evos": [
-            "9",
-            "254",
-            "269",
-            "300",
-            "114",
-            "205"
+            "16",
+            "28",
+            "103",
+            "157",
+            "103",
+            "110",
+            "88",
+            "166",
+            "59",
+            "298",
+            "26",
+            "107",
+            "131",
+            "190"
         ],
-        "tamer_id": "AceMaker001",
-        "abi": "37",
-        "dateConverted": "2024-04-25",
-        "ultraOrder": 0,
-        "moves": [],
-        "name": "Drac",
-        "wantedEvos": [
-            "173",
-            "306",
-            "236"
-        ],
+        "name": "Wanny",
+        "dateConverted": "2024-04-12",
         "currentForm": {
-            "name": "Piedmon",
-            "id": "205",
+            "imageData": "http://digidb.io/images/dot/dot086.png",
+            "name": "Kentaurosmon",
             "neighbors": {
+                "next": [],
                 "prev": [
-                    "114",
-                    "116",
-                    "166",
-                    "300"
-                ],
-                "next": [
-                    "341"
+                    "131",
+                    "135",
+                    "289"
                 ]
             },
-            "moves": [
-                "Destruction",
-                "Hell Crusher II",
-                "Nightmare III",
-                "Texture Blow",
-                "Hell Crusher III"
-            ],
             "stage": {
                 "name": "Mega",
                 "level": 6
             },
-            "imageData": "http://digidb.io/images/dot/dot427.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=205"
+            "infoURL": "http://digidb.io/digimon-search/?request=190",
+            "moves": [
+                "Shining Laser II",
+                "Saint Knuckle III",
+                "Shining Laser III",
+                "Restore",
+                "Final Heal"
+            ],
+            "id": "190"
         },
-        "imageData": "http://digidb.io/images/dot/dot427.png"
+        "megaOrder": "17",
+        "id": "SPF8hBaaHf6PAoT6",
+        "abi": "96",
+        "moves": [],
+        "tamer_id": "AceMaker001",
+        "ultraOrder": 0,
+        "wantedEvos": [],
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "megaOrder": 0,
-        "name": "Gold",
-        "wantedEvos": [],
+        "name": "Gilly",
         "tamer_id": "AceMaker001",
+        "moves": [],
+        "evos": [
+            "6",
+            "27",
+            "84",
+            "158",
+            "84",
+            "287",
+            "315"
+        ],
+        "abi": "34",
+        "imageData": "http://digidb.io/images/dot/dot214.png",
+        "wantedEvos": [],
+        "megaOrder": "4",
+        "dateConverted": "2024-04-12",
+        "ultraOrder": 0,
+        "id": "WZ27G00m9Y6hFNHY",
+        "currentForm": {
+            "neighbors": {
+                "next": [
+                    "175"
+                ],
+                "prev": [
+                    "287",
+                    "295",
+                    "154"
+                ]
+            },
+            "id": "315",
+            "imageData": "http://digidb.io/images/dot/dot214.png",
+            "moves": [
+                "Thunder Fall II",
+                "Guard Break Field",
+                "Nanomachine Break III",
+                "Thunder Fall III",
+                "Awesome Quake III"
+            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=315",
+            "name": "Breakdramon",
+            "stage": {
+                "level": 6,
+                "name": "Mega"
+            }
+        },
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "imageData": "http://digidb.io/images/dot/dot700.png",
+        "id": "RfWyewYc5YHA5bAy",
+        "moves": [],
+        "ultraOrder": 0,
+        "tamer_id": "AceMaker001",
+        "evos": [
+            "22",
+            "270",
+            "111",
+            "76",
+            "39",
+            "80",
+            "8",
+            "252",
+            "272",
+            "294",
+            "311"
+        ],
+        "currentForm": {
+            "infoURL": "http://digidb.io/digimon-search/?request=311",
+            "moves": [
+                "Heavy Strike III",
+                "Support End",
+                "Cross-Counter",
+                "Attack Charge Field",
+                "Mach Rush III"
+            ],
+            "neighbors": {
+                "prev": [
+                    "288",
+                    "294",
+                    "136"
+                ],
+                "next": []
+            },
+            "id": "311",
+            "imageData": "http://digidb.io/images/dot/dot700.png",
+            "stage": {
+                "level": 6,
+                "name": "Mega"
+            },
+            "name": "Durandamon"
+        },
+        "dateConverted": "2024-04-12",
+        "abi": "55",
+        "megaOrder": "9",
+        "name": "Hop",
+        "wantedEvos": [],
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "megaOrder": "11",
+        "imageData": "http://digidb.io/images/dot/dot083.png",
+        "dateConverted": "2024-04-12",
+        "id": "QZunvQGEBD2jknnV",
+        "abi": "31",
+        "name": "Feather",
+        "ultraOrder": 0,
+        "wantedEvos": [],
+        "currentForm": {
+            "moves": [
+                "Wind Claw III",
+                "Shining Laser II",
+                "Speed Charge Field",
+                "Gale Storm III",
+                "Revive"
+            ],
+            "name": "Gryphonmon",
+            "imageData": "http://digidb.io/images/dot/dot083.png",
+            "stage": {
+                "level": 6,
+                "name": "Mega"
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=307",
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "119",
+                    "126",
+                    "297"
+                ]
+            },
+            "id": "307"
+        },
+        "moves": [],
+        "evos": [
+            "44",
+            "97",
+            "297",
+            "62",
+            "297",
+            "307"
+        ],
+        "tamer_id": "AceMaker001",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "id": "M0AcHN27EvmVKBEU",
+        "tamer_id": "AceMaker001",
+        "ultraOrder": 0,
+        "wantedEvos": [],
+        "evos": [
+            "7",
+            "52",
+            "281",
+            "289",
+            "8",
+            "26",
+            "107",
+            "141",
+            "218"
+        ],
+        "currentForm": {
+            "infoURL": "http://digidb.io/digimon-search/?request=218",
+            "id": "218",
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "129",
+                    "141",
+                    "145"
+                ]
+            },
+            "imageData": "http://digidb.io/images/dot/dot024.png",
+            "moves": [
+                "Hydro Water III",
+                "Ocean Wave II",
+                "Dispel",
+                "Final Aura",
+                "Safety Guard"
+            ],
+            "name": "MarineAngemon",
+            "stage": {
+                "level": 6,
+                "name": "Mega"
+            }
+        },
+        "name": "Tide",
+        "moves": [],
+        "imageData": "http://digidb.io/images/dot/dot024.png",
+        "megaOrder": "16",
+        "abi": "44",
+        "dateConverted": "2024-04-12",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "evos": [
+            "50",
+            "82",
+            "159",
+            "66",
+            "125",
+            "180"
+        ],
+        "currentForm": {
+            "name": "Kuzuhamon",
+            "id": "180",
+            "infoURL": "http://digidb.io/digimon-search/?request=180",
+            "moves": [
+                "Nightmare III",
+                "Hell Crusher II",
+                "Status Barrier",
+                "Chain Loss",
+                "Hell Crusher III"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot754.png",
+            "stage": {
+                "name": "Mega",
+                "level": 6
+            },
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "125",
+                    "130",
+                    "157"
+                ]
+            }
+        },
+        "moves": [
+            "Nightmare III",
+            "Crescent Leaf III",
+            "X-Heal"
+        ],
+        "tamer_id": "AceMaker001",
+        "id": "yrL3WhUaNLn32OXd",
+        "name": "Lillia",
+        "wantedEvos": [],
+        "dateConverted": "2024-04-13",
+        "imageData": "http://digidb.io/images/dot/dot754.png",
+        "megaOrder": "18",
+        "ultraOrder": 0,
+        "abi": "33",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "imageData": "http://digidb.io/images/dot/dot737.png",
+        "id": "p5SpKl5cwAHYTbCz",
+        "wantedEvos": [],
+        "name": "Gray",
+        "moves": [],
+        "dateConverted": "2024-04-13",
+        "tamer_id": "AceMaker001",
+        "abi": "48",
+        "ultraOrder": 0,
+        "megaOrder": "7",
+        "evos": [
+            "74",
+            "17",
+            "90",
+            "153",
+            "53",
+            "274",
+            "123",
+            "189"
+        ],
+        "currentForm": {
+            "id": "189",
+            "infoURL": "http://digidb.io/digimon-search/?request=189",
+            "stage": {
+                "name": "Mega",
+                "level": 6
+            },
+            "imageData": "http://digidb.io/images/dot/dot737.png",
+            "name": "Justimon",
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "119",
+                    "123",
+                    "127",
+                    "286",
+                    "296"
+                ]
+            },
+            "moves": [
+                "Saint Knuckle III",
+                "Acceleration Boost",
+                "Cross-Counter",
+                "Revive",
+                "Chain Max"
+            ]
+        },
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "abi": "42",
+        "imageData": "http://digidb.io/images/dot/dot777.png",
+        "megaOrder": "8",
+        "evos": [
+            "31",
+            "95",
+            "132",
+            "63",
+            "23",
+            "147",
+            "220",
+            "247"
+        ],
+        "currentForm": {
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "220"
+                ]
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=247",
+            "id": "247",
+            "name": "MirageGaogamon BM",
+            "moves": [
+                "Saint Knuckle III",
+                "Attack Break Field",
+                "Holy Light III",
+                "Final Aura",
+                "Shining Laser III"
+            ],
+            "stage": {
+                "name": "Ultra",
+                "level": 7
+            },
+            "imageData": "http://digidb.io/images/dot/dot777.png"
+        },
+        "name": "Gobbi",
+        "tamer_id": "AceMaker001",
+        "moves": [
+            "Wind Claw III",
+            "Speed Charge Field",
+            "Gale Storm III",
+            "Mirror Reflection"
+        ],
+        "wantedEvos": [
+            "194"
+        ],
+        "dateConverted": "2024-04-13",
+        "ultraOrder": "3",
+        "id": "M8CbfosrrGdWCmEn",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "id": "8TicmPBBKqty3Oxq",
+        "currentForm": {
+            "stage": {
+                "level": 4,
+                "name": "Champion"
+            },
+            "neighbors": {
+                "prev": [
+                    "28",
+                    "40",
+                    "51"
+                ],
+                "next": [
+                    "119",
+                    "124",
+                    "146",
+                    "291",
+                    "297"
+                ]
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=62",
+            "moves": [
+                "Holy Light II",
+                "X-Heal",
+                "Shining Laser I"
+            ],
+            "name": "Angemon",
+            "id": "62",
+            "imageData": "http://digidb.io/images/dot/dot087.png"
+        },
+        "dateConverted": "2024-04-14",
+        "megaOrder": 0,
+        "name": "Peck",
+        "wantedEvos": [],
+        "ultraOrder": 0,
+        "imageData": "http://digidb.io/images/dot/dot087.png",
+        "moves": [],
+        "abi": "29",
+        "evos": [
+            "103",
+            "49",
+            "56",
+            "119",
+            "62"
+        ],
+        "tamer_id": "AceMaker001",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "megaOrder": "20",
+        "currentForm": {
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
+            "neighbors": {
+                "next": [
+                    "220",
+                    "223",
+                    "224"
+                ],
+                "prev": [
+                    "63",
+                    "65",
+                    "69",
+                    "263",
+                    "271"
+                ]
+            },
+            "imageData": "http://digidb.io/images/dot/dot140.png",
+            "id": "164",
+            "name": "WereGarurumon",
+            "infoURL": "http://digidb.io/digimon-search/?request=164",
+            "moves": [
+                "Awesome Quake I",
+                "Meteor Fall I",
+                "Comet Hammer III",
+                "Awesome Quake II"
+            ]
+        },
+        "imageData": "http://digidb.io/images/dot/dot140.png",
+        "evos": [
+            "94",
+            "38",
+            "81",
+            "135",
+            "69",
+            "164",
+            "223",
+            "164"
+        ],
+        "id": "6OtuGAVwirGPdCDO",
+        "name": "Duru",
+        "wantedEvos": [
+            "220",
+            "147",
+            "319"
+        ],
+        "moves": [
+            "Wolkenapalm III",
+            "Comet Hammer III",
+            "Speed Charge Field",
+            "Sonic Void III",
+            "Ice Archery III",
+            "Ocean Wave III"
+        ],
+        "abi": "43",
+        "dateConverted": "2024-04-14",
+        "tamer_id": "AceMaker001",
+        "ultraOrder": 0,
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "imageData": "http://digidb.io/images/dot/dot429.png",
+        "wantedEvos": [],
+        "currentForm": {
+            "stage": {
+                "name": "Mega",
+                "level": 6
+            },
+            "imageData": "http://digidb.io/images/dot/dot429.png",
+            "moves": [
+                "Chain Minus",
+                "Escape Dash",
+                "Power Energy III",
+                "Mental Charge Field",
+                "Final Heal"
+            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=209",
+            "name": "PrinceMamemon",
+            "id": "209",
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "142",
+                    "148",
+                    "155",
+                    "286"
+                ]
+            }
+        },
+        "dateConverted": "2024-04-15",
+        "ultraOrder": 0,
+        "id": "EMHjay5GO5BCNkmn",
+        "tamer_id": "AceMaker001",
+        "moves": [],
+        "abi": "37",
+        "evos": [
+            "14",
+            "33",
+            "83",
+            "149",
+            "67",
+            "142",
+            "209"
+        ],
+        "megaOrder": "14",
+        "name": "Buck",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "name": "Luna",
+        "moves": [],
+        "currentForm": {
+            "name": "Pandamon",
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=296",
+            "neighbors": {
+                "next": [
+                    "305",
+                    "189",
+                    "204"
+                ],
+                "prev": [
+                    "70",
+                    "273",
+                    "91",
+                    "330"
+                ]
+            },
+            "imageData": "http://digidb.io/images/dot/dot041.png",
+            "moves": [
+                "Mach Rush I",
+                "Heal",
+                "Heavy Strike III",
+                "Comet Hammer III"
+            ],
+            "id": "296"
+        },
+        "tamer_id": "AceMaker001",
+        "ultraOrder": 0,
+        "wantedEvos": [
+            "331"
+        ],
+        "id": "fkhbaxulcqWCLRfG",
+        "imageData": "http://digidb.io/images/dot/dot041.png",
+        "evos": [
+            "11",
+            "259",
+            "330",
+            "296"
+        ],
+        "megaOrder": 0,
+        "abi": "13",
+        "dateConverted": "2024-04-15",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "id": "RUQJoznNCbOXuLoo",
+        "moves": [],
+        "megaOrder": 0,
+        "abi": "30",
+        "evos": [
+            "25",
+            "105",
+            "156",
+            "71",
+            "163"
+        ],
+        "tamer_id": "AceMaker001",
+        "wantedEvos": [],
+        "ultraOrder": 0,
+        "currentForm": {
+            "moves": [
+                "Hell Crusher I",
+                "Spirit Drain",
+                "Nightmare III",
+                "Hell Crusher II"
+            ],
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=163",
+            "name": "LadyDevimon",
+            "neighbors": {
+                "next": [
+                    "217",
+                    "228",
+                    "232"
+                ],
+                "prev": [
+                    "55",
+                    "71",
+                    "98",
+                    "101",
+                    "330"
+                ]
+            },
+            "id": "163",
+            "imageData": "http://digidb.io/images/dot/dot107.png"
+        },
+        "dateConverted": "2024-04-15",
+        "imageData": "http://digidb.io/images/dot/dot107.png",
+        "name": "Blank",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "imageData": "http://digidb.io/images/dot/dot630.png",
+        "currentForm": {
+            "neighbors": {
+                "next": [
+                    "113",
+                    "123",
+                    "130",
+                    "282"
+                ],
+                "prev": [
+                    "24",
+                    "29",
+                    "43",
+                    "251",
+                    "258"
+                ]
+            },
+            "name": "Kurisarimon",
+            "id": "73",
+            "stage": {
+                "level": 4,
+                "name": "Champion"
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=73",
+            "moves": [
+                "Destruction Cannon II",
+                "Nanomachine Break II",
+                "Guard Break"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot630.png"
+        },
+        "evos": [
+            "54",
+            "87",
+            "113",
+            "196",
+            "110",
+            "195",
+            "73"
+        ],
+        "wantedEvos": [
+            "123"
+        ],
+        "dateConverted": "2024-04-15",
+        "megaOrder": "2",
+        "ultraOrder": 0,
+        "id": "TPV6e2d5WRRpzATJ",
+        "abi": "81",
+        "tamer_id": "AceMaker001",
+        "name": "Buggy",
+        "moves": [
+            "Nightmare III",
+            "Destruction Cannon III",
+            "Guard Break Field",
+            "Dispel",
+            "Power Energy III",
+            "Restore",
+            "Meteor Fall III"
+        ],
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "name": "Zipper",
+        "currentForm": {
+            "infoURL": "http://digidb.io/digimon-search/?request=181",
+            "id": "181",
+            "stage": {
+                "level": 6,
+                "name": "Mega"
+            },
+            "imageData": "http://digidb.io/images/dot/dot423.png",
+            "neighbors": {
+                "prev": [
+                    "109",
+                    "118",
+                    "125",
+                    "293",
+                    "295"
+                ],
+                "next": []
+            },
+            "moves": [
+                "Physical Drain",
+                "Crescent Leaf III",
+                "Gale Storm II",
+                "Attack Break Field",
+                "Speed Charge Field"
+            ],
+            "name": "GranKuwagamon"
+        },
+        "dateConverted": "2024-04-16",
+        "imageData": "http://digidb.io/images/dot/dot423.png",
+        "evos": [
+            "108",
+            "36",
+            "7",
+            "256",
+            "108",
+            "118",
+            "181"
+        ],
+        "abi": "33",
+        "megaOrder": "13",
+        "moves": [],
+        "wantedEvos": [
+            "193"
+        ],
+        "id": "wCCPCJjvGfc5KNTm",
+        "tamer_id": "AceMaker001",
+        "ultraOrder": 0,
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "dateConverted": "2024-04-16",
+        "megaOrder": 0,
+        "tamer_id": "AceMaker001",
+        "abi": "20",
+        "ultraOrder": 0,
+        "evos": [
+            "96",
+            "48",
+            "14",
+            "102",
+            "109"
+        ],
+        "moves": [],
+        "name": "New-New",
+        "wantedEvos": [
+            "310"
+        ],
+        "imageData": "http://digidb.io/images/dot/dot305.png",
+        "id": "EzWF01G7FN7ntlqH",
+        "currentForm": {
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
+            "id": "109",
+            "imageData": "http://digidb.io/images/dot/dot305.png",
+            "moves": [
+                "Rune Forest I",
+                "Speed Break",
+                "Gaia Element III",
+                "Rune Forest II"
+            ],
+            "name": "MegaKabuterimon",
+            "neighbors": {
+                "prev": [
+                    "66",
+                    "102",
+                    "108"
+                ],
+                "next": [
+                    "181",
+                    "211",
+                    "215"
+                ]
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=109"
+        },
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "moves": [],
+        "id": "EbY8H0BxY4XMggEo",
+        "wantedEvos": [
+            "322"
+        ],
+        "megaOrder": 0,
+        "imageData": "http://digidb.io/images/dot/dot452.png",
+        "evos": [
+            "48",
+            "264",
+            "150",
+            "81"
+        ],
+        "currentForm": {
+            "id": "81",
+            "name": "Cyclonemon",
+            "moves": [
+                "Critical Charge",
+                "Awesome Quake I",
+                "Cross-Counter"
+            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=81",
+            "stage": {
+                "name": "Champion",
+                "level": 4
+            },
+            "neighbors": {
+                "prev": [
+                    "18",
+                    "19",
+                    "38"
+                ],
+                "next": [
+                    "135",
+                    "137",
+                    "150"
+                ]
+            },
+            "imageData": "http://digidb.io/images/dot/dot452.png"
+        },
+        "name": "Beta",
+        "ultraOrder": 0,
+        "tamer_id": "AceMaker001",
+        "abi": "29",
+        "dateConverted": "2024-04-17",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "name": "Falcon",
+        "ultraOrder": 0,
+        "megaOrder": "19",
+        "evos": [
+            "45",
+            "61",
+            "283",
+            "238",
+            "61",
+            "146",
+            "191"
+        ],
+        "moves": [],
+        "currentForm": {
+            "id": "191",
+            "stage": {
+                "name": "Mega",
+                "level": 6
+            },
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "131",
+                    "146",
+                    "297"
+                ]
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=191",
+            "name": "Seraphimon",
+            "moves": [
+                "Holy Light III",
+                "Shining Laser II",
+                "Final Heal",
+                "Shining Laser III",
+                "Perfect Revival"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot315.png"
+        },
+        "dateConverted": "2024-04-18",
+        "abi": "62",
+        "id": "y9UMh8TB7cMFRXbj",
+        "tamer_id": "AceMaker001",
+        "wantedEvos": [
+            "248",
+            "302",
+            "323"
+        ],
+        "imageData": "http://digidb.io/images/dot/dot315.png",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "wantedEvos": [],
+        "imageData": "http://digidb.io/images/dot/dot409.png",
+        "moves": [],
+        "ultraOrder": 0,
+        "tamer_id": "AceMaker001",
+        "megaOrder": 0,
+        "abi": "12",
+        "currentForm": {
+            "stage": {
+                "name": "Ultimate",
+                "level": 5
+            },
+            "moves": [
+                "Ocean Wave I",
+                "Agility Charge",
+                "Hydro Water III",
+                "Ice Archery III"
+            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=139",
+            "id": "139",
+            "name": "Panjyamon",
+            "neighbors": {
+                "prev": [
+                    "69",
+                    "104",
+                    "106",
+                    "260"
+                ],
+                "next": [
+                    "185",
+                    "204",
+                    "220"
+                ]
+            },
+            "imageData": "http://digidb.io/images/dot/dot409.png"
+        },
+        "evos": [
+            "32",
+            "260",
+            "139"
+        ],
+        "name": "Crysta",
+        "id": "A7PvjvHhkF7r9fd7",
+        "dateConverted": "2024-04-19",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "dateConverted": "2024-04-20",
+        "currentForm": {
+            "infoURL": "http://digidb.io/digimon-search/?request=299",
+            "name": "Volcanomon",
+            "moves": [
+                "Chain Plus",
+                "Mach Rush I",
+                "Awesome Quake I",
+                "Wolkenapalm III"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot059.png",
+            "stage": {
+                "name": "Ultimate",
+                "level": 5
+            },
+            "id": "299",
+            "neighbors": {
+                "prev": [
+                    "268",
+                    "89",
+                    "104"
+                ],
+                "next": [
+                    "314",
+                    "179",
+                    "222"
+                ]
+            }
+        },
+        "name": "Rock",
+        "abi": "9",
+        "wantedEvos": [],
+        "ultraOrder": 0,
+        "megaOrder": 0,
+        "evos": [
+            "30",
+            "268",
+            "299"
+        ],
+        "id": "R0kDSnM7jcrfM39W",
+        "moves": [],
+        "tamer_id": "AceMaker001",
+        "imageData": "http://digidb.io/images/dot/dot059.png",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "name": "Gold",
+        "megaOrder": 0,
+        "moves": [],
+        "wantedEvos": [],
         "evos": [
             "36",
             "15",
@@ -1008,13 +1273,14 @@
             "294",
             "279"
         ],
-        "abi": "25",
-        "dateConverted": "2024-04-21",
-        "moves": [],
-        "ultraOrder": 0,
+        "imageData": "http://digidb.io/images/dot/dot025.png",
         "id": "tbFWNSQHWsfvRuSX",
+        "dateConverted": "2024-04-21",
         "currentForm": {
-            "name": "Raptordramon",
+            "stage": {
+                "name": "Champion",
+                "level": 4
+            },
             "id": "279",
             "neighbors": {
                 "prev": [
@@ -1030,488 +1296,38 @@
                     "135"
                 ]
             },
+            "infoURL": "http://digidb.io/digimon-search/?request=279",
+            "name": "Raptordramon",
+            "imageData": "http://digidb.io/images/dot/dot025.png",
             "moves": [
                 "Heavy Strike II",
                 "Comet Hammer II",
                 "Shock"
-            ],
-            "stage": {
-                "name": "Champion",
-                "level": 4
-            },
-            "imageData": "http://digidb.io/images/dot/dot025.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=279"
+            ]
         },
-        "imageData": "http://digidb.io/images/dot/dot025.png"
-    },
-    {
+        "abi": "25",
         "ultraOrder": 0,
-        "abi": "50",
         "tamer_id": "AceMaker001",
-        "evos": [
-            "85",
-            "21",
-            "13",
-            "257",
-            "253",
-            "280",
-            "290"
-        ],
-        "moves": [],
-        "wantedEvos": [
-            "197"
-        ],
-        "id": "eMLN7dkB4gLZdURD",
-        "name": "Dart",
-        "megaOrder": 0,
-        "dateConverted": "2024-04-28",
-        "currentForm": {
-            "name": "SkullSatamon",
-            "id": "290",
-            "neighbors": {
-                "prev": [
-                    "262",
-                    "63",
-                    "92",
-                    "280"
-                ],
-                "next": [
-                    "306",
-                    "196",
-                    "197"
-                ]
-            },
-            "moves": [
-                "Character Reversal",
-                "Hell Crusher I",
-                "Destruction Cannon III",
-                "Nightmare III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot006.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=290"
-        },
-        "imageData": "http://digidb.io/images/dot/dot006.png"
+        "tamerName": "TeamCyberSleuth"
     },
     {
         "megaOrder": 0,
-        "ultraOrder": 0,
-        "id": "8TicmPBBKqty3Oxq",
-        "abi": "29",
-        "moves": [],
-        "evos": [
-            "103",
-            "49",
-            "56",
-            "119",
-            "62"
-        ],
-        "name": "Peck",
         "tamer_id": "AceMaker001",
-        "dateConverted": "2024-04-14",
-        "wantedEvos": [],
-        "currentForm": {
-            "name": "Angemon",
-            "id": "62",
-            "neighbors": {
-                "prev": [
-                    "28",
-                    "40",
-                    "51"
-                ],
-                "next": [
-                    "119",
-                    "124",
-                    "146",
-                    "291",
-                    "297"
-                ]
-            },
-            "moves": [
-                "Holy Light II",
-                "X-Heal",
-                "Shining Laser I"
-            ],
-            "stage": {
-                "name": "Champion",
-                "level": 4
-            },
-            "imageData": "http://digidb.io/images/dot/dot087.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=62"
-        },
-        "imageData": "http://digidb.io/images/dot/dot087.png"
-    },
-    {
-        "id": "A7PvjvHhkF7r9fd7",
-        "tamer_id": "AceMaker001",
-        "abi": "12",
-        "moves": [],
-        "dateConverted": "2024-04-19",
-        "name": "Crysta",
-        "evos": [
-            "32",
-            "260",
-            "139"
-        ],
-        "ultraOrder": 0,
-        "wantedEvos": [],
-        "megaOrder": 0,
-        "currentForm": {
-            "name": "Panjyamon",
-            "id": "139",
-            "neighbors": {
-                "prev": [
-                    "69",
-                    "104",
-                    "106",
-                    "260"
-                ],
-                "next": [
-                    "185",
-                    "204",
-                    "220"
-                ]
-            },
-            "moves": [
-                "Ocean Wave I",
-                "Agility Charge",
-                "Hydro Water III",
-                "Ice Archery III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot409.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=139"
-        },
-        "imageData": "http://digidb.io/images/dot/dot409.png"
-    },
-    {
-        "name": "Shell",
-        "abi": "5",
-        "evos": [
-            "155"
-        ],
-        "tamer_id": "AceMaker001",
-        "dateConverted": "2024-05-05",
-        "megaOrder": 0,
-        "moves": [],
-        "ultraOrder": 0,
-        "wantedEvos": [
-            "199",
-            "226"
-        ],
-        "id": "HpyFV2NSZR6GJxwJ",
-        "currentForm": {
-            "name": "MetalMamemon",
-            "id": "155",
-            "neighbors": {
-                "prev": [
-                    "64",
-                    "79",
-                    "86",
-                    "100"
-                ],
-                "next": [
-                    "169",
-                    "202",
-                    "209"
-                ]
-            },
-            "moves": [
-                "Escape Dash",
-                "Hit Charge",
-                "Nanomachine Break III",
-                "Burst Flame III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot413.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=155"
-        },
-        "imageData": "http://digidb.io/images/dot/dot413.png"
-    },
-    {
-        "moves": [],
-        "dateConverted": "2024-04-12",
-        "id": "RfWyewYc5YHA5bAy",
-        "abi": "55",
-        "megaOrder": "9",
-        "wantedEvos": [],
-        "ultraOrder": 0,
-        "tamer_id": "AceMaker001",
-        "name": "Hop",
-        "evos": [
-            "22",
-            "270",
-            "111",
-            "76",
-            "39",
-            "80",
-            "8",
-            "252",
-            "272",
-            "294",
-            "311"
-        ],
-        "currentForm": {
-            "name": "Durandamon",
-            "id": "311",
-            "neighbors": {
-                "prev": [
-                    "288",
-                    "294",
-                    "136"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Heavy Strike III",
-                "Support End",
-                "Cross-Counter",
-                "Attack Charge Field",
-                "Mach Rush III"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot700.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=311"
-        },
-        "imageData": "http://digidb.io/images/dot/dot700.png"
-    },
-    {
-        "id": "QZunvQGEBD2jknnV",
-        "wantedEvos": [],
-        "ultraOrder": 0,
-        "abi": "31",
-        "megaOrder": "11",
-        "name": "Feather",
-        "dateConverted": "2024-04-12",
-        "moves": [],
-        "tamer_id": "AceMaker001",
-        "evos": [
-            "44",
-            "97",
-            "297",
-            "62",
-            "297",
-            "307"
-        ],
-        "currentForm": {
-            "name": "Gryphonmon",
-            "id": "307",
-            "neighbors": {
-                "prev": [
-                    "119",
-                    "126",
-                    "297"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Wind Claw III",
-                "Shining Laser II",
-                "Speed Charge Field",
-                "Gale Storm III",
-                "Revive"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot083.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=307"
-        },
-        "imageData": "http://digidb.io/images/dot/dot083.png"
-    },
-    {
-        "abi": "42",
-        "wantedEvos": [
-            "168"
-        ],
-        "moves": [],
-        "evos": [
-            "46",
-            "271",
-            "123",
-            "99",
-            "115",
-            "229",
-            "248"
-        ],
-        "name": "Victory",
-        "tamer_id": "AceMaker001",
-        "id": "uFSw2an9VZ9jZmnA",
-        "ultraOrder": "2",
-        "megaOrder": "6",
-        "dateConverted": "2024-04-23",
-        "currentForm": {
-            "name": "Ravemon BM",
-            "id": "248",
-            "neighbors": {
-                "prev": [
-                    "229"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Texture Blow",
-                "Speed Break Field",
-                "Character Reversal",
-                "Status Barrier",
-                "Support End"
-            ],
-            "stage": {
-                "name": "Ultra",
-                "level": 7
-            },
-            "imageData": "http://digidb.io/images/dot/dot778.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=248"
-        },
-        "imageData": "http://digidb.io/images/dot/dot778.png"
-    },
-    {
-        "wantedEvos": [],
-        "abi": "43",
-        "dateConverted": "2024-04-14",
-        "evos": [
-            "94",
-            "38",
-            "81",
-            "135",
-            "69",
-            "164",
-            "223"
-        ],
-        "name": "Duru",
-        "ultraOrder": 0,
-        "id": "6OtuGAVwirGPdCDO",
-        "moves": [
-            "Wolkenapalm III",
-            "Comet Hammer III",
-            "Speed Charge Field",
-            "Sonic Void III",
-            "Ice Archery III"
-        ],
-        "tamer_id": "AceMaker001",
-        "megaOrder": "20",
-        "currentForm": {
-            "name": "MetalGarurumon",
-            "id": "223",
-            "neighbors": {
-                "prev": [
-                    "129",
-                    "131",
-                    "164"
-                ],
-                "next": [
-                    "234"
-                ]
-            },
-            "moves": [
-                "Ice Archery III",
-                "Aura",
-                "Speed Charge Field",
-                "Sonic Void III",
-                "Ocean Wave III"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot135.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=223"
-        },
-        "imageData": "http://digidb.io/images/dot/dot135.png"
-    },
-    {
-        "ultraOrder": 0,
-        "dateConverted": "2024-04-22",
-        "abi": "46",
-        "tamer_id": "AceMaker001",
-        "name": "Shoot",
-        "id": "lxR6depj8LhqwVWt",
-        "moves": [
-            "Nightmare III"
-        ],
-        "wantedEvos": [
-            "242"
-        ],
-        "megaOrder": 0,
-        "evos": [
-            "12",
-            "20",
-            "55",
-            "43",
-            "9",
-            "29",
-            "98",
-            "298",
-            "29",
-            "73",
-            "113"
-        ],
-        "currentForm": {
-            "name": "Infermon",
-            "id": "113",
-            "neighbors": {
-                "prev": [
-                    "73",
-                    "87",
-                    "92",
-                    "262"
-                ],
-                "next": [
-                    "173",
-                    "196",
-                    "212",
-                    "301"
-                ]
-            },
-            "moves": [
-                "Destruction Cannon II",
-                "Destruction",
-                "Mach Rush II",
-                "Destruction Cannon III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot627.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=113"
-        },
-        "imageData": "http://digidb.io/images/dot/dot627.png"
-    },
-    {
-        "ultraOrder": 0,
-        "evos": [
-            "37",
-            "64",
-            "286",
-            "86",
-            "127"
-        ],
-        "megaOrder": 0,
         "abi": "20",
-        "name": "Star",
-        "id": "aTjdFmPIcWSEnfdJ",
         "moves": [],
-        "tamer_id": "AceMaker001",
-        "wantedEvos": [
-            "179"
-        ],
-        "dateConverted": "2024-04-21",
         "currentForm": {
+            "moves": [
+                "Shining Laser I",
+                "Anti-Sleep",
+                "Mach Rush I",
+                "Saint Knuckle III"
+            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=127",
             "name": "SuperStarmon",
+            "stage": {
+                "name": "Ultimate",
+                "level": 5
+            },
             "id": "127",
             "neighbors": {
                 "prev": [
@@ -1526,189 +1342,366 @@
                     "207"
                 ]
             },
-            "moves": [
-                "Shining Laser I",
-                "Anti-Sleep",
-                "Mach Rush I",
-                "Saint Knuckle III"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot079.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=127"
+            "imageData": "http://digidb.io/images/dot/dot079.png"
         },
-        "imageData": "http://digidb.io/images/dot/dot079.png"
+        "name": "Star",
+        "imageData": "http://digidb.io/images/dot/dot079.png",
+        "dateConverted": "2024-04-21",
+        "evos": [
+            "37",
+            "64",
+            "286",
+            "86",
+            "127"
+        ],
+        "wantedEvos": [
+            "179"
+        ],
+        "ultraOrder": 0,
+        "id": "aTjdFmPIcWSEnfdJ",
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "abi": "30",
-        "ultraOrder": 0,
-        "megaOrder": 0,
-        "evos": [
-            "25",
-            "105",
-            "156",
-            "71",
-            "163"
-        ],
-        "wantedEvos": [],
-        "name": "Blank",
-        "id": "RUQJoznNCbOXuLoo",
         "tamer_id": "AceMaker001",
-        "dateConverted": "2024-04-15",
-        "moves": [],
+        "evos": [
+            "12",
+            "20",
+            "55",
+            "43",
+            "9",
+            "29",
+            "98",
+            "298",
+            "29",
+            "73",
+            "113"
+        ],
+        "dateConverted": "2024-04-22",
+        "megaOrder": 0,
+        "wantedEvos": [
+            "242"
+        ],
+        "abi": "46",
+        "imageData": "http://digidb.io/images/dot/dot627.png",
+        "moves": [
+            "Nightmare III"
+        ],
+        "id": "lxR6depj8LhqwVWt",
+        "ultraOrder": 0,
+        "name": "Shoot",
         "currentForm": {
-            "name": "LadyDevimon",
-            "id": "163",
+            "imageData": "http://digidb.io/images/dot/dot627.png",
+            "name": "Infermon",
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
             "neighbors": {
-                "prev": [
-                    "55",
-                    "71",
-                    "98",
-                    "101",
-                    "330"
-                ],
                 "next": [
-                    "217",
-                    "228",
-                    "232"
+                    "173",
+                    "196",
+                    "212",
+                    "301"
+                ],
+                "prev": [
+                    "73",
+                    "87",
+                    "92",
+                    "262"
                 ]
             },
             "moves": [
-                "Hell Crusher I",
-                "Spirit Drain",
-                "Nightmare III",
-                "Hell Crusher II"
+                "Destruction Cannon II",
+                "Destruction",
+                "Mach Rush II",
+                "Destruction Cannon III"
             ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot107.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=163"
+            "id": "113",
+            "infoURL": "http://digidb.io/digimon-search/?request=113"
         },
-        "imageData": "http://digidb.io/images/dot/dot107.png"
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "wantedEvos": [],
-        "ultraOrder": 0,
-        "megaOrder": "18",
-        "tamer_id": "AceMaker001",
-        "abi": "33",
-        "id": "yrL3WhUaNLn32OXd",
-        "moves": [
-            "Nightmare III",
-            "Crescent Leaf III",
-            "X-Heal"
-        ],
-        "dateConverted": "2024-04-13",
+        "abi": "37",
         "evos": [
-            "50",
-            "82",
-            "159",
-            "66",
-            "125",
-            "180"
+            "17",
+            "6",
+            "255",
+            "266",
+            "267",
+            "41",
+            "275",
+            "291",
+            "309"
         ],
-        "name": "Lillia",
+        "moves": [
+            "Wolkenapalm III",
+            "Saint Knuckle III",
+            "Speed Charge Field",
+            "Attack Charge Field",
+            "Heavy Strike III"
+        ],
         "currentForm": {
-            "name": "Kuzuhamon",
-            "id": "180",
+            "name": "Slayerdramon",
             "neighbors": {
                 "prev": [
-                    "125",
-                    "130",
-                    "157"
+                    "283",
+                    "291",
+                    "158"
                 ],
-                "next": []
+                "next": [
+                    "175"
+                ]
             },
-            "moves": [
-                "Nightmare III",
-                "Hell Crusher II",
-                "Status Barrier",
-                "Chain Loss",
-                "Hell Crusher III"
-            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=309",
             "stage": {
                 "name": "Mega",
                 "level": 6
             },
-            "imageData": "http://digidb.io/images/dot/dot754.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=180"
+            "id": "309",
+            "imageData": "http://digidb.io/images/dot/dot213.png",
+            "moves": [
+                "Heavy Strike III",
+                "Attack Charge Field",
+                "Speed Charge Field",
+                "X-Aura",
+                "Gale Storm III"
+            ]
         },
-        "imageData": "http://digidb.io/images/dot/dot754.png"
+        "name": "Slash",
+        "tamer_id": "AceMaker001",
+        "imageData": "http://digidb.io/images/dot/dot213.png",
+        "wantedEvos": [
+            "187",
+            "158",
+            "94",
+            "288",
+            "193"
+        ],
+        "dateConverted": "2024-04-23",
+        "id": "vTquu9N3K8AHNr3S",
+        "ultraOrder": 0,
+        "megaOrder": "1",
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "dateConverted": "2024-04-15",
-        "wantedEvos": [
-            "331"
-        ],
-        "id": "fkhbaxulcqWCLRfG",
+        "tamer_id": "AceMaker001",
+        "ultraOrder": "2",
+        "imageData": "http://digidb.io/images/dot/dot778.png",
         "evos": [
-            "11",
-            "259",
-            "330",
-            "296"
+            "46",
+            "271",
+            "123",
+            "99",
+            "115",
+            "229",
+            "248"
         ],
-        "ultraOrder": 0,
+        "currentForm": {
+            "stage": {
+                "name": "Ultra",
+                "level": 7
+            },
+            "imageData": "http://digidb.io/images/dot/dot778.png",
+            "neighbors": {
+                "next": [],
+                "prev": [
+                    "229"
+                ]
+            },
+            "name": "Ravemon BM",
+            "id": "248",
+            "infoURL": "http://digidb.io/digimon-search/?request=248",
+            "moves": [
+                "Texture Blow",
+                "Speed Break Field",
+                "Character Reversal",
+                "Status Barrier",
+                "Support End"
+            ]
+        },
+        "wantedEvos": [
+            "168"
+        ],
+        "name": "Victory",
+        "dateConverted": "2024-04-23",
+        "abi": "42",
+        "megaOrder": "6",
+        "id": "uFSw2an9VZ9jZmnA",
         "moves": [],
-        "name": "Luna",
-        "abi": "13",
-        "megaOrder": 0,
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "moves": [],
+        "abi": "37",
+        "id": "14if8LbSkEm4qyXB",
+        "evos": [
+            "9",
+            "254",
+            "269",
+            "300",
+            "114",
+            "205"
+        ],
+        "megaOrder": "15",
         "tamer_id": "AceMaker001",
         "currentForm": {
-            "name": "Pandamon",
-            "id": "296",
+            "id": "205",
+            "infoURL": "http://digidb.io/digimon-search/?request=205",
+            "name": "Piedmon",
+            "imageData": "http://digidb.io/images/dot/dot427.png",
+            "stage": {
+                "level": 6,
+                "name": "Mega"
+            },
             "neighbors": {
-                "prev": [
-                    "70",
-                    "273",
-                    "91",
-                    "330"
-                ],
                 "next": [
-                    "305",
-                    "189",
-                    "204"
+                    "341"
+                ],
+                "prev": [
+                    "114",
+                    "116",
+                    "166",
+                    "300"
                 ]
             },
             "moves": [
-                "Mach Rush I",
-                "Heal",
-                "Heavy Strike III",
-                "Comet Hammer III"
-            ],
+                "Destruction",
+                "Hell Crusher II",
+                "Nightmare III",
+                "Texture Blow",
+                "Hell Crusher III"
+            ]
+        },
+        "wantedEvos": [
+            "173",
+            "306",
+            "236"
+        ],
+        "dateConverted": "2024-04-25",
+        "name": "Drac",
+        "ultraOrder": 0,
+        "imageData": "http://digidb.io/images/dot/dot427.png",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "megaOrder": 0,
+        "ultraOrder": 0,
+        "name": "Sandy",
+        "imageData": "http://digidb.io/images/dot/dot756.png",
+        "currentForm": {
+            "id": "112",
             "stage": {
                 "name": "Ultimate",
                 "level": 5
             },
-            "imageData": "http://digidb.io/images/dot/dot041.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=296"
+            "infoURL": "http://digidb.io/digimon-search/?request=112",
+            "name": "Meteormon",
+            "moves": [
+                "Awesome Quake I",
+                "Meteor Fall I",
+                "Grand Rock III",
+                "Power Energy III"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot756.png",
+            "neighbors": {
+                "next": [
+                    "169",
+                    "195",
+                    "222"
+                ],
+                "prev": [
+                    "57",
+                    "95",
+                    "106",
+                    "260",
+                    "268",
+                    "273"
+                ]
+            }
         },
-        "imageData": "http://digidb.io/images/dot/dot041.png"
+        "evos": [
+            "19",
+            "57",
+            "112"
+        ],
+        "moves": [],
+        "id": "HD6PcwfGFKokrsqR",
+        "abi": "13",
+        "tamer_id": "AceMaker001",
+        "dateConverted": "2024-04-28",
+        "wantedEvos": [
+            "183"
+        ],
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "id": "ktk4Bl5gGYA2R0N2",
-        "evos": [
-            "68",
-            "35",
-            "58",
-            "129"
-        ],
-        "megaOrder": 0,
-        "name": "Tank",
-        "abi": "13",
-        "moves": [],
-        "ultraOrder": 0,
         "wantedEvos": [
-            "341"
+            "197"
+        ],
+        "evos": [
+            "85",
+            "21",
+            "13",
+            "257",
+            "253",
+            "280",
+            "290"
         ],
         "tamer_id": "AceMaker001",
-        "dateConverted": "2024-04-29",
+        "imageData": "http://digidb.io/images/dot/dot006.png",
+        "name": "Dart",
+        "ultraOrder": 0,
+        "id": "eMLN7dkB4gLZdURD",
         "currentForm": {
-            "name": "Zudomon",
-            "id": "129",
+            "id": "290",
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
+            "imageData": "http://digidb.io/images/dot/dot006.png",
+            "moves": [
+                "Character Reversal",
+                "Hell Crusher I",
+                "Destruction Cannon III",
+                "Nightmare III"
+            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=290",
+            "neighbors": {
+                "prev": [
+                    "262",
+                    "63",
+                    "92",
+                    "280"
+                ],
+                "next": [
+                    "306",
+                    "196",
+                    "197"
+                ]
+            },
+            "name": "SkullSatamon"
+        },
+        "moves": [],
+        "dateConverted": "2024-04-28",
+        "megaOrder": 0,
+        "abi": "50",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "abi": "13",
+        "currentForm": {
+            "stage": {
+                "name": "Ultimate",
+                "level": 5
+            },
+            "moves": [
+                "Gale Storm I",
+                "Guard Break",
+                "Ice Archery III",
+                "Ocean Wave II"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot345.png",
             "neighbors": {
                 "prev": [
                     "58",
@@ -1723,138 +1716,244 @@
                     "210"
                 ]
             },
-            "moves": [
-                "Gale Storm I",
-                "Guard Break",
-                "Ice Archery III",
-                "Ocean Wave II"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot345.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=129"
+            "name": "Zudomon",
+            "infoURL": "http://digidb.io/digimon-search/?request=129",
+            "id": "129"
         },
-        "imageData": "http://digidb.io/images/dot/dot345.png"
-    },
-    {
-        "dateConverted": "2024-04-16",
-        "tamer_id": "AceMaker001",
-        "ultraOrder": 0,
-        "megaOrder": 0,
         "evos": [
-            "96",
-            "48",
-            "14",
-            "102",
-            "109"
+            "68",
+            "35",
+            "58",
+            "129"
         ],
         "moves": [],
-        "name": "New-New",
-        "id": "EzWF01G7FN7ntlqH",
-        "abi": "20",
+        "megaOrder": 0,
+        "id": "ktk4Bl5gGYA2R0N2",
         "wantedEvos": [
-            "310"
+            "341"
         ],
-        "currentForm": {
-            "name": "MegaKabuterimon",
-            "id": "109",
-            "neighbors": {
-                "prev": [
-                    "66",
-                    "102",
-                    "108"
-                ],
-                "next": [
-                    "181",
-                    "211",
-                    "215"
-                ]
-            },
-            "moves": [
-                "Rune Forest I",
-                "Speed Break",
-                "Gaia Element III",
-                "Rune Forest II"
-            ],
-            "stage": {
-                "name": "Ultimate",
-                "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot305.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=109"
-        },
-        "imageData": "http://digidb.io/images/dot/dot305.png"
+        "tamer_id": "AceMaker001",
+        "ultraOrder": 0,
+        "dateConverted": "2024-04-29",
+        "imageData": "http://digidb.io/images/dot/dot345.png",
+        "name": "Tank",
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "abi": "9",
-        "ultraOrder": 0,
-        "name": "Shine",
-        "megaOrder": 0,
+        "dateConverted": "2024-04-30",
         "tamer_id": "AceMaker001",
-        "evos": [
-            "10",
-            "328",
-            "330"
-        ],
+        "id": "7ATQf5DhKzVSonDl",
         "wantedEvos": [
-            "329"
+            "221",
+            "243"
         ],
+        "ultraOrder": 0,
+        "imageData": "http://digidb.io/images/dot/dot621.png",
+        "name": "Blaster",
         "moves": [],
-        "dateConverted": "2024-05-04",
-        "id": "yEhbM8w90SxdWpqD",
+        "megaOrder": 0,
+        "evos": [
+            "89"
+        ],
         "currentForm": {
-            "name": "Sistermon Ciel",
-            "id": "330",
-            "neighbors": {
-                "prev": [
-                    "328",
-                    "254",
-                    "259"
-                ],
-                "next": [
-                    "331",
-                    "296",
-                    "163"
-                ]
-            },
-            "moves": [
-                "Destruction Cannon I",
-                "Hell Crusher I"
-            ],
+            "id": "89",
             "stage": {
                 "name": "Champion",
                 "level": 4
             },
-            "imageData": "http://digidb.io/images/dot/dot783.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=330"
+            "neighbors": {
+                "prev": [
+                    "18",
+                    "19",
+                    "30"
+                ],
+                "next": [
+                    "111",
+                    "120",
+                    "121",
+                    "136",
+                    "299"
+                ]
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=89",
+            "moves": [
+                "Nanomachine Break II",
+                "Hit Charge",
+                "Shock"
+            ],
+            "name": "Tankmon",
+            "imageData": "http://digidb.io/images/dot/dot621.png"
         },
-        "imageData": "http://digidb.io/images/dot/dot783.png"
+        "abi": "4",
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "abi": "17",
-        "megaOrder": 0,
         "tamer_id": "AceMaker001",
+        "name": "Crash",
+        "moves": [],
+        "megaOrder": 0,
+        "dateConverted": "2024-05-01",
+        "evos": [
+            "43",
+            "1",
+            "18",
+            "75",
+            "295"
+        ],
+        "currentForm": {
+            "neighbors": {
+                "next": [
+                    "315",
+                    "181",
+                    "185"
+                ],
+                "prev": [
+                    "58",
+                    "75",
+                    "267",
+                    "277"
+                ]
+            },
+            "moves": [
+                "Awesome Quake I",
+                "Hit Charge",
+                "Wolkenapalm II",
+                "Comet Hammer III"
+            ],
+            "infoURL": "http://digidb.io/digimon-search/?request=295",
+            "stage": {
+                "name": "Ultimate",
+                "level": 5
+            },
+            "id": "295",
+            "imageData": "http://digidb.io/images/dot/dot033.png",
+            "name": "Triceramon"
+        },
+        "wantedEvos": [
+            "194",
+            "227"
+        ],
+        "imageData": "http://digidb.io/images/dot/dot033.png",
+        "ultraOrder": 0,
+        "id": "BzPyhjqtM6g1C1YE",
+        "abi": "18",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "dateConverted": "2024-05-01",
         "moves": [],
         "evos": [
-            "134",
-            "78",
-            "33"
+            "21",
+            "79",
+            "116"
         ],
+        "name": "Bright",
+        "abi": "13",
+        "id": "O7JYtk9NSjpmOBhb",
         "wantedEvos": [
-            "327",
-            "145",
-            "83",
-            "48"
+            "200"
         ],
-        "id": "byzI0RTNhcRU2Wt4",
-        "name": "Boisterous",
+        "tamer_id": "AceMaker001",
         "ultraOrder": 0,
-        "dateConverted": "2024-05-03",
+        "megaOrder": 0,
+        "imageData": "http://digidb.io/images/dot/dot311.png",
         "currentForm": {
-            "name": "Syakomon",
+            "neighbors": {
+                "prev": [
+                    "79",
+                    "85",
+                    "96",
+                    "100"
+                ],
+                "next": [
+                    "205",
+                    "207",
+                    "222",
+                    "305",
+                    "314"
+                ]
+            },
+            "name": "Etemon",
+            "imageData": "http://digidb.io/images/dot/dot311.png",
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=116",
+            "moves": [
+                "Hell Crusher I",
+                "Escape Dash",
+                "Mirror Reflection",
+                "Nightmare III"
+            ],
+            "id": "116"
+        },
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "name": "Dark",
+        "imageData": "http://digidb.io/images/dot/dot715.png",
+        "tamer_id": "AceMaker001",
+        "abi": "12",
+        "id": "q3zworw57qacTijV",
+        "dateConverted": "2024-05-03",
+        "ultraOrder": 0,
+        "moves": [],
+        "currentForm": {
+            "neighbors": {
+                "next": [
+                    "204",
+                    "219",
+                    "224",
+                    "319"
+                ],
+                "prev": [
+                    "70",
+                    "101",
+                    "269"
+                ]
+            },
+            "id": "165",
+            "stage": {
+                "level": 5,
+                "name": "Ultimate"
+            },
+            "infoURL": "http://digidb.io/digimon-search/?request=165",
+            "name": "WereGarurumon (Blk)",
+            "moves": [
+                "Mach Rush I",
+                "Wolkenapalm II",
+                "Comet Hammer III",
+                "Mach Rush II"
+            ],
+            "imageData": "http://digidb.io/images/dot/dot715.png"
+        },
+        "wantedEvos": [
+            "235"
+        ],
+        "megaOrder": "0",
+        "evos": [
+            "24",
+            "70",
+            "165"
+        ],
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "id": "byzI0RTNhcRU2Wt4",
+        "wantedEvos": [
+            "270",
+            "339",
+            "338",
+            "255",
+            "6",
+            "326",
+            "327"
+        ],
+        "moves": [],
+        "currentForm": {
             "id": "33",
+            "infoURL": "http://digidb.io/digimon-search/?request=33",
             "neighbors": {
                 "prev": [
                     "14"
@@ -1867,269 +1966,323 @@
                     "270"
                 ]
             },
+            "stage": {
+                "level": 3,
+                "name": "Rookie"
+            },
+            "imageData": "http://digidb.io/images/dot/dot709.png",
             "moves": [
                 "Ice Archery I",
                 "Anti-Sleep"
             ],
-            "stage": {
-                "name": "Rookie",
-                "level": 3
-            },
-            "imageData": "http://digidb.io/images/dot/dot709.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=33"
+            "name": "Syakomon"
         },
-        "imageData": "http://digidb.io/images/dot/dot709.png"
+        "megaOrder": 0,
+        "tamer_id": "AceMaker001",
+        "imageData": "http://digidb.io/images/dot/dot709.png",
+        "evos": [
+            "134",
+            "78",
+            "33"
+        ],
+        "name": "Boisterous",
+        "dateConverted": "2024-05-03",
+        "abi": "17",
+        "ultraOrder": 0,
+        "tamerName": "TeamCyberSleuth"
     },
     {
-        "moves": [],
-        "wantedEvos": [],
         "tamer_id": "AceMaker001",
-        "evos": [
-            "14",
-            "33",
-            "83",
-            "149",
-            "67",
-            "142",
-            "209"
-        ],
-        "megaOrder": "14",
-        "dateConverted": "2024-04-15",
-        "id": "EMHjay5GO5BCNkmn",
-        "name": "Buck",
+        "megaOrder": 0,
+        "moves": [],
+        "imageData": "http://digidb.io/images/dot/dot783.png",
         "ultraOrder": 0,
-        "abi": "37",
+        "name": "Shine",
+        "id": "yEhbM8w90SxdWpqD",
+        "evos": [
+            "10",
+            "328",
+            "330"
+        ],
         "currentForm": {
-            "name": "PrinceMamemon",
-            "id": "209",
-            "neighbors": {
-                "prev": [
-                    "142",
-                    "148",
-                    "155",
-                    "286"
-                ],
-                "next": []
+            "stage": {
+                "name": "Champion",
+                "level": 4
             },
             "moves": [
-                "Chain Minus",
-                "Escape Dash",
-                "Power Energy III",
-                "Mental Charge Field",
-                "Final Heal"
+                "Destruction Cannon I",
+                "Hell Crusher I"
             ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot429.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=209"
-        },
-        "imageData": "http://digidb.io/images/dot/dot429.png"
-    },
-    {
-        "ultraOrder": 0,
-        "id": "R0kDSnM7jcrfM39W",
-        "dateConverted": "2024-04-20",
-        "evos": [
-            "30",
-            "268",
-            "299"
-        ],
-        "moves": [],
-        "tamer_id": "AceMaker001",
-        "abi": "9",
-        "name": "Rock",
-        "megaOrder": 0,
-        "wantedEvos": [],
-        "currentForm": {
-            "name": "Volcanomon",
-            "id": "299",
+            "name": "Sistermon Ciel",
             "neighbors": {
-                "prev": [
-                    "268",
-                    "89",
-                    "104"
-                ],
                 "next": [
-                    "314",
-                    "179",
-                    "222"
+                    "331",
+                    "296",
+                    "163"
+                ],
+                "prev": [
+                    "328",
+                    "254",
+                    "259"
                 ]
             },
+            "infoURL": "http://digidb.io/digimon-search/?request=330",
+            "id": "330",
+            "imageData": "http://digidb.io/images/dot/dot783.png"
+        },
+        "abi": "9",
+        "wantedEvos": [
+            "329"
+        ],
+        "dateConverted": "2024-05-04",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "megaOrder": 0,
+        "moves": [],
+        "name": "Lilly",
+        "imageData": "http://digidb.io/images/dot/dot043.png",
+        "currentForm": {
+            "name": "BlackGatomon",
             "moves": [
-                "Chain Plus",
-                "Mach Rush I",
-                "Awesome Quake I",
-                "Wolkenapalm III"
+                "Nightmare II",
+                "Grand Rock II",
+                "Power Energy II"
             ],
+            "infoURL": "http://digidb.io/digimon-search/?request=101",
+            "stage": {
+                "level": 4,
+                "name": "Champion"
+            },
+            "neighbors": {
+                "prev": [
+                    "20",
+                    "52",
+                    "53",
+                    "253"
+                ],
+                "next": [
+                    "123",
+                    "136",
+                    "163",
+                    "165"
+                ]
+            },
+            "imageData": "http://digidb.io/images/dot/dot043.png",
+            "id": "101"
+        },
+        "ultraOrder": 0,
+        "dateConverted": "2024-05-04",
+        "tamer_id": "AceMaker001",
+        "id": "2JjSLRQnjfx6z3Tc",
+        "evos": [
+            "101"
+        ],
+        "wantedEvos": [
+            "217"
+        ],
+        "abi": "5",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "currentForm": {
+            "imageData": "http://digidb.io/images/dot/dot596.png",
+            "moves": [
+                "Awesome Quake I",
+                "Meteor Fall I",
+                "Comet Hammer III",
+                "Texture Blow"
+            ],
+            "neighbors": {
+                "prev": [
+                    "60",
+                    "93",
+                    "98",
+                    "268",
+                    "273"
+                ],
+                "next": [
+                    "206",
+                    "216",
+                    "231"
+                ]
+            },
+            "name": "Pumpkinmon",
+            "id": "140",
+            "infoURL": "http://digidb.io/digimon-search/?request=140",
             "stage": {
                 "name": "Ultimate",
                 "level": 5
-            },
-            "imageData": "http://digidb.io/images/dot/dot059.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=299"
+            }
         },
-        "imageData": "http://digidb.io/images/dot/dot059.png"
-    },
-    {
-        "abi": "48",
-        "megaOrder": "7",
-        "evos": [
-            "74",
-            "17",
-            "90",
-            "153",
-            "53",
-            "274",
-            "123",
-            "189"
-        ],
-        "tamer_id": "AceMaker001",
-        "wantedEvos": [],
-        "dateConverted": "2024-04-13",
-        "name": "Gray",
-        "id": "p5SpKl5cwAHYTbCz",
-        "moves": [],
-        "ultraOrder": 0,
-        "currentForm": {
-            "name": "Justimon",
-            "id": "189",
-            "neighbors": {
-                "prev": [
-                    "119",
-                    "123",
-                    "127",
-                    "286",
-                    "296"
-                ],
-                "next": []
-            },
-            "moves": [
-                "Saint Knuckle III",
-                "Acceleration Boost",
-                "Cross-Counter",
-                "Revive",
-                "Chain Max"
-            ],
-            "stage": {
-                "name": "Mega",
-                "level": 6
-            },
-            "imageData": "http://digidb.io/images/dot/dot737.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=189"
-        },
-        "imageData": "http://digidb.io/images/dot/dot737.png"
-    },
-    {
-        "id": "EbY8H0BxY4XMggEo",
-        "wantedEvos": [
-            "322"
-        ],
-        "tamer_id": "AceMaker001",
-        "ultraOrder": 0,
-        "moves": [],
-        "abi": "29",
-        "name": "Beta",
-        "evos": [
-            "48",
-            "264",
-            "150",
-            "81"
-        ],
         "megaOrder": 0,
-        "dateConverted": "2024-04-17",
+        "moves": [],
+        "imageData": "http://digidb.io/images/dot/dot596.png",
+        "wantedEvos": [
+            "98",
+            "114",
+            "203"
+        ],
+        "evos": [
+            "140"
+        ],
+        "tamer_id": "AceMaker001",
+        "dateConverted": "2024-05-04",
+        "name": "Jack",
+        "ultraOrder": 0,
+        "abi": "5",
+        "id": "x82yrX4YiwNBozca",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "evos": [
+            "155",
+            "100"
+        ],
+        "name": "Shell",
+        "megaOrder": 0,
+        "dateConverted": "2024-05-05",
+        "tamer_id": "AceMaker001",
         "currentForm": {
-            "name": "Cyclonemon",
-            "id": "81",
+            "imageData": "http://digidb.io/images/dot/dot752.png",
+            "id": "100",
             "neighbors": {
                 "prev": [
-                    "18",
-                    "19",
-                    "38"
+                    "29",
+                    "39",
+                    "41"
                 ],
                 "next": [
-                    "135",
-                    "137",
-                    "150"
+                    "116",
+                    "144",
+                    "155",
+                    "286"
                 ]
             },
             "moves": [
-                "Critical Charge",
-                "Awesome Quake I",
-                "Cross-Counter"
+                "Anti-Bug",
+                "Mental Break",
+                "Character Reversal"
             ],
             "stage": {
                 "name": "Champion",
                 "level": 4
             },
-            "imageData": "http://digidb.io/images/dot/dot452.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=81"
+            "name": "PlatinumSukamon",
+            "infoURL": "http://digidb.io/digimon-search/?request=100"
         },
-        "imageData": "http://digidb.io/images/dot/dot452.png"
-    },
-    {
-        "tamer_id": "AceMaker001",
-        "moves": [
-            "Nanomachine Break III",
-            "Acceleration Boost",
-            "Saint Knuckle III",
-            "Guard Charge Field",
-            "Wind Claw III",
-            "Gale Storm III"
-        ],
-        "megaOrder": "10",
-        "evos": [
-            "8",
-            "258",
-            "279",
-            "288",
-            "106",
-            "122",
-            "185",
-            "122",
-            "106",
-            "152"
-        ],
-        "name": "Mono",
-        "abi": "65",
-        "id": "Y4muE6FitHBiBjwR",
+        "id": "HpyFV2NSZR6GJxwJ",
+        "imageData": "http://digidb.io/images/dot/dot752.png",
+        "moves": [],
         "wantedEvos": [
-            "226",
-            "189",
-            "94"
+            "199",
+            "64",
+            "137",
+            "221",
+            "155",
+            "209",
+            "148",
+            "174",
+            "152",
+            "226"
         ],
         "ultraOrder": 0,
-        "dateConverted": "2024-04-09",
+        "abi": "5",
+        "tamerName": "TeamCyberSleuth"
+    },
+    {
+        "abi": "5",
+        "dateConverted": "2024-05-13",
+        "id": "kzAFb8YAdsXFp985",
         "currentForm": {
-            "name": "MetalGreymon",
-            "id": "152",
+            "imageData": "http://digidb.io/images/dot/dot437.png",
+            "infoURL": "http://digidb.io/digimon-search/?request=3",
+            "id": "3",
+            "name": "Punimon",
+            "stage": {
+                "level": 1,
+                "name": "Training 1"
+            },
+            "moves": [],
+            "neighbors": {
+                "prev": [],
+                "next": [
+                    "8",
+                    "11"
+                ]
+            }
+        },
+        "ultraOrder": 0,
+        "tamer_id": "Z5dnUdWqc6RR8oB3R27wL8GR",
+        "moves": [
+            "Acceleration Boost",
+            "Character Reversal",
+            "Chain Max",
+            "Spirit Drain",
+            "Hell Crusher III"
+        ],
+        "wantedEvos": [
+            "3",
+            "8",
+            "26",
+            "153",
+            "158",
+            "300",
+            "98",
+            "163",
+            "228"
+        ],
+        "evos": [
+            "3"
+        ],
+        "megaOrder": 0,
+        "name": "Lilith ",
+        "imageData": "http://digidb.io/images/dot/dot437.png",
+        "tamerName": "Ch0klit"
+    },
+    {
+        "abi": 1,
+        "dateConverted": "2024-05-14",
+        "currentForm": {
             "neighbors": {
                 "prev": [
-                    "72",
-                    "74",
-                    "106",
-                    "264"
+                    "6"
                 ],
                 "next": [
-                    "174",
-                    "177",
-                    "226"
+                    "84",
+                    "72",
+                    "75",
+                    "90",
+                    "104",
+                    "261"
                 ]
             },
-            "moves": [
-                "Mach Rush I",
-                "Attack Charge",
-                "Meteor Fall II",
-                "Wolkenapalm III"
-            ],
+            "imageData": "http://digidb.io/images/dot/dot090.png",
+            "id": "27",
+            "infoURL": "http://digidb.io/digimon-search/?request=27",
             "stage": {
-                "name": "Ultimate",
-                "level": 5
+                "level": 3,
+                "name": "Rookie"
             },
-            "imageData": "http://digidb.io/images/dot/dot302.png",
-            "infoURL": "http://digidb.io/digimon-search/?request=152"
+            "moves": [
+                "Wolkenapalm I",
+                "Attack Charge"
+            ],
+            "name": "Guilmon"
         },
-        "imageData": "http://digidb.io/images/dot/dot302.png"
+        "moves": [],
+        "megaOrder": 0,
+        "ultraOrder": 0,
+        "name": "Guilmon",
+        "id": "TB0ib47ascxNELhO",
+        "tamer_id": "48LFmvJtWhOX2Xv1E7bc5awE",
+        "evos": [
+            "27"
+        ],
+        "wantedEvos": [
+            "325"
+        ],
+        "imageData": "http://digidb.io/images/dot/dot090.png",
+        "tamerName": "Cafox555"
     }
 ]

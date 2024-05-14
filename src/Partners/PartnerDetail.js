@@ -135,7 +135,7 @@ function PartnerDetail({
                         <img className='dotImage' src={partner.currentForm.imageData} />
                     </div>: null
                 }
-                <h3 className="white">Tamer: {partner.tamer_id}</h3>
+                <h3 className="white">Tamer: {partner.tamerName}</h3>
                 <h3 className="white">Date Converted: {partner.dateConverted}</h3>
                 <h3 className="white">ABI: {partner.abi}</h3>
                 <h3 className="white">{partner.megaOrder? `Mega Order: ${partner.megaOrder}`: null}</h3>
