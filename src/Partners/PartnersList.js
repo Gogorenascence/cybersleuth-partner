@@ -46,19 +46,19 @@ function PartnersList({
         }
     }
 
-    // const getPartners = async () => {
-    //     if (account) {
-    //         const partnersData = await partnerQueries.getPartnersData()
-    //         if (partnersData) {
-    //             console.log(partnersData)
-    //             setPartners(partnersData)
+    const adminGetPartners = async () => {
+        if (account) {
+            const partnersData = await partnerQueries.getPartnersData()
+            if (partnersData) {
+                console.log(partnersData)
+                setPartners(partnersData)
 
-    //         }
-    //         if (results.current) {
-    //             results.current.scrollIntoView({ behavior: 'smooth' });
-    //         }
-    //     }
-    // }
+            }
+            if (results.current) {
+                results.current.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
 
     useEffect(() => {
         window.scroll(0, 0);
@@ -270,6 +270,14 @@ function PartnersList({
             >
                 Search
             </button>
+            {account && account.roles.includes("admin")?
+                <button
+                    className="margin-bottom-20p margin-top-20p"
+                    onClick={() => adminGetPartners()}
+                >
+                    All Partners
+                </button>: null
+            }
             <h3 className='white pointer'
                 onClick={() => getPartners()}
             >{refresh? "Search again to refresh your results": null}</h3>
