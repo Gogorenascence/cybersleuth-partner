@@ -102,6 +102,8 @@ function PartnersList({
         ABI_d: { method: (a,b) => b.abi - a.abi },
         stage_a: { method: (a,b) => a.currentForm?.stage?.level - b.currentForm?.stage?.level },
         stage_d: { method: (a,b) => b.currentForm?.stage?.level - a.currentForm?.stage?.level },
+        megaOrder: { method: (a,b) => b.megaOrder - a.megaOrder },
+        ultraOrder: { method: (a,b) => b.ultraOrder - a.ultraOrder },
     };
 
     const handleSort = (event) => {
@@ -263,6 +265,8 @@ function PartnersList({
                 <option value="stage_d">Stage Desc.</option>
                 <option value="ABI_a">ABI Asc.</option>
                 <option value="ABI_d">ABI Desc.</option>
+                <option value="megaOrder">Mega Order</option>
+                <option value="ultraOrder">Ultra Order</option>
             </select>
             <br/>
             <button
